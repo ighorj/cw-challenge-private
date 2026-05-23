@@ -220,8 +220,8 @@ __marimo__/
 # === Project-specific ===
 
 # Working artifacts (not part of this commit)
-RelevantQueries.ipynb
-SAR-2025-C101848-01.md
+src/notebooks/RelevantQueries.ipynb
+docs/phase1/SAR-2025-C101848-01.md
 
 # OS
 .DS_Store

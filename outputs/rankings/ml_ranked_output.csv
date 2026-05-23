@@ -1,0 +1,2501 @@
+customer_id,predicted_probability,predicted_band,actual_label,top_shap_driver_1,top_shap_driver_2,top_shap_driver_3
+C100153,0.9998,ML Tier 1,1,log_pix_in,log_annual_income,count_anon_events
+C102290,0.9998,ML Tier 1,1,log_pix_in,log_annual_income,count_anon_events
+C101297,0.9997,ML Tier 1,-1,log_pix_in,log_annual_income,log_wire_outflow
+C101448,0.9997,ML Tier 1,1,log_pix_in,log_annual_income,count_anon_events
+C101785,0.9997,ML Tier 1,-1,log_pix_in,log_annual_income,count_anon_events
+C100427,0.9997,ML Tier 1,1,log_pix_in,log_annual_income,count_anon_events
+C101715,0.9997,ML Tier 1,1,log_pix_in,log_annual_income,count_anon_events
+C102227,0.9997,ML Tier 1,1,log_pix_in,log_annual_income,distinct_merchants
+C100460,0.9997,ML Tier 1,1,log_pix_in,log_annual_income,count_anon_events
+C102003,0.9996,ML Tier 1,1,log_annual_income,log_pix_in,count_anon_events
+C100558,0.9996,ML Tier 1,1,log_pix_in,log_annual_income,log_wire_outflow
+C101622,0.9996,ML Tier 1,1,log_pix_in,log_annual_income,count_tor_events
+C102334,0.9996,ML Tier 1,1,log_pix_in,count_anon_events,log_wire_outflow
+C100526,0.9996,ML Tier 1,1,log_pix_in,log_annual_income,count_anon_events
+C100208,0.9996,ML Tier 1,1,log_pix_in,log_annual_income,count_anon_events
+C101887,0.9996,ML Tier 1,1,log_pix_in,log_annual_income,count_anon_events
+C102282,0.9996,ML Tier 1,1,log_annual_income,log_pix_in,count_anon_events
+C101856,0.9996,ML Tier 1,1,log_annual_income,log_pix_in,count_anon_events
+C100837,0.9996,ML Tier 1,1,log_pix_in,log_annual_income,count_tor_events
+C102179,0.9996,ML Tier 1,1,log_annual_income,log_pix_in,count_anon_events
+C101473,0.9996,ML Tier 1,1,log_pix_in,count_anon_events,log_wire_outflow
+C100902,0.9996,ML Tier 1,1,log_pix_in,count_anon_events,log_wire_outflow
+C100874,0.9995,ML Tier 1,1,log_pix_in,log_annual_income,count_anon_events
+C100842,0.9995,ML Tier 2,1,log_pix_in,log_annual_income,count_anon_events
+C100585,0.9995,ML Tier 1,1,log_pix_in,log_annual_income,count_anon_events
+C101022,0.9995,ML Tier 2,1,log_pix_in,count_anon_events,log_wire_outflow
+C102379,0.9995,ML Tier 2,1,log_pix_in,log_annual_income,count_chargeback_status
+C100138,0.9995,ML Tier 2,1,log_pix_in,log_annual_income,count_chargeback_status
+C102043,0.9995,ML Tier 2,1,log_pix_in,log_annual_income,count_anon_events
+C102356,0.9995,ML Tier 2,1,log_pix_in,count_anon_events,log_wire_outflow
+C100374,0.9995,ML Tier 2,1,log_pix_in,log_annual_income,count_anon_events
+C102496,0.9995,ML Tier 2,1,log_pix_in,log_annual_income,count_anon_events
+C100014,0.9995,ML Tier 1,1,log_pix_in,log_annual_income,count_anon_events
+C100278,0.9994,ML Tier 2,1,log_pix_in,log_annual_income,count_anon_events
+C100325,0.9994,ML Tier 2,1,log_annual_income,count_anon_events,log_pix_in
+C102124,0.9994,ML Tier 2,1,log_pix_in,count_anon_events,count_tor_events
+C101514,0.9994,ML Tier 2,1,log_pix_in,count_anon_events,log_annual_income
+C102398,0.9994,ML Tier 2,1,log_pix_in,log_annual_income,count_anon_events
+C101277,0.9994,ML Tier 2,1,log_pix_in,count_anon_events,count_tor_events
+C101819,0.9994,ML Tier 2,-1,log_pix_in,log_annual_income,distinct_merchants
+C100829,0.9994,ML Tier 2,1,log_pix_in,log_annual_income,log_wire_outflow
+C100624,0.9994,ML Tier 2,1,log_pix_in,log_annual_income,distinct_merchants
+C100714,0.9994,ML Tier 2,1,log_pix_in,log_annual_income,count_anon_events
+C100677,0.9994,ML Tier 2,1,log_pix_in,log_annual_income,count_tor_events
+C100406,0.9994,ML Tier 2,1,log_pix_in,log_annual_income,count_anon_events
+C100492,0.9994,ML Tier 2,1,log_pix_in,log_annual_income,count_anon_events
+C100703,0.9994,ML Tier 2,1,log_pix_in,count_anon_events,log_wire_outflow
+C101243,0.9993,ML Tier 2,1,log_pix_in,count_anon_events,log_wire_outflow
+C101141,0.9993,ML Tier 2,1,log_annual_income,log_pix_in,count_anon_events
+C101552,0.9993,ML Tier 2,1,log_pix_in,log_annual_income,count_anon_events
+C101029,0.9993,ML Tier 2,1,log_pix_in,log_annual_income,count_tor_events
+C100961,0.9993,ML Tier 2,1,log_pix_in,count_anon_events,log_wire_outflow
+C101755,0.9993,ML Tier 2,1,log_pix_in,count_anon_events,log_wire_outflow
+C102375,0.9993,ML Tier 2,1,log_pix_in,log_annual_income,count_anon_events
+C101411,0.9993,ML Tier 2,1,log_pix_in,count_anon_events,log_wire_outflow
+C101542,0.9993,ML Tier 2,1,log_annual_income,count_anon_events,log_pix_in
+C101240,0.9993,ML Tier 2,1,count_anon_events,log_annual_income,log_pix_in
+C101502,0.9993,ML Tier 2,1,log_pix_in,log_annual_income,log_wire_outflow
+C100319,0.9993,ML Tier 2,1,count_anon_events,log_pix_in,log_wire_outflow
+C100290,0.9993,ML Tier 2,1,log_pix_in,log_annual_income,count_tor_events
+C100388,0.9993,ML Tier 2,1,log_pix_in,log_annual_income,count_anon_events
+C100656,0.9993,ML Tier 2,1,log_pix_in,log_annual_income,distinct_merchants
+C100246,0.9993,ML Tier 2,1,log_annual_income,count_anon_events,log_pix_in
+C100328,0.9993,ML Tier 2,1,log_pix_in,log_annual_income,count_anon_events
+C101584,0.9992,ML Tier 2,-1,log_pix_in,count_anon_events,log_wire_outflow
+C100900,0.9992,ML Tier 2,1,log_pix_in,log_annual_income,count_anon_events
+C101657,0.9992,ML Tier 2,1,log_pix_in,count_anon_events,count_tor_events
+C101770,0.9992,ML Tier 2,1,log_pix_in,count_anon_events,log_wire_outflow
+C101671,0.9992,ML Tier 2,1,log_pix_in,log_annual_income,log_wire_outflow
+C101629,0.9992,ML Tier 2,1,log_pix_in,log_annual_income,count_anon_events
+C101011,0.9992,ML Tier 2,1,log_pix_in,log_annual_income,count_tor_events
+C101985,0.9992,ML Tier 2,1,log_pix_in,log_annual_income,count_anon_events
+C102147,0.9992,ML Tier 2,1,log_pix_in,log_annual_income,count_anon_events
+C100334,0.9992,ML Tier 2,1,log_pix_in,count_anon_events,count_tor_events
+C102471,0.9992,ML Tier 2,1,log_pix_in,count_tor_events,log_wire_outflow
+C100653,0.9992,ML Tier 2,1,log_pix_in,log_annual_income,count_tor_events
+C100237,0.9992,ML Tier 2,1,log_pix_in,log_wire_outflow,count_anon_events
+C100812,0.9992,ML Tier 2,1,log_pix_in,log_annual_income,count_anon_events
+C101858,0.9992,ML Tier 2,1,log_pix_in,count_anon_events,log_wire_outflow
+C102176,0.9992,ML Tier 2,1,log_pix_in,log_annual_income,count_anon_events
+C102080,0.9992,ML Tier 2,1,log_annual_income,log_pix_in,count_anon_events
+C100486,0.9992,ML Tier 2,-1,log_pix_in,log_annual_income,count_anon_events
+C100076,0.9991,ML Tier 2,-1,log_pix_in,count_anon_events,count_chargeback_status
+C101006,0.9991,ML Tier 2,-1,log_pix_in,log_annual_income,count_anon_events
+C100907,0.9991,ML Tier 2,1,log_pix_in,count_anon_events,count_tor_events
+C101432,0.9991,ML Tier 2,1,log_pix_in,log_annual_income,mean_merchant_chargeback
+C100103,0.9991,ML Tier 2,1,log_pix_in,log_annual_income,count_anon_events
+C102468,0.9991,ML Tier 2,1,log_pix_in,count_tor_events,log_wire_outflow
+C100496,0.9991,ML Tier 2,-1,log_pix_in,log_annual_income,log_wire_outflow
+C102195,0.9991,ML Tier 2,1,log_pix_in,count_anon_events,log_wire_outflow
+C102093,0.9991,ML Tier 2,1,log_pix_in,log_annual_income,count_anon_events
+C102000,0.9991,ML Tier 2,1,log_pix_in,log_annual_income,count_chargeback_status
+C102201,0.9991,ML Tier 2,-1,log_pix_in,count_anon_events,log_wire_outflow
+C100610,0.9991,ML Tier 2,1,log_pix_in,count_anon_events,count_tor_events
+C102053,0.999,ML Tier 2,1,log_pix_in,log_annual_income,count_anon_events
+C100621,0.999,ML Tier 2,1,log_pix_in,count_anon_events,log_wire_outflow
+C100618,0.999,ML Tier 2,1,log_annual_income,count_anon_events,log_pix_in
+C101995,0.999,ML Tier 2,1,log_pix_in,log_annual_income,fraction_high_mcc
+C100716,0.999,ML Tier 2,1,log_pix_in,count_anon_events,log_wire_outflow
+C100097,0.999,ML Tier 2,1,log_pix_in,log_annual_income,count_tor_events
+C101720,0.999,ML Tier 2,1,log_pix_in,log_annual_income,distinct_merchants
+C101646,0.999,ML Tier 2,1,log_pix_in,log_annual_income,count_anon_events
+C101082,0.999,ML Tier 2,1,log_pix_in,log_annual_income,count_anon_events
+C102494,0.999,ML Tier 2,1,log_pix_in,log_wire_outflow,count_chargeback_status
+C102459,0.999,ML Tier 2,1,log_pix_in,log_annual_income,count_anon_events
+C100254,0.999,ML Tier 2,1,log_annual_income,log_pix_in,count_anon_events
+C102252,0.999,ML Tier 2,1,log_annual_income,count_anon_events,log_wire_outflow
+C100367,0.999,ML Tier 2,-1,log_pix_in,log_wire_outflow,distinct_merchants
+C100864,0.999,ML Tier 2,1,log_pix_in,log_annual_income,count_anon_events
+C100595,0.999,ML Tier 2,1,log_pix_in,log_annual_income,distinct_merchants
+C100044,0.999,ML Tier 2,1,log_pix_in,log_annual_income,count_anon_events
+C101821,0.999,ML Tier 2,1,log_pix_in,count_anon_events,log_wire_outflow
+C100591,0.9989,ML Tier 2,1,count_anon_events,count_tor_events,log_wire_outflow
+C102038,0.9989,ML Tier 2,1,log_pix_in,log_annual_income,distinct_merchants
+C101956,0.9989,ML Tier 2,1,log_pix_in,log_annual_income,mean_merchant_chargeback
+C100359,0.9989,ML Tier 2,1,log_pix_in,log_annual_income,fraction_high_mcc
+C100706,0.9989,ML Tier 2,1,log_pix_in,log_annual_income,log_wire_outflow
+C102082,0.9989,ML Tier 2,1,log_pix_in,count_anon_events,distinct_merchants
+C100493,0.9989,ML Tier 2,1,log_pix_in,log_wire_outflow,count_chargeback_status
+C101451,0.9989,ML Tier 2,-1,log_pix_in,count_anon_events,log_wire_outflow
+C100969,0.9989,ML Tier 2,1,log_pix_in,count_anon_events,log_wire_outflow
+C101612,0.9989,ML Tier 2,1,log_pix_in,log_annual_income,count_anon_events
+C102410,0.9989,ML Tier 2,1,log_pix_in,count_chargeback_status,count_tor_events
+C100642,0.9989,ML Tier 2,-1,log_pix_in,log_annual_income,distinct_merchants
+C100772,0.9989,ML Tier 2,1,log_pix_in,log_annual_income,count_tor_events
+C101746,0.9988,ML Tier 3,1,log_pix_in,log_annual_income,count_anon_events
+C101817,0.9988,ML Tier 3,1,log_pix_in,count_anon_events,distinct_merchants
+C101593,0.9988,ML Tier 3,-1,log_pix_in,log_annual_income,count_chargeback_status
+C101341,0.9988,ML Tier 3,1,count_anon_events,log_wire_outflow,log_pix_in
+C101140,0.9988,ML Tier 3,-1,log_pix_in,count_chargeback_status,log_wire_outflow
+C101225,0.9988,ML Tier 3,1,log_pix_in,log_annual_income,distinct_merchants
+C101407,0.9988,ML Tier 3,1,log_annual_income,log_pix_in,distinct_merchants
+C100080,0.9988,ML Tier 3,1,log_annual_income,log_pix_in,count_tor_events
+C102474,0.9988,ML Tier 3,1,log_pix_in,count_anon_events,log_wire_outflow
+C101652,0.9988,ML Tier 3,1,log_pix_in,count_chargeback_status,count_tor_events
+C100589,0.9988,ML Tier 3,1,log_annual_income,count_anon_events,log_wire_outflow
+C100221,0.9988,ML Tier 3,1,log_pix_in,log_annual_income,distinct_merchants
+C102002,0.9988,ML Tier 3,-1,log_pix_in,log_annual_income,distinct_merchants
+C102255,0.9988,ML Tier 3,-1,log_pix_in,log_wire_outflow,count_anon_events
+C100287,0.9988,ML Tier 3,-1,log_pix_in,log_annual_income,count_anon_events
+C100786,0.9988,ML Tier 3,1,log_pix_in,log_annual_income,count_tor_events
+C101902,0.9988,ML Tier 3,1,log_pix_in,log_annual_income,count_anon_events
+C102084,0.9988,ML Tier 3,1,count_anon_events,log_wire_outflow,log_pix_in
+C101630,0.9987,ML Tier 3,1,log_pix_in,log_annual_income,count_tor_events
+C101074,0.9987,ML Tier 3,1,log_pix_in,log_annual_income,count_anon_events
+C101445,0.9987,ML Tier 3,1,log_pix_in,log_wire_outflow,count_anon_events
+C101471,0.9987,ML Tier 3,-1,log_pix_in,count_tor_events,log_wire_outflow
+C100997,0.9987,ML Tier 3,1,log_pix_in,log_annual_income,count_anon_events
+C100955,0.9987,ML Tier 3,1,log_pix_in,log_annual_income,distinct_merchants
+C100047,0.9987,ML Tier 3,1,log_pix_in,log_annual_income,count_anon_events
+C100636,0.9987,ML Tier 3,1,log_pix_in,log_annual_income,distinct_merchants
+C102266,0.9987,ML Tier 3,1,log_pix_in,count_anon_events,count_tor_events
+C100299,0.9987,ML Tier 3,1,log_pix_in,log_wire_outflow,distinct_merchants
+C100830,0.9987,ML Tier 3,1,log_pix_in,count_anon_events,log_wire_outflow
+C101863,0.9987,ML Tier 3,1,log_pix_in,count_tor_events,count_anon_events
+C100847,0.9987,ML Tier 3,1,log_pix_in,log_annual_income,fraction_high_mcc
+C100312,0.9987,ML Tier 3,1,log_pix_in,log_annual_income,count_tor_events
+C100308,0.9987,ML Tier 3,1,count_anon_events,log_wire_outflow,count_tor_events
+C102304,0.9987,ML Tier 3,1,log_annual_income,count_anon_events,log_pix_in
+C101829,0.9986,ML Tier 3,1,log_pix_in,count_tor_events,count_chargeback_status
+C100797,0.9986,ML Tier 3,1,log_pix_in,count_chargeback_status,log_wire_outflow
+C102234,0.9986,ML Tier 3,1,log_pix_in,log_annual_income,distinct_merchants
+C101868,0.9986,ML Tier 3,1,log_pix_in,count_anon_events,log_wire_outflow
+C100692,0.9986,ML Tier 3,1,log_annual_income,count_anon_events,distinct_merchants
+C101078,0.9986,ML Tier 3,-1,log_pix_in,count_anon_events,log_wire_outflow
+C101326,0.9986,ML Tier 3,1,log_pix_in,count_anon_events,log_wire_outflow
+C101742,0.9985,ML Tier 3,1,log_pix_in,count_anon_events,count_tor_events
+C100301,0.9985,ML Tier 3,1,log_pix_in,count_anon_events,count_tor_events
+C100663,0.9985,ML Tier 3,-1,log_pix_in,count_anon_events,log_wire_outflow
+C100474,0.9985,ML Tier 3,1,log_pix_in,count_chargeback_status,distinct_merchants
+C102170,0.9985,ML Tier 3,-1,log_pix_in,count_anon_events,distinct_merchants
+C101736,0.9985,ML Tier 3,1,count_anon_events,log_pix_in,log_wire_outflow
+C100510,0.9985,ML Tier 3,1,log_pix_in,log_annual_income,count_anon_events
+C102481,0.9985,ML Tier 3,-1,log_pix_in,count_chargeback_status,log_wire_outflow
+C102285,0.9985,ML Tier 3,1,log_pix_in,count_anon_events,distinct_merchants
+C100185,0.9985,ML Tier 3,1,log_pix_in,log_annual_income,count_anon_events
+C102366,0.9984,ML Tier 3,1,count_anon_events,log_pix_in,distinct_merchants
+C101681,0.9984,ML Tier 3,-1,log_pix_in,count_anon_events,log_wire_outflow
+C101385,0.9984,ML Tier 3,1,log_pix_in,log_annual_income,fraction_high_mcc
+C102244,0.9984,ML Tier 3,1,log_annual_income,log_pix_in,log_wire_outflow
+C100546,0.9984,ML Tier 3,1,log_pix_in,count_chargeback_status,log_wire_outflow
+C100167,0.9984,ML Tier 3,-1,log_pix_in,log_wire_outflow,count_chargeback_status
+C102348,0.9984,ML Tier 3,1,log_pix_in,count_anon_events,log_wire_outflow
+C102181,0.9984,ML Tier 3,1,count_anon_events,log_wire_outflow,distinct_merchants
+C100366,0.9984,ML Tier 3,1,log_annual_income,distinct_merchants,log_wire_outflow
+C101913,0.9983,ML Tier 3,1,log_pix_in,log_annual_income,count_anon_events
+C100846,0.9983,ML Tier 3,-1,log_pix_in,distinct_merchants,log_wire_outflow
+C101167,0.9982,ML Tier 3,-1,log_pix_in,log_annual_income,distinct_merchants
+C100737,0.9982,ML Tier 3,-1,log_annual_income,log_pix_in,count_anon_events
+C100682,0.9982,ML Tier 3,-1,log_pix_in,log_wire_outflow,count_chargeback_status
+C101842,0.9982,ML Tier 3,1,log_pix_in,log_wire_outflow,distinct_merchants
+C102033,0.9982,ML Tier 3,1,log_pix_in,log_annual_income,distinct_merchants
+C102312,0.9982,ML Tier 3,-1,log_pix_in,count_chargeback_status,log_wire_outflow
+C102040,0.9982,ML Tier 3,1,log_pix_in,log_annual_income,count_tor_events
+C100579,0.9982,ML Tier 3,1,log_pix_in,count_tor_events,count_anon_events
+C100426,0.9982,ML Tier 3,1,log_pix_in,count_anon_events,distinct_merchants
+C102109,0.9982,ML Tier 3,-1,log_pix_in,log_annual_income,distinct_merchants
+C100521,0.9982,ML Tier 3,-1,log_pix_in,count_anon_events,mean_merchant_chargeback
+C102276,0.9982,ML Tier 3,1,log_pix_in,log_annual_income,log_wire_outflow
+C100098,0.9981,ML Tier 3,1,count_anon_events,log_pix_in,count_tor_events
+C100370,0.9981,ML Tier 3,1,log_pix_in,count_anon_events,distinct_merchants
+C100383,0.9981,ML Tier 3,1,log_pix_in,count_anon_events,count_tor_events
+C101999,0.9981,ML Tier 3,1,log_pix_in,count_anon_events,log_wire_outflow
+C101343,0.9981,ML Tier 3,-1,log_pix_in,log_annual_income,distinct_merchants
+C100037,0.9981,ML Tier 3,1,log_pix_in,log_wire_outflow,count_tor_events
+C100238,0.9981,ML Tier 3,1,log_annual_income,log_pix_in,distinct_merchants
+C101015,0.9981,ML Tier 3,1,log_pix_in,count_anon_events,count_tor_events
+C100650,0.998,ML Tier 3,1,log_pix_in,log_annual_income,count_anon_events
+C101979,0.998,ML Tier 3,1,log_pix_in,log_annual_income,count_chargeback_status
+C101990,0.998,ML Tier 3,1,log_pix_in,count_anon_events,log_wire_outflow
+C102405,0.998,ML Tier 3,-1,log_pix_in,log_annual_income,distinct_merchants
+C102151,0.998,ML Tier 3,1,log_pix_in,log_wire_outflow,distinct_merchants
+C100435,0.998,ML Tier 3,1,log_annual_income,log_pix_in,count_chargeback_status
+C101122,0.998,ML Tier 3,-1,count_anon_events,log_pix_in,log_wire_outflow
+C100569,0.998,ML Tier 3,1,log_pix_in,count_anon_events,log_wire_outflow
+C101544,0.9979,ML Tier 3,1,log_pix_in,count_anon_events,count_tor_events
+C102044,0.9979,ML Tier 3,1,count_anon_events,log_wire_outflow,log_pix_in
+C100710,0.9979,ML Tier 3,1,log_pix_in,count_anon_events,count_tor_events
+C102355,0.9979,ML Tier 3,-1,log_annual_income,log_pix_in,count_anon_events
+C101485,0.9979,ML Tier 3,-1,log_pix_in,count_chargeback_status,log_wire_outflow
+C102402,0.9979,ML Tier 3,1,log_annual_income,log_pix_in,count_anon_events
+C101713,0.9979,ML Tier 3,1,log_annual_income,count_anon_events,count_tor_events
+C102062,0.9979,ML Tier 3,-1,log_pix_in,log_annual_income,distinct_merchants
+C100941,0.9979,ML Tier 3,1,count_anon_events,log_pix_in,distinct_merchants
+C102015,0.9979,ML Tier 3,1,log_pix_in,log_annual_income,count_anon_events
+C102413,0.9978,ML Tier 3,-1,log_pix_in,log_wire_outflow,distinct_merchants
+C100418,0.9978,ML Tier 3,1,log_pix_in,count_chargeback_status,log_wire_outflow
+C101388,0.9978,ML Tier 3,1,log_pix_in,count_chargeback_status,count_tor_events
+C101634,0.9977,ML Tier 3,1,count_anon_events,log_pix_in,log_wire_outflow
+C100696,0.9977,ML Tier 3,1,log_pix_in,log_annual_income,count_chargeback_status
+C101119,0.9977,ML Tier 3,-1,log_pix_in,count_chargeback_status,log_wire_outflow
+C100498,0.9977,ML Tier 3,1,log_annual_income,log_pix_in,count_anon_events
+C102458,0.9977,ML Tier 3,1,log_pix_in,log_annual_income,count_tor_events
+C100445,0.9976,ML Tier 3,1,log_annual_income,count_anon_events,log_pix_in
+C102177,0.9976,ML Tier 3,-1,log_pix_in,log_annual_income,log_wire_outflow
+C100584,0.9976,ML Tier 3,-1,log_pix_in,count_chargeback_status,count_anon_events
+C102454,0.9976,ML Tier 3,1,log_pix_in,log_annual_income,count_tor_events
+C101145,0.9976,ML Tier 3,1,log_pix_in,count_tor_events,count_anon_events
+C102154,0.9976,ML Tier 3,1,log_pix_in,log_annual_income,count_tor_events
+C102487,0.9975,ML Tier 3,-1,log_pix_in,log_annual_income,distinct_merchants
+C100250,0.9975,ML Tier 3,-1,log_pix_in,log_annual_income,mean_merchant_chargeback
+C101745,0.9975,ML Tier 3,1,log_annual_income,count_tor_events,log_pix_in
+C100313,0.9975,ML Tier 3,1,count_anon_events,log_pix_in,log_wire_outflow
+C102240,0.9975,ML Tier 3,-1,log_pix_in,count_tor_events,count_anon_events
+C100270,0.9975,ML Tier 3,1,count_anon_events,count_chargeback_status,log_wire_outflow
+C102287,0.9975,ML Tier 3,-1,log_annual_income,log_wire_outflow,distinct_merchants
+C100291,0.9975,ML Tier 3,-1,log_pix_in,count_chargeback_status,distinct_merchants
+C101624,0.9975,ML Tier 3,1,log_pix_in,count_anon_events,count_chargeback_status
+C100214,0.9975,ML Tier 3,1,count_anon_events,count_tor_events,log_wire_outflow
+C100630,0.9975,ML Tier 3,1,log_annual_income,log_pix_in,distinct_merchants
+C101983,0.9975,ML Tier 3,-1,log_pix_in,log_wire_outflow,count_chargeback_status
+C102018,0.9975,ML Tier 3,1,count_anon_events,log_pix_in,log_wire_outflow
+C101506,0.9974,ML Tier 3,-1,log_pix_in,log_annual_income,count_chargeback_status
+C101114,0.9974,ML Tier 3,1,count_anon_events,log_pix_in,distinct_merchants
+C101784,0.9974,ML Tier 3,-1,log_annual_income,log_pix_in,distinct_merchants
+C101443,0.9974,ML Tier 3,1,count_anon_events,log_wire_outflow,log_pix_in
+C100509,0.9974,ML Tier 3,1,log_annual_income,log_pix_in,log_wire_outflow
+C100408,0.9974,ML Tier 3,1,log_pix_in,log_annual_income,count_anon_events
+C100604,0.9974,ML Tier 3,1,log_pix_in,count_anon_events,count_tor_events
+C100605,0.9974,ML Tier 3,-1,log_pix_in,log_wire_outflow,count_chargeback_status
+C100262,0.9973,ML Tier 3,1,count_anon_events,log_pix_in,distinct_merchants
+C100335,0.9973,ML Tier 3,1,log_wire_outflow,log_pix_in,count_chargeback_status
+C100171,0.9973,ML Tier 3,-1,log_pix_in,log_annual_income,distinct_merchants
+C101303,0.9973,ML Tier 3,-1,log_pix_in,log_wire_outflow,distinct_merchants
+C102347,0.9973,ML Tier 3,-1,log_pix_in,log_wire_outflow,count_anon_events
+C101976,0.9973,ML Tier 3,1,log_annual_income,count_tor_events,count_anon_events
+C100779,0.9973,ML Tier 3,1,log_pix_in,log_annual_income,count_chargeback_status
+C102299,0.9972,ML Tier 3,1,log_pix_in,count_chargeback_status,log_wire_outflow
+C102067,0.9972,ML Tier 3,1,log_pix_in,log_annual_income,count_anon_events
+C102289,0.9972,ML Tier 3,-1,log_pix_in,log_annual_income,count_anon_events
+C102099,0.9972,ML Tier 3,1,log_pix_in,count_anon_events,log_wire_outflow
+C102428,0.9971,ML Tier 3,1,count_anon_events,log_wire_outflow,distinct_merchants
+C102389,0.9971,ML Tier 3,-1,log_pix_in,log_annual_income,count_anon_events
+C101003,0.9971,ML Tier 3,1,log_annual_income,count_anon_events,log_pix_in
+C100962,0.9971,ML Tier 3,-1,log_pix_in,count_tor_events,count_anon_events
+C102248,0.9971,ML Tier 3,-1,log_pix_in,log_annual_income,distinct_merchants
+C102274,0.9971,ML Tier 3,1,log_pix_in,log_annual_income,count_anon_events
+C101975,0.9971,ML Tier 3,1,log_pix_in,log_annual_income,distinct_merchants
+C102023,0.9971,ML Tier 3,1,log_pix_in,log_annual_income,distinct_merchants
+C100069,0.9971,ML Tier 3,-1,log_pix_in,log_wire_outflow,count_chargeback_status
+C101021,0.997,ML Tier 3,1,count_anon_events,log_pix_in,log_wire_outflow
+C100519,0.997,ML Tier 3,1,log_pix_in,log_wire_outflow,count_chargeback_status
+C100384,0.997,ML Tier 3,1,log_pix_in,log_annual_income,count_chargeback_status
+C100100,0.997,ML Tier 3,-1,log_pix_in,count_tor_events,count_anon_events
+C101597,0.997,ML Tier 3,-1,log_pix_in,count_anon_events,count_chargeback_status
+C100387,0.997,ML Tier 3,-1,log_annual_income,log_pix_in,log_wire_outflow
+C100245,0.9969,ML Tier 3,-1,log_pix_in,log_annual_income,count_chargeback_status
+C100451,0.9969,ML Tier 3,-1,log_pix_in,log_annual_income,distinct_merchants
+C101571,0.9969,ML Tier 3,-1,log_pix_in,log_annual_income,count_anon_events
+C100300,0.9969,ML Tier 3,1,log_pix_in,count_anon_events,log_wire_outflow
+C100767,0.9969,ML Tier 3,-1,log_pix_in,count_anon_events,log_wire_outflow
+C100601,0.9969,ML Tier 3,-1,log_pix_in,log_wire_outflow,distinct_merchants
+C100698,0.9969,ML Tier 3,-1,log_pix_in,log_wire_outflow,distinct_merchants
+C100654,0.9968,ML Tier 3,1,log_annual_income,log_pix_in,count_anon_events
+C101204,0.9968,ML Tier 3,-1,log_annual_income,log_pix_in,log_wire_outflow
+C101749,0.9968,ML Tier 3,1,log_pix_in,count_anon_events,count_chargeback_status
+C101278,0.9968,ML Tier 3,1,log_annual_income,count_anon_events,log_wire_outflow
+C100351,0.9968,ML Tier 3,1,log_annual_income,log_pix_in,count_anon_events
+C101025,0.9968,ML Tier 3,1,log_pix_in,log_annual_income,count_tor_events
+C101667,0.9968,ML Tier 3,1,count_anon_events,log_wire_outflow,distinct_merchants
+C101996,0.9968,ML Tier 3,1,log_pix_in,count_anon_events,log_wire_outflow
+C101500,0.9967,ML Tier 3,1,log_pix_in,log_annual_income,fraction_high_mcc
+C102004,0.9967,ML Tier 3,1,log_annual_income,log_pix_in,distinct_merchants
+C101579,0.9967,ML Tier 3,1,log_annual_income,log_pix_in,count_anon_events
+C101365,0.9967,ML Tier 3,1,log_pix_in,log_annual_income,count_anon_events
+C101065,0.9967,ML Tier 3,1,log_pix_in,log_annual_income,count_chargeback_status
+C102433,0.9966,ML Tier 3,-1,log_pix_in,log_annual_income,distinct_merchants
+C101588,0.9966,ML Tier 3,1,log_pix_in,log_annual_income,fraction_high_mcc
+C101106,0.9966,ML Tier 3,1,count_anon_events,log_pix_in,count_tor_events
+C100054,0.9966,ML Tier 3,1,log_pix_in,log_annual_income,count_anon_events
+C101382,0.9966,ML Tier 3,1,log_pix_in,count_anon_events,count_chargeback_status
+C102140,0.9966,ML Tier 3,-1,log_pix_in,count_tor_events,count_anon_events
+C102006,0.9966,ML Tier 3,-1,log_annual_income,log_pix_in,distinct_merchants
+C100754,0.9966,ML Tier 3,1,log_pix_in,log_wire_outflow,tx_count
+C100272,0.9965,ML Tier 3,1,log_pix_in,count_tor_events,log_wire_outflow
+C102408,0.9965,ML Tier 3,1,count_anon_events,log_pix_in,distinct_merchants
+C101658,0.9965,ML Tier 3,1,log_pix_in,count_anon_events,log_wire_outflow
+C101532,0.9965,ML Tier 3,1,log_pix_in,count_anon_events,log_annual_income
+C100318,0.9965,ML Tier 3,1,count_anon_events,log_wire_outflow,distinct_merchants
+C101299,0.9965,ML Tier 3,-1,log_wire_outflow,log_pix_in,count_chargeback_status
+C102324,0.9965,ML Tier 3,-1,log_pix_in,distinct_merchants,log_wire_outflow
+C101830,0.9964,ML Tier 3,1,log_pix_in,log_annual_income,count_anon_events
+C102303,0.9964,ML Tier 3,1,log_pix_in,log_wire_outflow,distinct_merchants
+C102130,0.9964,ML Tier 3,1,log_pix_in,count_anon_events,mean_merchant_chargeback
+C100398,0.9964,ML Tier 3,1,log_pix_in,log_wire_outflow,distinct_merchants
+C100550,0.9964,ML Tier 3,1,count_anon_events,log_pix_in,count_chargeback_status
+C100507,0.9964,ML Tier 3,-1,log_pix_in,count_chargeback_status,log_wire_outflow
+C101181,0.9963,ML Tier 3,-1,log_pix_in,log_annual_income,log_wire_outflow
+C102025,0.9963,ML Tier 3,-1,log_annual_income,log_pix_in,distinct_merchants
+C100832,0.9963,ML Tier 3,-1,log_pix_in,log_annual_income,log_wire_outflow
+C102166,0.9963,ML Tier 3,1,log_pix_in,log_annual_income,count_anon_events
+C102077,0.9963,ML Tier 3,-1,log_annual_income,count_chargeback_status,distinct_merchants
+C100091,0.9962,ML Tier 3,1,log_pix_in,log_annual_income,log_wire_outflow
+C101431,0.9962,ML Tier 3,-1,log_annual_income,log_pix_in,distinct_merchants
+C101098,0.9962,ML Tier 3,1,log_pix_in,count_anon_events,log_annual_income
+C102041,0.9962,ML Tier 3,1,count_anon_events,log_pix_in,count_chargeback_status
+C101103,0.9962,ML Tier 3,-1,log_annual_income,log_pix_in,count_chargeback_status
+C101330,0.9962,ML Tier 3,-1,count_tor_events,count_anon_events,log_wire_outflow
+C101048,0.9961,ML Tier 3,1,log_pix_in,count_anon_events,log_wire_outflow
+C101978,0.9961,ML Tier 3,-1,count_anon_events,log_wire_outflow,distinct_merchants
+C100777,0.9961,ML Tier 3,-1,log_pix_in,count_anon_events,count_chargeback_status
+C101136,0.9961,ML Tier 3,1,log_pix_in,log_annual_income,count_tor_events
+C100230,0.9961,ML Tier 3,1,log_pix_in,count_anon_events,distinct_merchants
+C101779,0.9961,ML Tier 3,1,count_anon_events,count_tor_events,count_chargeback_status
+C102465,0.996,ML Tier 3,1,log_annual_income,count_anon_events,fraction_high_mcc
+C102060,0.996,ML Tier 3,1,log_pix_in,log_annual_income,count_anon_events
+C102183,0.996,ML Tier 3,1,log_pix_in,log_annual_income,count_chargeback_status
+C100932,0.996,ML Tier 3,1,log_pix_in,log_annual_income,mean_merchant_chargeback
+C101352,0.996,ML Tier 3,1,log_annual_income,log_pix_in,distinct_merchants
+C101368,0.996,ML Tier 3,-1,log_pix_in,log_annual_income,mean_merchant_chargeback
+C100117,0.9959,ML Tier 3,1,log_pix_in,log_annual_income,count_anon_events
+C101826,0.9959,ML Tier 3,1,count_anon_events,log_pix_in,log_wire_outflow
+C102128,0.9959,ML Tier 3,-1,log_pix_in,log_wire_outflow,tx_count
+C101450,0.9959,ML Tier 3,1,log_pix_in,log_annual_income,count_tor_events
+C101575,0.9959,ML Tier 3,-1,log_pix_in,count_anon_events,log_wire_outflow
+C101073,0.9958,ML Tier 3,-1,log_pix_in,log_wire_outflow,tx_count
+C100188,0.9958,ML Tier 3,-1,log_pix_in,count_tor_events,log_annual_income
+C101623,0.9957,ML Tier 3,1,log_pix_in,mean_merchant_chargeback,count_anon_events
+C101577,0.9957,ML Tier 3,1,log_pix_in,count_anon_events,log_wire_outflow
+C100146,0.9957,ML Tier 3,-1,log_annual_income,log_pix_in,log_wire_outflow
+C101415,0.9957,ML Tier 3,1,log_annual_income,log_pix_in,mean_merchant_chargeback
+C100251,0.9957,ML Tier 3,1,log_pix_in,count_anon_events,count_chargeback_status
+C100549,0.9957,ML Tier 3,1,log_pix_in,log_annual_income,count_anon_events
+C100409,0.9956,ML Tier 3,-1,log_pix_in,count_chargeback_status,distinct_merchants
+C100302,0.9956,ML Tier 3,1,count_anon_events,log_wire_outflow,count_chargeback_status
+C100811,0.9956,ML Tier 3,-1,log_annual_income,log_pix_in,distinct_merchants
+C102194,0.9956,ML Tier 3,1,log_pix_in,count_anon_events,log_wire_outflow
+C100177,0.9956,ML Tier 3,1,log_pix_in,count_anon_events,log_annual_income
+C101812,0.9956,ML Tier 3,-1,log_pix_in,log_wire_outflow,count_chargeback_status
+C102017,0.9956,ML Tier 3,1,log_pix_in,count_tor_events,log_wire_outflow
+C100667,0.9956,ML Tier 3,-1,log_pix_in,count_anon_events,count_tor_events
+C101594,0.9956,ML Tier 3,-1,log_annual_income,log_pix_in,log_wire_outflow
+C101582,0.9955,ML Tier 3,1,log_pix_in,log_annual_income,count_anon_events
+C102132,0.9955,ML Tier 3,1,log_pix_in,log_annual_income,fraction_high_mcc
+C100159,0.9955,ML Tier 3,-1,log_pix_in,count_chargeback_status,log_wire_outflow
+C101201,0.9955,ML Tier 3,-1,count_anon_events,log_pix_in,log_annual_income
+C100375,0.9955,ML Tier 3,1,log_pix_in,count_anon_events,count_tor_events
+C102250,0.9955,ML Tier 3,1,log_annual_income,count_tor_events,log_pix_in
+C102447,0.9955,ML Tier 3,-1,log_pix_in,log_wire_outflow,log_annual_income
+C101413,0.9954,ML Tier 3,-1,log_annual_income,log_pix_in,distinct_merchants
+C101066,0.9954,ML Tier 3,-1,log_pix_in,log_wire_outflow,count_chargeback_status
+C100064,0.9954,ML Tier 3,1,log_pix_in,log_annual_income,fraction_high_mcc
+C102114,0.9954,ML Tier 3,-1,log_pix_in,count_anon_events,log_wire_outflow
+C100632,0.9953,ML Tier 3,-1,count_tor_events,log_pix_in,count_anon_events
+C102058,0.9953,ML Tier 3,-1,log_pix_in,log_wire_outflow,tx_count
+C102221,0.9953,ML Tier 3,1,log_pix_in,log_annual_income,count_tor_events
+C102316,0.9953,ML Tier 3,-1,log_pix_in,count_tor_events,count_anon_events
+C100506,0.9953,ML Tier 3,1,log_pix_in,count_chargeback_status,log_wire_outflow
+C102123,0.9952,ML Tier 3,1,log_annual_income,log_pix_in,count_chargeback_status
+C102188,0.9952,ML Tier 3,-1,log_pix_in,count_tor_events,count_anon_events
+C102057,0.9952,ML Tier 3,1,log_pix_in,log_annual_income,mean_merchant_chargeback
+C101392,0.9952,ML Tier 3,1,count_anon_events,log_wire_outflow,distinct_merchants
+C102305,0.9951,ML Tier 3,-1,log_pix_in,count_anon_events,count_tor_events
+C101561,0.9951,ML Tier 3,-1,log_pix_in,count_anon_events,count_chargeback_status
+C101568,0.9951,ML Tier 3,-1,log_annual_income,log_pix_in,distinct_merchants
+C100497,0.9951,ML Tier 3,1,log_pix_in,count_chargeback_status,log_wire_outflow
+C102054,0.9951,ML Tier 3,-1,log_pix_in,count_tor_events,count_chargeback_status
+C100433,0.9951,ML Tier 3,1,log_pix_in,log_annual_income,count_anon_events
+C100979,0.9951,ML Tier 3,1,log_pix_in,count_anon_events,count_chargeback_status
+C100093,0.9951,ML Tier 3,1,log_pix_in,log_annual_income,count_anon_events
+C100376,0.995,ML Tier 3,-1,log_pix_in,count_chargeback_status,log_wire_outflow
+C101530,0.995,ML Tier 3,1,log_pix_in,count_anon_events,log_wire_outflow
+C102049,0.9949,ML Tier 3,1,log_pix_in,count_tor_events,count_anon_events
+C100346,0.9949,ML Tier 3,1,log_pix_in,log_annual_income,distinct_merchants
+C101304,0.9949,ML Tier 3,-1,count_anon_events,log_pix_in,log_wire_outflow
+C101354,0.9949,ML Tier 3,1,log_pix_in,log_annual_income,mean_merchant_chargeback
+C101143,0.9949,ML Tier 3,-1,log_wire_outflow,count_chargeback_status,tx_count
+C102330,0.9948,ML Tier 3,1,count_anon_events,log_wire_outflow,distinct_merchants
+C102116,0.9948,ML Tier 3,-1,log_pix_in,log_wire_outflow,count_chargeback_status
+C100760,0.9948,ML Tier 3,1,log_annual_income,log_pix_in,log_wire_outflow
+C100034,0.9948,ML Tier 3,1,log_pix_in,log_wire_outflow,tx_count
+C101483,0.9948,ML Tier 3,1,log_pix_in,count_anon_events,count_tor_events
+C101292,0.9948,ML Tier 3,-1,log_annual_income,log_pix_in,mean_merchant_chargeback
+C100953,0.9948,ML Tier 3,1,log_pix_in,log_annual_income,count_anon_events
+C102233,0.9947,ML Tier 3,-1,log_pix_in,log_wire_outflow,count_chargeback_status
+C100110,0.9947,ML Tier 3,-1,log_wire_outflow,count_chargeback_status,tx_count
+C101061,0.9947,ML Tier 3,1,log_pix_in,log_annual_income,distinct_merchants
+C102222,0.9947,ML Tier 3,-1,log_pix_in,log_annual_income,mean_merchant_chargeback
+C101737,0.9946,ML Tier 3,1,log_pix_in,count_anon_events,log_wire_outflow
+C101121,0.9946,ML Tier 3,-1,log_pix_in,count_anon_events,log_wire_outflow
+C102439,0.9946,ML Tier 3,-1,log_pix_in,count_tor_events,count_chargeback_status
+C100197,0.9946,ML Tier 3,-1,log_pix_in,count_anon_events,log_wire_outflow
+C102497,0.9945,ML Tier 3,1,log_annual_income,log_pix_in,count_chargeback_status
+C102273,0.9945,ML Tier 3,1,log_pix_in,fraction_high_mcc,count_anon_events
+C102012,0.9945,ML Tier 3,1,log_annual_income,fraction_high_mcc,log_pix_in
+C101649,0.9945,ML Tier 3,-1,log_pix_in,count_anon_events,count_chargeback_status
+C101761,0.9945,ML Tier 3,1,log_pix_in,count_anon_events,mean_merchant_chargeback
+C100917,0.9945,ML Tier 3,1,log_pix_in,count_anon_events,distinct_merchants
+C100776,0.9945,ML Tier 3,1,log_pix_in,distinct_merchants,tx_count
+C100060,0.9944,ML Tier 3,-1,log_pix_in,count_chargeback_status,log_wire_outflow
+C100241,0.9944,ML Tier 3,-1,log_pix_in,log_annual_income,fraction_high_mcc
+C100913,0.9944,ML Tier 3,1,log_pix_in,mean_merchant_chargeback,count_anon_events
+C100536,0.9944,ML Tier 3,-1,log_pix_in,log_annual_income,count_anon_events
+C101019,0.9944,ML Tier 3,1,log_annual_income,count_anon_events,log_pix_in
+C101038,0.9943,ML Tier 3,1,count_chargeback_status,count_tor_events,log_pix_in
+C101583,0.9943,ML Tier 3,-1,count_anon_events,log_wire_outflow,distinct_merchants
+C100088,0.9943,ML Tier 3,-1,log_pix_in,log_annual_income,log_wire_outflow
+C100147,0.9943,ML Tier 3,-1,log_annual_income,log_pix_in,log_wire_outflow
+C100027,0.9942,ML Tier 3,1,log_pix_in,count_anon_events,distinct_merchants
+C101465,0.9942,ML Tier 3,1,log_pix_in,log_annual_income,count_anon_events
+C101198,0.9941,ML Tier 3,1,log_pix_in,distinct_merchants,tx_count
+C102200,0.9941,ML Tier 3,1,log_pix_in,count_anon_events,log_wire_outflow
+C102364,0.9941,ML Tier 3,1,log_annual_income,count_anon_events,count_tor_events
+C101419,0.9941,ML Tier 3,1,log_pix_in,count_anon_events,log_wire_outflow
+C100564,0.9941,ML Tier 3,-1,log_pix_in,log_annual_income,distinct_merchants
+C101847,0.994,ML Tier 3,-1,log_pix_in,log_wire_outflow,count_chargeback_status
+C101315,0.9939,ML Tier 3,-1,log_pix_in,count_tor_events,count_anon_events
+C102152,0.9939,ML Tier 3,-1,log_pix_in,log_annual_income,log_wire_outflow
+C102069,0.9939,ML Tier 3,-1,log_pix_in,log_annual_income,count_anon_events
+C100469,0.9939,ML Tier 3,1,log_pix_in,count_anon_events,log_wire_outflow
+C100611,0.9939,ML Tier 3,1,count_anon_events,log_wire_outflow,distinct_merchants
+C100420,0.9938,ML Tier 3,-1,log_pix_in,count_chargeback_status,distinct_merchants
+C102415,0.9938,ML Tier 3,1,log_pix_in,count_anon_events,count_chargeback_status
+C100631,0.9938,ML Tier 3,-1,log_annual_income,log_pix_in,distinct_merchants
+C102377,0.9936,ML Tier 3,-1,count_tor_events,count_anon_events,log_wire_outflow
+C101702,0.9936,ML Tier 3,-1,log_annual_income,log_pix_in,log_wire_outflow
+C100006,0.9935,ML Tier 3,-1,log_pix_in,count_anon_events,count_chargeback_status
+C100043,0.9935,ML Tier 3,-1,log_pix_in,log_annual_income,mean_merchant_chargeback
+C100931,0.9935,ML Tier 3,1,log_annual_income,count_anon_events,count_tor_events
+C101405,0.9935,ML Tier 3,-1,log_pix_in,tx_count,log_wire_outflow
+C101960,0.9935,ML Tier 3,-1,log_annual_income,log_pix_in,distinct_merchants
+C101756,0.9935,ML Tier 3,1,log_annual_income,count_tor_events,log_wire_outflow
+C101796,0.9934,ML Tier 3,1,log_annual_income,log_pix_in,count_anon_events
+C101456,0.9934,ML Tier 3,1,log_annual_income,log_pix_in,mean_merchant_chargeback
+C100363,0.9934,ML Tier 3,-1,log_pix_in,count_anon_events,distinct_merchants
+C100993,0.9934,ML Tier 3,-1,log_pix_in,log_annual_income,distinct_merchants
+C102455,0.9934,ML Tier 3,-1,log_pix_in,log_total_outflow,count_anon_events
+C101534,0.9933,ML Tier 3,1,log_pix_in,log_annual_income,distinct_merchants
+C102226,0.9933,ML Tier 3,1,log_pix_in,count_anon_events,tx_count
+C101750,0.9933,ML Tier 3,-1,log_pix_in,count_anon_events,tx_count
+C101497,0.9933,ML Tier 3,-1,log_pix_in,log_annual_income,count_anon_events
+C100175,0.9932,ML Tier 3,-1,log_annual_income,log_pix_in,count_anon_events
+C102409,0.9932,ML Tier 3,-1,log_pix_in,log_annual_income,fraction_high_mcc
+C100789,0.9932,ML Tier 3,-1,log_pix_in,log_annual_income,distinct_merchants
+C101469,0.9932,ML Tier 3,-1,log_pix_in,count_anon_events,count_tor_events
+C100115,0.993,ML Tier 3,-1,log_wire_outflow,count_chargeback_status,log_pix_in
+C100739,0.993,ML Tier 3,-1,log_pix_in,log_annual_income,count_chargeback_status
+C101564,0.993,ML Tier 3,1,log_annual_income,log_pix_in,mean_merchant_chargeback
+C102063,0.993,ML Tier 3,-1,log_annual_income,log_pix_in,distinct_merchants
+C102029,0.993,ML Tier 3,1,log_annual_income,log_pix_in,count_anon_events
+C102137,0.9929,ML Tier 3,1,log_pix_in,count_anon_events,count_chargeback_status
+C101416,0.9928,ML Tier 3,-1,log_pix_in,count_anon_events,count_tor_events
+C100828,0.9928,ML Tier 3,1,count_anon_events,log_wire_outflow,count_tor_events
+C100745,0.9928,ML Tier 3,1,log_pix_in,count_tor_events,log_annual_income
+C100179,0.9928,ML Tier 3,-1,log_pix_in,log_annual_income,count_anon_events
+C100419,0.9928,ML Tier 3,-1,log_pix_in,log_annual_income,count_chargeback_status
+C101072,0.9928,ML Tier 3,-1,log_pix_in,log_annual_income,log_wire_outflow
+C102245,0.9927,ML Tier 3,-1,log_annual_income,log_pix_in,count_anon_events
+C101644,0.9927,ML Tier 3,1,log_pix_in,count_anon_events,log_wire_outflow
+C100592,0.9926,ML Tier 3,-1,log_pix_in,log_wire_outflow,distinct_merchants
+C100866,0.9926,ML Tier 3,1,log_pix_in,count_chargeback_status,mean_merchant_chargeback
+C100199,0.9926,ML Tier 3,1,log_pix_in,log_annual_income,count_tor_events
+C102204,0.9926,ML Tier 3,1,log_pix_in,count_anon_events,count_tor_events
+C102174,0.9926,ML Tier 3,-1,log_pix_in,log_wire_outflow,tx_count
+C100568,0.9926,ML Tier 3,1,log_pix_in,log_annual_income,count_anon_events
+C101037,0.9925,ML Tier 3,-1,count_anon_events,count_tor_events,log_wire_outflow
+C101647,0.9925,ML Tier 3,1,log_pix_in,count_anon_events,tx_count
+C100176,0.9925,Routine,-1,log_pix_in,log_wire_outflow,distinct_merchants
+C101237,0.9925,ML Tier 3,-1,log_pix_in,mean_merchant_chargeback,count_tor_events
+C100151,0.9925,ML Tier 3,1,log_pix_in,log_annual_income,count_anon_events
+C100892,0.9925,ML Tier 3,-1,count_anon_events,log_wire_outflow,distinct_merchants
+C100994,0.9924,Routine,1,log_annual_income,count_anon_events,log_pix_in
+C100909,0.9924,Routine,-1,log_wire_outflow,count_chargeback_status,log_pix_in
+C101289,0.9924,Routine,-1,log_pix_in,count_chargeback_status,log_wire_outflow
+C102036,0.9923,Routine,-1,log_pix_in,count_tor_events,count_anon_events
+C102257,0.9923,Routine,1,log_pix_in,count_anon_events,count_tor_events
+C101605,0.9923,Routine,-1,count_anon_events,count_tor_events,log_wire_outflow
+C102462,0.9923,Routine,1,log_pix_in,count_tor_events,count_anon_events
+C101433,0.9923,Routine,-1,count_anon_events,log_pix_in,distinct_merchants
+C101391,0.9922,Routine,-1,log_pix_in,log_annual_income,count_chargeback_status
+C101814,0.9922,Routine,-1,log_pix_in,log_wire_outflow,distinct_merchants
+C100467,0.9922,Routine,1,count_anon_events,log_pix_in,count_tor_events
+C101460,0.9921,Routine,1,log_annual_income,count_anon_events,distinct_merchants
+C102492,0.9921,Routine,-1,log_pix_in,count_chargeback_status,log_wire_outflow
+C101470,0.992,Routine,-1,log_wire_outflow,log_pix_in,distinct_merchants
+C101410,0.992,Routine,1,log_annual_income,count_anon_events,log_pix_in
+C100744,0.9919,Routine,1,log_annual_income,count_anon_events,log_pix_in
+C101586,0.9919,Routine,-1,log_pix_in,count_chargeback_status,log_wire_outflow
+C101998,0.9919,Routine,1,log_pix_in,log_annual_income,count_anon_events
+C101754,0.9919,Routine,-1,log_pix_in,count_chargeback_status,log_wire_outflow
+C102315,0.9919,Routine,-1,log_pix_in,count_tor_events,log_wire_outflow
+C100136,0.9919,Routine,1,count_anon_events,mean_merchant_chargeback,count_chargeback_status
+C101776,0.9919,Routine,1,log_pix_in,count_anon_events,distinct_merchants
+C100859,0.9918,Routine,1,log_pix_in,count_tor_events,log_annual_income
+C101626,0.9918,Routine,1,log_wire_outflow,log_pix_in,distinct_merchants
+C100598,0.9918,Routine,-1,log_pix_in,log_annual_income,log_wire_outflow
+C101142,0.9917,Routine,-1,count_anon_events,log_pix_in,distinct_merchants
+C100156,0.9917,Routine,-1,count_chargeback_status,log_wire_outflow,log_pix_in
+C102495,0.9917,Routine,1,log_annual_income,log_pix_in,count_anon_events
+C100466,0.9917,Routine,-1,log_pix_in,count_anon_events,log_wire_outflow
+C100556,0.9917,Routine,1,count_anon_events,log_pix_in,mean_merchant_chargeback
+C102198,0.9916,Routine,1,log_pix_in,count_chargeback_status,log_wire_outflow
+C101325,0.9916,Routine,-1,log_annual_income,log_pix_in,count_chargeback_status
+C100535,0.9916,Routine,-1,log_pix_in,log_annual_income,count_anon_events
+C100465,0.9916,Routine,-1,log_pix_in,count_chargeback_status,log_wire_outflow
+C101339,0.9916,Routine,-1,log_annual_income,log_pix_in,mean_merchant_chargeback
+C100217,0.9916,Routine,-1,log_pix_in,log_total_outflow,log_annual_income
+C102001,0.9915,Routine,1,log_pix_in,log_wire_outflow,distinct_merchants
+C100183,0.9914,Routine,1,log_annual_income,count_anon_events,log_pix_in
+C101793,0.9914,Routine,-1,log_pix_in,count_anon_events,log_wire_outflow
+C100439,0.9914,Routine,1,log_pix_in,count_tor_events,count_chargeback_status
+C100077,0.9914,Routine,-1,log_annual_income,log_pix_in,distinct_merchants
+C101946,0.9914,Routine,-1,log_pix_in,count_anon_events,tx_count
+C100734,0.9913,Routine,1,log_pix_in,log_annual_income,count_tor_events
+C100753,0.9913,Routine,-1,log_pix_in,log_annual_income,count_anon_events
+C102457,0.9912,Routine,-1,log_pix_in,log_wire_outflow,count_chargeback_status
+C102237,0.9912,Routine,1,count_tor_events,log_pix_in,log_wire_outflow
+C102295,0.9912,Routine,-1,log_pix_in,log_annual_income,count_anon_events
+C101924,0.9912,Routine,1,log_pix_in,log_annual_income,mean_merchant_chargeback
+C101739,0.9911,Routine,-1,count_tor_events,log_pix_in,count_anon_events
+C100261,0.991,Routine,-1,log_pix_in,log_wire_outflow,count_tor_events
+C100877,0.991,Routine,-1,log_pix_in,log_annual_income,count_anon_events
+C102444,0.991,Routine,1,log_annual_income,log_pix_in,distinct_merchants
+C102269,0.9909,Routine,-1,count_tor_events,log_pix_in,log_annual_income
+C101795,0.9909,Routine,-1,log_pix_in,log_wire_outflow,mean_merchant_chargeback
+C101000,0.9909,Routine,1,log_pix_in,count_anon_events,distinct_merchants
+C101105,0.9909,Routine,-1,log_pix_in,count_chargeback_status,log_wire_outflow
+C101195,0.9908,Routine,1,log_pix_in,count_anon_events,distinct_merchants
+C100036,0.9908,Routine,-1,log_annual_income,count_anon_events,mean_merchant_chargeback
+C101220,0.9908,Routine,1,log_pix_in,count_tor_events,distinct_merchants
+C101769,0.9907,Routine,1,log_pix_in,log_annual_income,count_anon_events
+C100860,0.9907,Routine,1,log_wire_outflow,count_chargeback_status,tx_count
+C101587,0.9906,Routine,-1,count_anon_events,log_pix_in,distinct_merchants
+C102110,0.9906,Routine,-1,log_pix_in,log_annual_income,count_anon_events
+C101957,0.9906,Routine,1,count_tor_events,log_pix_in,log_annual_income
+C101251,0.9905,Routine,-1,log_pix_in,log_annual_income,log_wire_outflow
+C100885,0.9905,Routine,1,log_annual_income,count_tor_events,count_anon_events
+C101783,0.9904,Routine,1,log_pix_in,count_anon_events,distinct_merchants
+C101930,0.9904,Routine,-1,log_pix_in,count_chargeback_status,log_wire_outflow
+C102126,0.9904,Routine,-1,log_pix_in,log_wire_outflow,distinct_merchants
+C100500,0.9904,Routine,1,log_annual_income,log_pix_in,count_chargeback_status
+C100628,0.9903,Routine,-1,log_pix_in,count_anon_events,log_wire_outflow
+C101033,0.9903,Routine,-1,log_pix_in,count_chargeback_status,count_anon_events
+C101508,0.9903,Routine,1,log_pix_in,count_chargeback_status,log_wire_outflow
+C101971,0.9903,Routine,-1,log_pix_in,log_annual_income,count_anon_events
+C101937,0.9903,Routine,1,log_annual_income,log_pix_in,distinct_merchants
+C101408,0.9903,Routine,1,count_anon_events,log_pix_in,log_wire_outflow
+C102361,0.9903,Routine,1,log_annual_income,count_anon_events,count_tor_events
+C101717,0.9903,Routine,-1,log_pix_in,log_annual_income,count_anon_events
+C102158,0.9902,Routine,1,log_pix_in,count_tor_events,count_chargeback_status
+C100567,0.9901,Routine,-1,log_pix_in,log_annual_income,count_anon_events
+C101808,0.9901,Routine,1,log_pix_in,count_tor_events,log_wire_outflow
+C100648,0.9901,Routine,-1,log_pix_in,log_annual_income,log_wire_outflow
+C101018,0.9901,Routine,1,log_pix_in,log_wire_outflow,distinct_merchants
+C100196,0.9901,Routine,1,count_anon_events,log_pix_in,count_tor_events
+C100213,0.9899,Routine,1,log_pix_in,log_annual_income,count_anon_events
+C100930,0.9899,Routine,-1,log_pix_in,log_annual_income,count_anon_events
+C101117,0.9898,Routine,-1,count_tor_events,count_anon_events,log_pix_in
+C102031,0.9898,Routine,-1,log_pix_in,log_annual_income,mean_merchant_chargeback
+C101166,0.9898,Routine,1,log_annual_income,distinct_merchants,log_pix_in
+C101897,0.9897,Routine,1,log_annual_income,count_anon_events,distinct_merchants
+C101677,0.9896,Routine,-1,log_annual_income,count_anon_events,log_wire_outflow
+C101344,0.9896,Routine,1,log_pix_in,mean_merchant_chargeback,count_chargeback_status
+C100292,0.9895,Routine,-1,log_pix_in,count_anon_events,log_wire_outflow
+C100228,0.9894,Routine,1,log_pix_in,log_annual_income,count_anon_events
+C101190,0.9894,Routine,1,log_annual_income,count_anon_events,log_pix_in
+C100182,0.9894,Routine,1,log_pix_in,distinct_merchants,tx_count
+C101881,0.9894,Routine,1,log_annual_income,log_pix_in,count_anon_events
+C100173,0.9893,Routine,-1,log_pix_in,count_anon_events,distinct_merchants
+C101488,0.9893,Routine,-1,log_pix_in,count_anon_events,log_wire_outflow
+C100317,0.9893,Routine,-1,log_pix_in,log_wire_outflow,distinct_merchants
+C101600,0.9892,Routine,-1,log_annual_income,log_pix_in,log_wire_outflow
+C100807,0.9892,Routine,-1,log_pix_in,log_annual_income,count_chargeback_status
+C102404,0.9891,Routine,-1,log_annual_income,count_anon_events,mean_merchant_chargeback
+C102028,0.9891,Routine,-1,log_pix_in,count_anon_events,count_tor_events
+C102493,0.9891,Routine,-1,log_annual_income,log_wire_outflow,distinct_merchants
+C101967,0.9891,Routine,1,log_pix_in,log_annual_income,count_tor_events
+C101961,0.9889,Routine,-1,log_pix_in,count_chargeback_status,log_wire_outflow
+C101208,0.9889,Routine,1,log_pix_in,count_anon_events,tx_count
+C100132,0.9889,Routine,-1,log_pix_in,count_anon_events,distinct_merchants
+C102087,0.9888,Routine,1,log_pix_in,log_wire_outflow,mean_merchant_chargeback
+C101953,0.9887,Routine,-1,log_pix_in,count_anon_events,distinct_merchants
+C101712,0.9886,Routine,-1,log_pix_in,log_wire_outflow,count_chargeback_status
+C101563,0.9886,Routine,1,count_anon_events,log_wire_outflow,distinct_merchants
+C100757,0.9885,Routine,1,log_pix_in,log_annual_income,count_chargeback_status
+C101221,0.9885,Routine,-1,log_pix_in,log_annual_income,count_anon_events
+C100815,0.9885,Routine,1,log_pix_outflow,log_pix_in,log_annual_income
+C101263,0.9884,Routine,1,log_pix_in,fraction_high_mcc,count_anon_events
+C102399,0.9884,Routine,-1,log_pix_in,count_anon_events,count_chargeback_status
+C101537,0.9884,Routine,-1,log_pix_in,log_annual_income,log_wire_outflow
+C101689,0.9884,Routine,-1,log_pix_in,count_anon_events,count_chargeback_status
+C101874,0.9884,Routine,-1,log_pix_in,count_anon_events,log_wire_outflow
+C100870,0.9883,Routine,1,log_pix_in,count_tor_events,log_wire_outflow
+C101378,0.9883,Routine,1,count_anon_events,mean_merchant_chargeback,fraction_high_mcc
+C100695,0.9882,Routine,-1,log_pix_in,count_anon_events,log_wire_outflow
+C101047,0.9882,Routine,1,log_annual_income,count_anon_events,log_wire_outflow
+C102223,0.9882,Routine,1,log_pix_in,count_anon_events,distinct_merchants
+C102011,0.988,Routine,1,log_pix_in,count_tor_events,log_total_outflow
+C100990,0.988,Routine,-1,log_pix_in,count_tor_events,count_chargeback_status
+C101820,0.9879,Routine,-1,log_pix_in,log_annual_income,log_wire_outflow
+C100774,0.9878,Routine,-1,log_pix_in,count_chargeback_status,log_wire_outflow
+C100940,0.9878,Routine,1,log_pix_in,log_annual_income,count_anon_events
+C102367,0.9877,Routine,-1,log_pix_in,log_annual_income,count_anon_events
+C101501,0.9876,Routine,-1,log_pix_in,log_annual_income,count_chargeback_status
+C100134,0.9875,Routine,-1,log_pix_in,count_anon_events,distinct_merchants
+C102372,0.9875,Routine,-1,log_pix_in,log_annual_income,distinct_merchants
+C101977,0.9875,Routine,1,log_annual_income,distinct_merchants,log_total_outflow
+C100361,0.9875,Routine,-1,log_pix_in,log_annual_income,count_anon_events
+C100032,0.9874,Routine,-1,count_anon_events,log_pix_in,log_pix_outflow
+C100263,0.9874,Routine,-1,log_wire_outflow,count_chargeback_status,log_pix_in
+C100534,0.9874,Routine,1,log_pix_in,log_annual_income,count_anon_events
+C102035,0.9874,Routine,1,log_pix_in,count_anon_events,fraction_high_mcc
+C101941,0.9873,Routine,1,count_tor_events,log_pix_in,count_anon_events
+C101050,0.9873,Routine,1,count_tor_events,log_pix_in,log_annual_income
+C101748,0.9872,Routine,-1,log_pix_in,count_anon_events,count_tor_events
+C101377,0.9872,Routine,-1,log_pix_in,count_chargeback_status,log_wire_outflow
+C100896,0.987,Routine,-1,log_pix_in,count_anon_events,log_wire_outflow
+C101627,0.987,Routine,-1,log_pix_in,count_anon_events,mean_merchant_chargeback
+C101222,0.987,Routine,1,log_pix_in,count_anon_events,tx_count
+C101427,0.9869,Routine,-1,log_pix_in,log_annual_income,count_chargeback_status
+C100187,0.9869,Routine,-1,log_pix_in,count_anon_events,count_chargeback_status
+C102281,0.9869,Routine,1,log_pix_in,count_anon_events,tx_count
+C101358,0.9867,Routine,-1,log_pix_in,log_annual_income,count_anon_events
+C101317,0.9867,Routine,-1,log_pix_in,count_chargeback_status,log_wire_outflow
+C100987,0.9866,Routine,1,count_chargeback_status,tx_count,log_wire_outflow
+C100008,0.9866,Routine,-1,log_annual_income,distinct_merchants,log_total_outflow
+C100488,0.9865,Routine,-1,log_wire_outflow,count_chargeback_status,distinct_merchants
+C100234,0.9865,Routine,-1,count_anon_events,log_wire_outflow,count_chargeback_status
+C101580,0.9864,Routine,-1,count_anon_events,log_wire_outflow,log_pix_in
+C101409,0.9864,Routine,-1,log_pix_in,count_chargeback_status,log_annual_income
+C101280,0.9864,Routine,-1,log_wire_outflow,log_pix_in,count_chargeback_status
+C100404,0.9863,Routine,-1,log_pix_in,count_anon_events,tx_count
+C101859,0.9862,Routine,1,log_pix_in,count_anon_events,count_chargeback_status
+C101095,0.9862,Routine,-1,log_pix_in,log_wire_outflow,log_annual_income
+C101504,0.9862,Routine,-1,log_annual_income,count_chargeback_status,log_pix_in
+C101028,0.9862,Routine,1,log_pix_in,count_anon_events,count_chargeback_status
+C101797,0.9861,Routine,1,log_pix_in,log_annual_income,count_anon_events
+C100331,0.9859,Routine,-1,log_annual_income,log_wire_outflow,distinct_merchants
+C101467,0.9858,Routine,1,log_pix_in,count_anon_events,log_wire_outflow
+C101476,0.9858,Routine,-1,log_pix_in,log_annual_income,count_anon_events
+C101654,0.9857,Routine,1,count_anon_events,log_pix_in,log_wire_outflow
+C101809,0.9856,Routine,1,count_anon_events,log_pix_in,log_wire_outflow
+C100169,0.9856,Routine,-1,count_anon_events,count_tor_events,log_wire_outflow
+C101848,0.9856,Routine,1,log_annual_income,log_pix_in,count_chargeback_status
+C101899,0.9856,Routine,-1,log_pix_in,count_anon_events,log_wire_outflow
+C100640,0.9856,Routine,-1,log_pix_in,count_anon_events,count_chargeback_status
+C101867,0.9855,Routine,-1,log_pix_in,fraction_high_mcc,log_wire_outflow
+C101876,0.9854,Routine,-1,log_pix_in,count_anon_events,distinct_merchants
+C101102,0.9853,Routine,-1,log_pix_in,log_annual_income,count_chargeback_status
+C100057,0.9852,Routine,1,log_pix_in,log_annual_income,count_tor_events
+C100968,0.9852,Routine,-1,log_pix_in,count_tor_events,log_wire_outflow
+C101664,0.9852,Routine,-1,count_anon_events,count_tor_events,log_wire_outflow
+C100886,0.9851,Routine,1,count_anon_events,log_wire_outflow,distinct_merchants
+C101252,0.985,Routine,-1,count_anon_events,mean_merchant_chargeback,log_pix_in
+C100853,0.985,Routine,1,log_pix_in,log_annual_income,count_anon_events
+C101265,0.9849,Routine,-1,log_pix_in,log_annual_income,count_tor_events
+C101942,0.9849,Routine,1,log_pix_in,log_wire_outflow,log_annual_income
+C101474,0.9849,Routine,-1,log_pix_in,count_anon_events,count_tor_events
+C100554,0.9848,Routine,1,log_annual_income,count_anon_events,log_pix_in
+C100587,0.9848,Routine,-1,log_pix_in,mean_merchant_chargeback,count_chargeback_status
+C100697,0.9848,Routine,-1,log_pix_in,count_anon_events,distinct_merchants
+C101738,0.9847,Routine,-1,log_pix_in,count_chargeback_status,log_wire_outflow
+C100003,0.9847,Routine,-1,log_pix_in,log_wire_outflow,distinct_merchants
+C100326,0.9847,Routine,-1,log_pix_in,log_wire_outflow,log_annual_income
+C101127,0.9846,Routine,-1,log_pix_in,count_anon_events,count_tor_events
+C100378,0.9845,Routine,1,log_pix_in,log_annual_income,count_anon_events
+C100951,0.9845,Routine,1,log_annual_income,log_pix_in,count_anon_events
+C101384,0.9844,Routine,-1,log_pix_in,count_anon_events,mean_merchant_chargeback
+C100959,0.9844,Routine,-1,log_pix_in,count_tor_events,count_anon_events
+C101650,0.9842,Routine,-1,log_annual_income,log_pix_in,count_chargeback_status
+C101162,0.9842,Routine,-1,log_pix_in,log_annual_income,count_anon_events
+C101659,0.9842,Routine,-1,log_pix_in,count_chargeback_status,log_wire_outflow
+C101615,0.9841,Routine,-1,count_anon_events,log_pix_in,count_tor_events
+C101276,0.9841,Routine,-1,log_pix_in,count_anon_events,count_chargeback_status
+C101523,0.9841,Routine,-1,log_pix_in,count_anon_events,log_wire_outflow
+C102294,0.9841,Routine,-1,log_pix_in,count_anon_events,distinct_merchants
+C100949,0.9841,Routine,-1,log_pix_in,log_annual_income,distinct_merchants
+C100456,0.9841,Routine,-1,log_pix_in,log_annual_income,count_anon_events
+C101725,0.9841,Routine,-1,log_pix_in,log_annual_income,distinct_merchants
+C100113,0.9839,Routine,-1,log_pix_in,count_tor_events,count_anon_events
+C101744,0.9839,Routine,1,log_pix_in,log_annual_income,mean_merchant_chargeback
+C101743,0.9839,Routine,1,log_annual_income,log_pix_in,distinct_merchants
+C101611,0.9839,Routine,1,log_pix_in,count_tor_events,log_annual_income
+C102456,0.9838,Routine,-1,log_pix_in,count_anon_events,mean_merchant_chargeback
+C100061,0.9838,Routine,-1,log_pix_in,log_annual_income,count_anon_events
+C100225,0.9837,Routine,-1,log_pix_in,count_anon_events,distinct_merchants
+C100382,0.9836,Routine,-1,log_pix_in,log_annual_income,count_chargeback_status
+C101120,0.9836,Routine,-1,log_pix_in,count_chargeback_status,log_wire_outflow
+C100906,0.9834,Routine,-1,log_pix_in,log_annual_income,count_chargeback_status
+C100822,0.9834,Routine,-1,log_pix_in,distinct_merchants,log_wire_outflow
+C101854,0.9834,Routine,1,log_annual_income,mean_merchant_chargeback,log_wire_outflow
+C100314,0.9834,Routine,-1,log_annual_income,count_chargeback_status,log_wire_outflow
+C101511,0.9833,Routine,-1,log_pix_in,log_wire_outflow,log_annual_income
+C100067,0.9833,Routine,1,count_anon_events,count_tor_events,log_wire_outflow
+C101126,0.9831,Routine,1,log_pix_in,count_anon_events,tx_count
+C100865,0.983,Routine,-1,count_chargeback_status,log_pix_in,log_wire_outflow
+C101701,0.983,Routine,1,log_pix_in,count_anon_events,mean_merchant_chargeback
+C101249,0.983,Routine,-1,log_pix_in,count_anon_events,log_wire_outflow
+C101555,0.9829,Routine,-1,log_pix_in,log_annual_income,count_chargeback_status
+C100256,0.9827,Routine,-1,log_pix_in,log_wire_outflow,distinct_merchants
+C101283,0.9825,Routine,1,log_pix_in,log_annual_income,log_pix_outflow
+C100019,0.9822,Routine,-1,log_pix_in,log_wire_outflow,distinct_merchants
+C100025,0.9822,Routine,-1,log_annual_income,count_anon_events,log_pix_in
+C102172,0.9822,Routine,1,log_pix_in,log_annual_income,count_anon_events
+C102173,0.9821,Routine,-1,log_pix_in,count_anon_events,distinct_merchants
+C100332,0.9821,Routine,-1,log_annual_income,log_pix_in,log_wire_outflow
+C102397,0.982,Routine,-1,log_pix_in,count_anon_events,count_tor_events
+C100468,0.982,Routine,1,log_pix_in,count_anon_events,log_wire_outflow
+C100635,0.982,Routine,-1,log_pix_in,log_wire_outflow,count_chargeback_status
+C101773,0.9819,Routine,1,count_anon_events,log_pix_in,count_chargeback_status
+C100596,0.9819,Routine,-1,log_pix_in,log_wire_outflow,distinct_merchants
+C101092,0.9819,Routine,-1,log_pix_in,log_wire_outflow,log_annual_income
+C101064,0.9817,Routine,-1,log_pix_in,log_annual_income,log_wire_outflow
+C100266,0.9817,Routine,-1,count_anon_events,distinct_merchants,log_pix_in
+C100517,0.9817,Routine,-1,count_anon_events,mean_merchant_chargeback,log_wire_outflow
+C100410,0.9816,Routine,-1,log_annual_income,count_anon_events,count_tor_events
+C101595,0.9815,Routine,-1,log_pix_in,count_anon_events,log_annual_income
+C101763,0.9814,Routine,-1,log_pix_in,log_annual_income,count_tor_events
+C101302,0.9813,Routine,-1,log_total_outflow,count_anon_events,log_pix_in
+C101535,0.9812,Routine,1,log_pix_in,log_wire_outflow,log_annual_income
+C101919,0.9812,Routine,1,log_annual_income,log_pix_in,count_anon_events
+C100620,0.9811,Routine,-1,log_annual_income,log_pix_in,log_wire_outflow
+C101266,0.9811,Routine,1,log_pix_in,log_annual_income,mean_merchant_chargeback
+C101906,0.9809,Routine,-1,log_pix_in,mean_merchant_chargeback,log_wire_outflow
+C101816,0.9809,Routine,1,log_annual_income,count_anon_events,log_pix_in
+C101691,0.9808,Routine,-1,log_pix_in,log_total_outflow,count_anon_events
+C101210,0.9804,Routine,-1,log_pix_in,count_anon_events,log_wire_outflow
+C101435,0.9804,Routine,-1,log_wire_outflow,count_chargeback_status,log_annual_income
+C100142,0.9802,Routine,1,log_annual_income,count_tor_events,log_pix_in
+C102225,0.9802,Routine,1,log_annual_income,count_chargeback_status,log_total_outflow
+C100615,0.9802,Routine,1,log_pix_in,log_annual_income,count_tor_events
+C102463,0.9802,Routine,-1,log_annual_income,log_pix_in,distinct_merchants
+C100701,0.9801,Routine,1,log_pix_in,count_anon_events,log_wire_outflow
+C101390,0.9801,Routine,-1,log_annual_income,log_pix_in,log_wire_outflow
+C100674,0.98,Routine,-1,log_pix_in,count_tor_events,log_wire_outflow
+C101989,0.9799,Routine,-1,log_pix_in,count_anon_events,count_chargeback_status
+C102472,0.9798,Routine,-1,log_pix_in,count_anon_events,log_wire_outflow
+C101070,0.9797,Routine,-1,log_annual_income,count_anon_events,count_chargeback_status
+C101878,0.9797,Routine,-1,log_pix_in,log_wire_outflow,count_chargeback_status
+C100736,0.9796,Routine,1,count_anon_events,mean_merchant_chargeback,log_wire_outflow
+C102322,0.9794,Routine,-1,count_anon_events,log_wire_outflow,log_pix_in
+C100149,0.9794,Routine,-1,log_pix_in,mean_merchant_chargeback,count_chargeback_status
+C100062,0.9793,Routine,-1,log_pix_in,distinct_merchants,log_wire_outflow
+C100131,0.9793,Routine,1,log_pix_in,count_tor_events,count_chargeback_status
+C100236,0.9792,Routine,1,log_pix_in,count_anon_events,mean_merchant_chargeback
+C101165,0.9791,Routine,-1,count_anon_events,log_wire_outflow,distinct_merchants
+C101108,0.9791,Routine,-1,log_pix_in,distinct_merchants,tx_count
+C100577,0.9791,Routine,-1,log_pix_in,log_wire_outflow,distinct_merchants
+C101981,0.9791,Routine,-1,log_pix_in,distinct_merchants,log_wire_outflow
+C100633,0.979,Routine,-1,log_pix_in,mean_merchant_chargeback,log_annual_income
+C101026,0.979,Routine,1,log_pix_in,log_total_outflow,log_annual_income
+C101765,0.9789,Routine,-1,log_pix_in,count_chargeback_status,log_wire_outflow
+C101068,0.9788,Routine,1,log_pix_outflow,log_annual_income,count_anon_events
+C100424,0.9788,Routine,-1,log_pix_in,log_annual_income,count_anon_events
+C101215,0.9787,Routine,-1,log_pix_in,distinct_merchants,log_wire_outflow
+C100603,0.9787,Routine,-1,log_pix_in,count_tor_events,log_wire_outflow
+C100887,0.9786,Routine,-1,log_pix_in,count_anon_events,log_wire_outflow
+C100594,0.9785,Routine,-1,log_pix_in,distinct_merchants,log_wire_outflow
+C101723,0.9782,Routine,-1,log_pix_in,mean_merchant_chargeback,count_chargeback_status
+C101920,0.9782,Routine,-1,log_pix_in,count_anon_events,log_wire_outflow
+C100721,0.9781,Routine,1,log_annual_income,count_anon_events,log_wire_outflow
+C100699,0.9781,Routine,-1,log_pix_in,log_wire_outflow,mean_merchant_chargeback
+C101487,0.978,Routine,1,log_pix_in,log_annual_income,count_anon_events
+C101180,0.978,Routine,-1,log_pix_in,count_anon_events,tx_count
+C102039,0.978,Routine,1,log_pix_in,log_annual_income,count_tor_events
+C102149,0.9779,Routine,-1,log_pix_in,distinct_merchants,log_wire_outflow
+C101539,0.9779,Routine,-1,log_pix_in,count_anon_events,count_tor_events
+C100915,0.9779,Routine,-1,log_pix_in,count_anon_events,mean_merchant_chargeback
+C100244,0.9777,Routine,1,log_pix_outflow,log_pix_in,log_annual_income
+C102095,0.9777,Routine,-1,log_annual_income,count_tor_events,count_anon_events
+C102362,0.9777,Routine,-1,log_pix_in,count_chargeback_status,log_wire_outflow
+C101908,0.9776,Routine,1,count_anon_events,log_wire_outflow,count_chargeback_status
+C101328,0.9776,Routine,1,log_pix_in,log_wire_outflow,distinct_merchants
+C101177,0.9776,Routine,1,log_pix_in,count_tor_events,count_anon_events
+C100280,0.9775,Routine,-1,log_pix_in,count_chargeback_status,log_wire_outflow
+C101912,0.9774,Routine,-1,log_pix_in,count_chargeback_status,log_wire_outflow
+C100878,0.9772,Routine,-1,count_tor_events,count_anon_events,log_pix_in
+C100141,0.9772,Routine,-1,log_pix_in,count_anon_events,count_chargeback_status
+C100593,0.9772,Routine,-1,log_pix_in,count_chargeback_status,log_annual_income
+C100544,0.9771,Routine,-1,log_pix_in,count_chargeback_status,mean_merchant_chargeback
+C100028,0.9771,Routine,1,log_pix_in,log_annual_income,log_wire_outflow
+C100817,0.977,Routine,1,log_annual_income,log_pix_in,count_anon_events
+C102206,0.9766,Routine,1,count_anon_events,log_pix_in,mean_merchant_chargeback
+C101267,0.9765,Routine,1,log_annual_income,distinct_merchants,log_total_outflow
+C100224,0.9764,Routine,-1,log_pix_in,count_chargeback_status,log_wire_outflow
+C101203,0.9764,Routine,-1,log_pix_in,count_chargeback_status,log_annual_income
+C100504,0.9764,Routine,-1,log_pix_in,log_annual_income,count_anon_events
+C100297,0.9762,Routine,-1,log_annual_income,log_pix_in,count_anon_events
+C101151,0.9761,Routine,-1,count_chargeback_status,log_pix_in,log_annual_income
+C101733,0.976,Routine,-1,log_pix_in,count_chargeback_status,log_wire_outflow
+C100391,0.976,Routine,-1,log_pix_in,count_anon_events,log_wire_outflow
+C102412,0.976,Routine,-1,log_pix_in,log_annual_income,log_wire_outflow
+C102395,0.9757,Routine,-1,log_pix_in,log_wire_outflow,log_pix_outflow
+C101901,0.9755,Routine,-1,log_pix_in,count_anon_events,log_annual_income
+C102251,0.9755,Routine,1,count_tor_events,count_anon_events,log_pix_in
+C101888,0.9754,Routine,-1,log_annual_income,log_pix_in,count_anon_events
+C101179,0.9753,Routine,-1,log_pix_in,log_wire_outflow,distinct_merchants
+C100722,0.9752,Routine,-1,log_pix_in,count_chargeback_status,distinct_merchants
+C100201,0.9751,Routine,-1,count_anon_events,log_wire_outflow,distinct_merchants
+C100861,0.975,Routine,-1,count_anon_events,log_pix_in,log_wire_outflow
+C101782,0.9749,Routine,-1,log_annual_income,distinct_merchants,count_chargeback_status
+C100657,0.9749,Routine,-1,log_annual_income,log_pix_in,log_wire_outflow
+C100194,0.9747,Routine,-1,count_tor_events,count_anon_events,log_wire_outflow
+C102311,0.9746,Routine,-1,log_pix_in,log_annual_income,count_anon_events
+C101922,0.9746,Routine,1,log_pix_in,count_chargeback_status,mean_merchant_chargeback
+C100205,0.9745,Routine,-1,count_tor_events,log_pix_in,count_anon_events
+C101320,0.9744,Routine,1,log_pix_in,count_tor_events,count_chargeback_status
+C101256,0.9744,Routine,-1,log_pix_in,distinct_merchants,tx_count
+C101406,0.9743,Routine,-1,log_pix_in,count_tor_events,log_wire_outflow
+C101057,0.9743,Routine,-1,log_pix_in,count_anon_events,log_wire_outflow
+C101640,0.9743,Routine,-1,log_pix_in,count_chargeback_status,count_anon_events
+C101815,0.9743,Routine,-1,log_pix_in,count_anon_events,log_wire_outflow
+C102192,0.9743,Routine,-1,log_annual_income,log_pix_in,log_wire_outflow
+C101193,0.9742,Routine,1,count_anon_events,count_chargeback_status,mean_merchant_chargeback
+C101948,0.9742,Routine,-1,log_pix_in,log_annual_income,log_wire_outflow
+C100590,0.974,Routine,-1,log_pix_in,distinct_merchants,tx_count
+C101023,0.974,Routine,-1,log_pix_in,mean_merchant_chargeback,distinct_merchants
+C100808,0.9739,Routine,1,log_pix_in,log_annual_income,count_anon_events
+C100854,0.9739,Routine,1,count_anon_events,log_pix_in,distinct_merchants
+C101232,0.9738,Routine,-1,log_annual_income,log_pix_in,count_chargeback_status
+C101189,0.9737,Routine,-1,log_pix_in,count_anon_events,log_wire_outflow
+C101056,0.9737,Routine,-1,log_pix_in,count_chargeback_status,count_anon_events
+C101270,0.9736,Routine,-1,log_annual_income,log_pix_in,mean_merchant_chargeback
+C102466,0.9735,Routine,-1,log_pix_in,count_anon_events,log_wire_outflow
+C101933,0.9732,Routine,1,log_annual_income,count_chargeback_status,log_total_outflow
+C100746,0.9732,Routine,-1,log_annual_income,log_wire_outflow,distinct_merchants
+C101823,0.9731,Routine,-1,log_pix_in,log_annual_income,count_anon_events
+C100905,0.973,Routine,-1,log_pix_in,log_wire_outflow,distinct_merchants
+C101838,0.973,Routine,-1,log_pix_in,log_wire_outflow,count_chargeback_status
+C101628,0.9729,Routine,-1,log_pix_in,count_chargeback_status,mean_merchant_chargeback
+C102470,0.9725,Routine,-1,log_pix_in,log_annual_income,count_chargeback_status
+C101426,0.9724,Routine,1,log_pix_outflow,log_annual_income,count_tor_events
+C100726,0.9723,Routine,-1,log_pix_in,mean_merchant_chargeback,log_wire_outflow
+C101293,0.9723,Routine,-1,log_pix_in,count_anon_events,log_wire_outflow
+C100273,0.9723,Routine,-1,log_annual_income,log_pix_in,count_anon_events
+C102310,0.9721,Routine,1,count_anon_events,count_chargeback_status,log_wire_outflow
+C101440,0.9721,Routine,1,log_pix_in,count_tor_events,count_chargeback_status
+C100150,0.972,Routine,-1,log_pix_in,count_anon_events,log_wire_outflow
+C101054,0.972,Routine,1,log_pix_in,distinct_merchants,log_wire_outflow
+C100548,0.9719,Routine,-1,log_pix_in,distinct_merchants,log_wire_outflow
+C102219,0.9719,Routine,-1,log_pix_in,log_annual_income,count_chargeback_status
+C100450,0.9718,Routine,-1,log_pix_in,count_anon_events,mean_merchant_chargeback
+C100470,0.9718,Routine,-1,log_pix_in,log_annual_income,tx_count
+C100104,0.9717,Routine,-1,log_annual_income,log_pix_in,log_wire_outflow
+C102419,0.9714,Routine,-1,count_anon_events,log_wire_outflow,distinct_merchants
+C101184,0.9712,Routine,1,log_annual_income,count_anon_events,log_total_outflow
+C102300,0.9711,Routine,-1,count_anon_events,count_tor_events,log_wire_outflow
+C102353,0.971,Routine,-1,log_pix_in,log_annual_income,count_anon_events
+C100872,0.9709,Routine,-1,log_pix_in,log_annual_income,log_pix_outflow
+C100850,0.9708,Routine,-1,log_pix_in,count_tor_events,count_anon_events
+C101518,0.9707,Routine,1,log_pix_in,log_annual_income,count_chargeback_status
+C100348,0.9706,Routine,-1,count_anon_events,count_tor_events,log_wire_outflow
+C100665,0.9704,Routine,-1,log_pix_in,count_chargeback_status,log_wire_outflow
+C100007,0.9704,Routine,-1,log_pix_in,count_anon_events,log_wire_outflow
+C100942,0.9702,Routine,1,log_pix_in,count_anon_events,tx_count
+C102309,0.9702,Routine,-1,log_pix_in,distinct_merchants,log_wire_outflow
+C102425,0.9701,Routine,-1,log_pix_in,log_total_outflow,log_annual_income
+C102111,0.97,Routine,1,log_annual_income,count_tor_events,count_anon_events
+C100935,0.9698,Routine,-1,log_pix_in,log_pix_outflow,count_chargeback_status
+C101735,0.9697,Routine,-1,log_pix_in,count_anon_events,log_wire_outflow
+C100502,0.9697,Routine,-1,log_pix_in,log_annual_income,count_anon_events
+C101637,0.9696,Routine,1,log_pix_in,count_anon_events,distinct_merchants
+C101357,0.9695,Routine,-1,log_pix_in,count_anon_events,log_wire_outflow
+C101760,0.9694,Routine,-1,log_annual_income,log_pix_in,mean_merchant_chargeback
+C101336,0.9693,Routine,-1,log_pix_in,log_annual_income,log_pix_outflow
+C101835,0.9693,Routine,1,count_anon_events,log_wire_outflow,log_pix_in
+C100164,0.9692,Routine,-1,log_pix_in,count_anon_events,count_tor_events
+C101217,0.9692,Routine,-1,log_pix_in,distinct_merchants,tx_count
+C101811,0.9691,Routine,-1,log_wire_outflow,distinct_merchants,tx_count
+C102351,0.969,Routine,-1,log_pix_in,count_anon_events,distinct_merchants
+C102396,0.969,Routine,-1,log_pix_in,log_annual_income,count_chargeback_status
+C101543,0.9688,Routine,-1,log_pix_in,mean_merchant_chargeback,log_wire_outflow
+C102218,0.9687,Routine,1,count_anon_events,count_chargeback_status,distinct_merchants
+C101576,0.9686,Routine,-1,log_pix_in,log_annual_income,count_anon_events
+C101036,0.9684,Routine,-1,log_pix_in,log_wire_outflow,distinct_merchants
+C102205,0.9684,Routine,1,log_pix_in,count_anon_events,distinct_merchants
+C101157,0.9683,Routine,-1,log_pix_in,count_chargeback_status,log_wire_outflow
+C100323,0.9683,Routine,-1,log_pix_in,log_wire_outflow,mean_merchant_chargeback
+C100415,0.9683,Routine,-1,log_pix_in,count_tor_events,count_chargeback_status
+C100666,0.9682,Routine,-1,log_pix_in,log_annual_income,tx_count
+C101113,0.9682,Routine,1,log_pix_in,log_annual_income,count_anon_events
+C101503,0.9681,Routine,-1,log_pix_in,count_tor_events,count_anon_events
+C101653,0.968,Routine,-1,log_pix_in,log_wire_outflow,distinct_merchants
+C101338,0.968,Routine,-1,log_pix_in,log_annual_income,count_anon_events
+C100102,0.9679,Routine,-1,log_wire_outflow,count_chargeback_status,mean_merchant_chargeback
+C102246,0.9678,Routine,-1,log_pix_in,log_annual_income,log_wire_outflow
+C100035,0.9678,Routine,1,log_pix_in,log_annual_income,log_wire_outflow
+C101546,0.9678,Routine,-1,log_pix_in,distinct_merchants,log_wire_outflow
+C101192,0.9677,Routine,1,log_total_outflow,log_pix_in,count_tor_events
+C101932,0.9676,Routine,-1,log_pix_in,count_anon_events,mean_merchant_chargeback
+C101893,0.9676,Routine,-1,log_annual_income,count_anon_events,log_pix_in
+C100356,0.9675,Routine,-1,log_annual_income,count_tor_events,log_wire_outflow
+C100490,0.9674,Routine,-1,log_pix_in,log_wire_outflow,distinct_merchants
+C100039,0.9673,Routine,-1,log_annual_income,log_pix_in,log_wire_outflow
+C101839,0.9672,Routine,-1,log_pix_in,count_chargeback_status,mean_merchant_chargeback
+C102101,0.9672,Routine,-1,log_pix_in,count_anon_events,count_tor_events
+C101607,0.9672,Routine,-1,log_pix_in,count_anon_events,count_tor_events
+C100691,0.9672,Routine,-1,log_pix_in,count_tor_events,count_anon_events
+C101370,0.9672,Routine,-1,count_chargeback_status,log_wire_outflow,log_pix_in
+C102267,0.9671,Routine,-1,log_pix_in,log_annual_income,count_anon_events
+C102313,0.967,Routine,-1,log_pix_in,count_anon_events,log_wire_outflow
+C101753,0.967,Routine,-1,log_pix_in,log_annual_income,count_tor_events
+C101423,0.9669,Routine,1,log_pix_in,count_tor_events,log_annual_income
+C102469,0.9667,Routine,-1,log_pix_in,count_anon_events,mean_merchant_chargeback
+C101046,0.9666,Routine,-1,log_pix_in,count_anon_events,log_annual_income
+C100782,0.9665,Routine,-1,log_pix_in,count_chargeback_status,log_annual_income
+C100118,0.9665,Routine,1,log_pix_in,tx_count,log_wire_outflow
+C102390,0.9663,Routine,-1,count_anon_events,log_pix_in,log_wire_outflow
+C100274,0.9661,Routine,1,log_pix_in,count_anon_events,tx_count
+C101759,0.966,Routine,1,log_annual_income,mean_merchant_chargeback,count_tor_events
+C100712,0.9658,Routine,-1,log_pix_in,log_annual_income,count_anon_events
+C101258,0.9655,Routine,-1,log_pix_in,log_wire_outflow,distinct_merchants
+C102491,0.9654,Routine,-1,count_tor_events,log_wire_outflow,distinct_merchants
+C102013,0.9653,Routine,-1,log_pix_in,count_chargeback_status,log_wire_outflow
+C101857,0.9651,Routine,-1,log_pix_in,log_annual_income,count_anon_events
+C101716,0.9649,Routine,-1,log_pix_in,log_annual_income,log_wire_outflow
+C101907,0.9646,Routine,-1,log_pix_in,log_annual_income,log_pix_outflow
+C100459,0.9645,Routine,-1,log_pix_in,count_anon_events,log_total_outflow
+C101940,0.964,Routine,-1,log_pix_in,log_annual_income,count_anon_events
+C101112,0.9637,Routine,-1,log_pix_in,distinct_merchants,log_wire_outflow
+C101287,0.9636,Routine,-1,log_annual_income,log_pix_in,count_anon_events
+C102268,0.9633,Routine,-1,log_pix_in,count_chargeback_status,count_anon_events
+C100651,0.9633,Routine,-1,log_pix_in,count_anon_events,fraction_high_mcc
+C101632,0.9632,Routine,-1,log_pix_in,log_wire_outflow,tx_count
+C101397,0.9631,Routine,-1,log_pix_in,log_annual_income,log_wire_outflow
+C102301,0.9631,Routine,-1,log_pix_in,log_annual_income,count_anon_events
+C100607,0.9631,Routine,-1,log_annual_income,count_tor_events,count_anon_events
+C101076,0.9629,Routine,-1,log_pix_in,log_annual_income,mean_merchant_chargeback
+C102262,0.9629,Routine,-1,log_annual_income,log_pix_in,count_anon_events
+C100778,0.9628,Routine,-1,log_pix_in,count_anon_events,log_wire_outflow
+C101373,0.9628,Routine,-1,log_pix_in,log_wire_outflow,distinct_merchants
+C101633,0.9625,Routine,-1,log_pix_in,count_anon_events,mean_merchant_chargeback
+C101780,0.9623,Routine,1,log_pix_outflow,log_total_outflow,log_pix_in
+C101925,0.9621,Routine,-1,log_pix_in,count_anon_events,distinct_merchants
+C102091,0.9621,Routine,-1,log_wire_outflow,distinct_merchants,count_anon_events
+C102360,0.9621,Routine,1,log_annual_income,log_wire_outflow,log_pix_in
+C101135,0.9618,Routine,-1,log_annual_income,log_pix_in,distinct_merchants
+C101991,0.9615,Routine,-1,count_tor_events,log_wire_outflow,log_pix_in
+C101349,0.9614,Routine,-1,log_pix_in,count_chargeback_status,distinct_merchants
+C102213,0.9612,Routine,-1,log_pix_in,tx_count,log_wire_outflow
+C102378,0.9606,Routine,-1,log_pix_in,count_anon_events,log_wire_outflow
+C100111,0.9605,Routine,-1,log_annual_income,log_pix_in,count_anon_events
+C101791,0.9602,Routine,1,count_tor_events,log_pix_outflow,log_pix_in
+C101521,0.9595,Routine,1,log_pix_in,tx_count,log_wire_outflow
+C100321,0.9586,Routine,-1,log_pix_in,log_annual_income,count_tor_events
+C101175,0.9586,Routine,-1,log_pix_in,count_anon_events,distinct_merchants
+C100880,0.9578,Routine,1,log_pix_in,log_annual_income,count_tor_events
+C100965,0.9577,Routine,1,log_pix_in,log_annual_income,log_wire_outflow
+C100580,0.9576,Routine,-1,log_pix_in,count_anon_events,count_tor_events
+C101017,0.9575,Routine,-1,log_pix_in,log_annual_income,fraction_high_mcc
+C100130,0.9575,Routine,-1,log_pix_in,log_wire_outflow,distinct_merchants
+C100790,0.9573,Routine,1,log_pix_outflow,log_annual_income,count_tor_events
+C100345,0.957,Routine,-1,log_pix_in,log_annual_income,log_wire_outflow
+C100641,0.9562,Routine,-1,log_pix_in,log_wire_outflow,mean_merchant_chargeback
+C101230,0.9561,Routine,-1,log_pix_in,mean_merchant_chargeback,log_wire_outflow
+C100184,0.9552,Routine,1,log_pix_in,log_wire_outflow,distinct_merchants
+C101199,0.9551,Routine,-1,log_pix_in,count_tor_events,tx_count
+C102136,0.9545,Routine,-1,log_pix_in,tx_count,count_chargeback_status
+C102452,0.9543,Routine,1,log_pix_in,count_tor_events,log_annual_income
+C101063,0.9537,Routine,-1,log_pix_in,log_annual_income,tx_count
+C101219,0.9533,Routine,-1,count_tor_events,log_pix_in,count_anon_events
+C101708,0.9529,Routine,-1,log_pix_in,log_annual_income,count_anon_events
+C100681,0.9528,Routine,1,log_annual_income,count_anon_events,count_tor_events
+C100505,0.9527,Routine,-1,log_pix_in,log_wire_outflow,log_annual_income
+C101547,0.9522,Routine,1,log_pix_in,count_anon_events,log_wire_outflow
+C101675,0.952,Routine,-1,log_pix_in,distinct_merchants,log_pix_outflow
+C101898,0.9517,Routine,-1,count_anon_events,distinct_merchants,log_pix_in
+C100911,0.9515,Routine,-1,log_pix_in,count_chargeback_status,log_wire_outflow
+C101962,0.9514,Routine,-1,log_pix_in,log_annual_income,log_wire_outflow
+C100161,0.9509,Routine,-1,log_pix_in,log_wire_outflow,log_annual_income
+C100690,0.9507,Routine,-1,log_pix_in,count_chargeback_status,log_wire_outflow
+C102314,0.9507,Routine,-1,log_pix_in,count_tor_events,log_wire_outflow
+C101418,0.9505,Routine,-1,count_tor_events,count_anon_events,log_total_outflow
+C101825,0.9504,Routine,-1,log_pix_in,log_annual_income,count_tor_events
+C102253,0.95,Routine,1,log_pix_in,count_chargeback_status,log_wire_outflow
+C100476,0.9495,Routine,-1,log_pix_in,log_annual_income,log_wire_outflow
+C100463,0.9494,Routine,1,log_pix_in,count_anon_events,count_tor_events
+C101207,0.9493,Routine,1,log_pix_in,log_annual_income,count_anon_events
+C102065,0.9493,Routine,1,log_pix_in,log_annual_income,count_tor_events
+C100480,0.9489,Routine,-1,log_annual_income,count_tor_events,count_anon_events
+C100058,0.9487,Routine,-1,log_pix_in,count_chargeback_status,log_annual_income
+C101086,0.9486,Routine,1,log_pix_in,count_anon_events,count_tor_events
+C102146,0.9481,Routine,-1,log_pix_in,log_annual_income,count_chargeback_status
+C100206,0.948,Routine,-1,log_pix_in,distinct_merchants,tx_count
+C100417,0.9477,Routine,-1,log_pix_in,log_annual_income,count_anon_events
+C100283,0.9475,Routine,-1,log_pix_in,count_anon_events,log_wire_outflow
+C100547,0.9473,Routine,1,log_pix_in,count_anon_events,count_tor_events
+C101522,0.9467,Routine,-1,log_pix_in,log_annual_income,count_anon_events
+C101421,0.9464,Routine,-1,log_annual_income,count_anon_events,log_pix_in
+C100472,0.9463,Routine,1,log_pix_in,log_wire_outflow,count_chargeback_status
+C101710,0.9462,Routine,-1,log_pix_in,log_wire_outflow,log_annual_income
+C100761,0.946,Routine,1,log_pix_in,tx_count,log_wire_outflow
+C101589,0.9456,Routine,-1,count_anon_events,log_pix_in,mean_merchant_chargeback
+C100609,0.9455,Routine,-1,log_pix_in,count_anon_events,log_wire_outflow
+C100637,0.9455,Routine,-1,log_pix_in,log_annual_income,count_chargeback_status
+C102297,0.9453,Routine,-1,log_pix_in,count_chargeback_status,log_wire_outflow
+C100809,0.945,Routine,-1,log_annual_income,count_tor_events,count_anon_events
+C101528,0.9449,Routine,-1,log_pix_in,count_tor_events,count_anon_events
+C101191,0.9449,Routine,1,log_annual_income,log_pix_outflow,log_pix_in
+C101107,0.9444,Routine,-1,count_anon_events,log_wire_outflow,count_chargeback_status
+C102193,0.9442,Routine,-1,log_pix_in,log_annual_income,count_anon_events
+C102061,0.9439,Routine,-1,log_pix_in,count_tor_events,count_chargeback_status
+C100553,0.9439,Routine,-1,log_pix_in,distinct_merchants,log_annual_income
+C101353,0.9436,Routine,-1,log_pix_in,log_annual_income,count_anon_events
+C100804,0.9428,Routine,-1,log_pix_in,count_tor_events,log_annual_income
+C101174,0.9421,Routine,-1,log_wire_outflow,distinct_merchants,tx_count
+C100012,0.9417,Routine,-1,log_pix_in,count_chargeback_status,log_wire_outflow
+C100863,0.9415,Routine,-1,log_pix_in,count_anon_events,distinct_merchants
+C102373,0.9412,Routine,-1,log_pix_in,log_wire_outflow,log_annual_income
+C102163,0.9412,Routine,-1,log_pix_in,log_annual_income,distinct_merchants
+C101282,0.9411,Routine,-1,log_pix_in,distinct_merchants,log_wire_outflow
+C100773,0.941,Routine,-1,log_pix_in,log_annual_income,log_total_outflow
+C100475,0.9407,Routine,-1,log_pix_in,log_annual_income,distinct_merchants
+C100282,0.9405,Routine,1,log_pix_in,count_anon_events,tx_count
+C100925,0.9405,Routine,-1,log_pix_in,count_anon_events,count_chargeback_status
+C101533,0.9402,Routine,-1,count_anon_events,log_pix_in,log_annual_income
+C101125,0.9402,Routine,-1,log_pix_in,count_chargeback_status,mean_merchant_chargeback
+C101669,0.9401,Routine,1,log_pix_in,count_anon_events,count_tor_events
+C101505,0.9401,Routine,-1,count_tor_events,count_anon_events,log_wire_outflow
+C102046,0.94,Routine,-1,log_wire_outflow,log_pix_in,mean_merchant_chargeback
+C100731,0.939,Routine,-1,log_annual_income,log_pix_in,distinct_merchants
+C101429,0.9389,Routine,1,log_pix_in,count_tor_events,count_anon_events
+C100094,0.9387,Routine,-1,log_pix_in,log_wire_outflow,mean_merchant_chargeback
+C100380,0.9386,Routine,-1,count_tor_events,log_annual_income,log_total_outflow
+C101700,0.938,Routine,-1,count_anon_events,log_wire_outflow,count_chargeback_status
+C100145,0.9377,Routine,-1,log_pix_in,count_tor_events,log_wire_outflow
+C101889,0.9372,Routine,-1,log_pix_in,count_anon_events,count_chargeback_status
+C101886,0.9371,Routine,1,log_annual_income,count_tor_events,log_pix_in
+C100801,0.9369,Routine,1,log_pix_in,distinct_merchants,log_wire_outflow
+C100956,0.9369,Routine,-1,log_pix_in,log_annual_income,log_wire_outflow
+C101513,0.9369,Routine,-1,log_pix_in,count_anon_events,mean_merchant_chargeback
+C101801,0.9366,Routine,-1,log_pix_in,count_anon_events,log_wire_outflow
+C101642,0.9362,Routine,-1,log_pix_in,count_anon_events,log_annual_income
+C101590,0.9357,Routine,-1,log_pix_in,log_annual_income,count_anon_events
+C101083,0.9352,Routine,-1,log_pix_in,log_annual_income,count_anon_events
+C101807,0.935,Routine,-1,count_chargeback_status,log_pix_in,log_annual_income
+C102156,0.9349,Routine,-1,log_pix_in,count_tor_events,count_anon_events
+C100394,0.9346,Routine,-1,log_pix_in,log_wire_outflow,distinct_merchants
+C100018,0.9343,Routine,-1,log_pix_in,distinct_merchants,log_wire_outflow
+C100148,0.9343,Routine,-1,log_pix_in,log_wire_outflow,tx_count
+C100662,0.9343,Routine,-1,log_pix_in,count_anon_events,mean_merchant_chargeback
+C102480,0.9342,Routine,-1,log_wire_outflow,distinct_merchants,tx_count
+C100071,0.9338,Routine,-1,log_pix_in,distinct_merchants,log_wire_outflow
+C100983,0.9334,Routine,-1,log_pix_in,log_wire_outflow,distinct_merchants
+C100002,0.9334,Routine,-1,log_pix_in,count_anon_events,tx_count
+C102190,0.9331,Routine,-1,log_pix_in,log_annual_income,count_tor_events
+C101306,0.9326,Routine,-1,log_pix_in,log_annual_income,count_anon_events
+C102247,0.9321,Routine,-1,log_pix_in,distinct_merchants,log_wire_outflow
+C100026,0.9311,Routine,1,log_pix_in,count_chargeback_status,count_anon_events
+C101008,0.9311,Routine,-1,log_annual_income,log_pix_in,count_anon_events
+C101155,0.9308,Routine,1,log_pix_in,log_wire_outflow,log_annual_income
+C100634,0.9301,Routine,1,log_pix_in,count_tor_events,mean_merchant_chargeback
+C102414,0.9301,Routine,-1,log_pix_in,count_chargeback_status,mean_merchant_chargeback
+C100910,0.93,Routine,-1,log_pix_in,count_chargeback_status,log_wire_outflow
+C101035,0.93,Routine,-1,log_annual_income,log_pix_in,distinct_merchants
+C101879,0.9298,Routine,-1,log_pix_in,distinct_merchants,log_annual_income
+C101372,0.9298,Routine,-1,log_pix_in,tx_count,log_wire_outflow
+C101909,0.9294,Routine,-1,log_pix_in,count_chargeback_status,log_wire_outflow
+C101279,0.9285,Routine,-1,log_pix_in,log_annual_income,count_chargeback_status
+C101096,0.9285,Routine,-1,log_pix_in,count_anon_events,log_wire_outflow
+C101608,0.9284,Routine,-1,log_pix_in,count_anon_events,mean_merchant_chargeback
+C100573,0.9275,Routine,-1,log_annual_income,log_wire_outflow,count_anon_events
+C102371,0.9271,Routine,-1,count_anon_events,count_tor_events,log_pix_in
+C100945,0.9269,Routine,-1,count_tor_events,log_annual_income,log_wire_outflow
+C100009,0.9268,Routine,-1,log_annual_income,log_pix_in,log_wire_outflow
+C101164,0.9268,Routine,1,log_pix_in,count_tor_events,log_annual_income
+C101030,0.9267,Routine,-1,log_pix_in,log_annual_income,distinct_merchants
+C100231,0.9264,Routine,1,count_tor_events,log_wire_outflow,mean_merchant_chargeback
+C102096,0.9261,Routine,-1,log_pix_in,count_tor_events,count_anon_events
+C100638,0.925,Routine,-1,log_pix_in,log_annual_income,distinct_merchants
+C101146,0.9249,Routine,-1,log_pix_in,count_anon_events,log_wire_outflow
+C101529,0.9247,Routine,-1,log_pix_in,log_wire_outflow,log_annual_income
+C101541,0.9246,Routine,-1,log_pix_in,count_chargeback_status,log_wire_outflow
+C100114,0.9241,Routine,-1,log_pix_in,log_wire_outflow,log_annual_income
+C100963,0.924,Routine,1,log_pix_in,distinct_merchants,log_annual_income
+C102411,0.9239,Routine,1,log_pix_in,log_annual_income,tx_count
+C101366,0.9239,Routine,1,count_chargeback_status,log_wire_outflow,tx_count
+C100835,0.9239,Routine,-1,log_pix_in,count_tor_events,count_anon_events
+C101481,0.9233,Routine,-1,log_annual_income,count_chargeback_status,log_pix_in
+C100759,0.9231,Routine,-1,log_pix_in,log_annual_income,mean_merchant_chargeback
+C100021,0.9231,Routine,-1,log_pix_in,distinct_merchants,log_wire_outflow
+C102185,0.9231,Routine,-1,log_pix_in,log_annual_income,log_wire_outflow
+C100191,0.9227,Routine,-1,log_pix_in,log_annual_income,count_anon_events
+C101787,0.9221,Routine,-1,log_pix_in,log_wire_outflow,mean_merchant_chargeback
+C100984,0.9217,Routine,1,count_tor_events,count_chargeback_status,count_anon_events
+C101853,0.9215,Routine,-1,log_pix_in,count_anon_events,tx_count
+C100447,0.921,Routine,-1,log_pix_in,count_anon_events,mean_merchant_chargeback
+C100785,0.9208,Routine,-1,log_pix_in,count_tor_events,count_anon_events
+C100128,0.9204,Routine,-1,log_pix_in,count_chargeback_status,log_wire_outflow
+C102339,0.9201,Routine,-1,log_pix_in,count_anon_events,log_wire_outflow
+C102241,0.92,Routine,-1,log_pix_outflow,log_pix_in,count_anon_events
+C102191,0.9185,Routine,-1,count_tor_events,count_anon_events,log_pix_in
+C100926,0.9182,Routine,-1,mean_merchant_chargeback,count_chargeback_status,log_pix_in
+C102144,0.9172,Routine,-1,count_anon_events,log_wire_outflow,fraction_high_mcc
+C102089,0.9169,Routine,-1,log_pix_in,distinct_merchants,log_wire_outflow
+C100248,0.9169,Routine,-1,count_chargeback_status,log_pix_in,log_wire_outflow
+C100914,0.9165,Routine,-1,log_pix_in,log_annual_income,log_wire_outflow
+C100264,0.9162,Routine,-1,count_tor_events,count_anon_events,count_chargeback_status
+C101928,0.9153,Routine,-1,log_pix_in,log_annual_income,log_wire_outflow
+C100894,0.9148,Routine,-1,log_pix_in,count_tor_events,log_wire_outflow
+C100676,0.9143,Routine,-1,log_pix_in,log_annual_income,distinct_merchants
+C100899,0.9143,Routine,-1,log_pix_in,mean_merchant_chargeback,log_wire_outflow
+C100155,0.9142,Routine,-1,log_pix_in,count_anon_events,tx_count
+C101081,0.914,Routine,-1,count_anon_events,distinct_merchants,log_wire_outflow
+C101850,0.9139,Routine,-1,log_pix_in,log_annual_income,log_total_outflow
+C100304,0.9138,Routine,-1,log_pix_in,count_tor_events,log_wire_outflow
+C100229,0.9138,Routine,-1,log_pix_in,log_annual_income,log_wire_outflow
+C101993,0.9137,Routine,1,log_pix_in,log_pix_outflow,count_tor_events
+C101722,0.9137,Routine,1,count_chargeback_status,log_wire_outflow,tx_count
+C100096,0.9136,Routine,-1,log_pix_in,count_anon_events,distinct_merchants
+C102443,0.9126,Routine,-1,log_pix_in,count_tor_events,log_wire_outflow
+C101939,0.9124,Routine,-1,log_pix_in,log_wire_outflow,log_annual_income
+C102117,0.9123,Routine,-1,log_pix_in,count_chargeback_status,log_wire_outflow
+C101789,0.9118,Routine,-1,log_pix_in,count_tor_events,count_anon_events
+C101690,0.9116,Routine,-1,log_pix_in,mean_merchant_chargeback,log_annual_income
+C102135,0.911,Routine,-1,log_pix_in,count_anon_events,count_tor_events
+C100127,0.9103,Routine,-1,log_pix_in,log_annual_income,mean_merchant_chargeback
+C101968,0.9092,Routine,-1,log_pix_in,log_annual_income,count_anon_events
+C100303,0.909,Routine,-1,log_pix_in,count_anon_events,log_wire_outflow
+C102254,0.909,Routine,-1,log_annual_income,log_pix_in,distinct_merchants
+C102261,0.9088,Routine,-1,log_pix_in,log_annual_income,tx_count
+C101927,0.9072,Routine,1,log_pix_in,log_wire_outflow,distinct_merchants
+C100428,0.9065,Routine,-1,log_pix_in,log_wire_outflow,distinct_merchants
+C101836,0.9063,Routine,1,count_tor_events,log_pix_in,count_chargeback_status
+C100457,0.9048,Routine,-1,log_pix_in,log_annual_income,log_wire_outflow
+C101766,0.9045,Routine,-1,log_pix_in,count_anon_events,log_wire_outflow
+C101673,0.9041,Routine,-1,log_pix_in,log_total_outflow,log_annual_income
+C101138,0.9034,Routine,-1,log_pix_in,log_annual_income,tx_count
+C101273,0.9028,Routine,-1,log_pix_in,distinct_merchants,log_wire_outflow
+C102165,0.9028,Routine,-1,log_pix_in,count_chargeback_status,log_wire_outflow
+C101918,0.9026,Routine,1,log_annual_income,log_pix_in,log_wire_outflow
+C101558,0.9023,Routine,-1,log_pix_in,mean_merchant_chargeback,log_annual_income
+C100421,0.9023,Routine,-1,log_pix_in,log_annual_income,count_chargeback_status
+C100478,0.9022,Routine,-1,log_pix_in,tx_count,log_wire_outflow
+C101229,0.902,Routine,-1,log_pix_in,count_anon_events,log_wire_outflow
+C100831,0.9019,Routine,1,log_pix_in,log_wire_outflow,tx_count
+C101904,0.9018,Routine,-1,log_pix_in,tx_count,log_wire_outflow
+C100166,0.9011,Routine,-1,log_pix_in,count_anon_events,log_annual_income
+C100756,0.9008,Routine,-1,log_pix_in,log_pix_outflow,log_wire_outflow
+C100551,0.9008,Routine,-1,log_annual_income,count_anon_events,distinct_merchants
+C100937,0.9007,Routine,-1,count_tor_events,count_chargeback_status,log_wire_outflow
+C102045,0.9007,Routine,-1,log_annual_income,log_pix_in,distinct_merchants
+C100948,0.8998,Routine,-1,log_pix_in,log_annual_income,distinct_merchants
+C100001,0.8994,Routine,-1,log_annual_income,count_anon_events,log_pix_in
+C100998,0.8991,Routine,-1,count_anon_events,log_wire_outflow,fraction_high_mcc
+C100947,0.8987,Routine,-1,log_pix_in,log_wire_outflow,mean_merchant_chargeback
+C101001,0.8987,Routine,1,log_pix_in,count_chargeback_status,log_wire_outflow
+C101327,0.8981,Routine,-1,log_pix_in,count_tor_events,log_wire_outflow
+C101728,0.8971,Routine,-1,log_wire_outflow,log_pix_in,distinct_merchants
+C102238,0.8965,Routine,-1,log_pix_in,log_wire_outflow,mean_merchant_chargeback
+C102071,0.8963,Routine,-1,log_pix_in,count_chargeback_status,log_annual_income
+C100358,0.8957,Routine,-1,log_pix_in,log_wire_outflow,log_annual_income
+C101980,0.8955,Routine,-1,log_annual_income,log_pix_in,count_anon_events
+C101323,0.8953,Routine,-1,log_pix_in,count_anon_events,log_wire_outflow
+C101866,0.8942,Routine,-1,log_pix_in,count_tor_events,count_anon_events
+C100575,0.8937,Routine,-1,log_pix_in,log_annual_income,distinct_merchants
+C101400,0.8935,Routine,1,tx_count,distinct_merchants,log_annual_income
+C100929,0.8933,Routine,-1,log_annual_income,log_pix_in,count_anon_events
+C101870,0.8928,Routine,-1,count_tor_events,count_anon_events,log_pix_in
+C101290,0.8927,Routine,-1,log_annual_income,log_pix_in,mean_merchant_chargeback
+C101973,0.8924,Routine,-1,log_pix_in,log_annual_income,log_total_outflow
+C100059,0.8916,Routine,-1,log_pix_in,log_annual_income,log_wire_outflow
+C102479,0.8916,Routine,-1,log_annual_income,count_anon_events,count_chargeback_status
+C100639,0.8913,Routine,-1,log_pix_in,count_anon_events,log_wire_outflow
+C100458,0.8912,Routine,-1,log_annual_income,count_anon_events,log_wire_outflow
+C102275,0.891,Routine,-1,log_pix_in,log_annual_income,distinct_merchants
+C100357,0.8908,Routine,-1,count_tor_events,log_pix_in,log_total_outflow
+C101489,0.8886,Routine,-1,log_pix_in,count_anon_events,log_wire_outflow
+C100629,0.8879,Routine,-1,log_pix_in,count_chargeback_status,log_wire_outflow
+C100825,0.8868,Routine,-1,count_tor_events,count_chargeback_status,log_wire_outflow
+C101592,0.8864,Routine,-1,log_pix_in,count_anon_events,log_wire_outflow
+C101569,0.8858,Routine,-1,log_pix_in,log_annual_income,count_chargeback_status
+C100747,0.8855,Routine,-1,log_pix_in,log_wire_outflow,tx_count
+C102113,0.8846,Routine,-1,log_pix_in,count_anon_events,mean_merchant_chargeback
+C102344,0.8845,Routine,-1,count_tor_events,count_anon_events,log_wire_outflow
+C100555,0.8841,Routine,-1,log_annual_income,log_pix_in,log_wire_outflow
+C101643,0.8837,Routine,-1,mean_merchant_chargeback,log_pix_in,log_wire_outflow
+C100971,0.8836,Routine,-1,log_annual_income,count_anon_events,log_pix_in
+C100525,0.8835,Routine,-1,log_pix_in,log_annual_income,distinct_merchants
+C100121,0.8833,Routine,-1,log_annual_income,log_pix_in,count_anon_events
+C102489,0.8831,Routine,-1,log_pix_in,log_wire_outflow,log_annual_income
+C100922,0.8828,Routine,-1,count_chargeback_status,log_pix_in,log_wire_outflow
+C100552,0.882,Routine,-1,log_wire_outflow,log_annual_income,distinct_merchants
+C101772,0.8818,Routine,1,log_pix_in,tx_count,log_wire_outflow
+C101696,0.8818,Routine,-1,log_pix_in,log_annual_income,distinct_merchants
+C100751,0.8811,Routine,-1,log_pix_in,count_anon_events,count_tor_events
+C102076,0.8811,Routine,-1,log_pix_in,log_annual_income,count_anon_events
+C101362,0.881,Routine,-1,count_anon_events,log_pix_in,log_wire_outflow
+C100821,0.8809,Routine,-1,log_pix_in,log_annual_income,fraction_high_mcc
+C100844,0.8807,Routine,-1,log_pix_in,log_annual_income,log_total_outflow
+C100220,0.8797,Routine,-1,log_pix_in,count_tor_events,log_wire_outflow
+C100805,0.8795,Routine,-1,count_anon_events,log_pix_in,log_wire_outflow
+C100532,0.8795,Routine,-1,count_tor_events,log_annual_income,log_pix_outflow
+C102021,0.8788,Routine,-1,log_pix_in,count_anon_events,count_chargeback_status
+C100688,0.8782,Routine,-1,log_pix_outflow,log_pix_in,log_annual_income
+C102008,0.8776,Routine,-1,log_pix_in,count_tor_events,count_anon_events
+C102388,0.8773,Routine,-1,log_pix_in,distinct_merchants,log_wire_outflow
+C100576,0.8757,Routine,-1,log_pix_in,count_tor_events,log_wire_outflow
+C100434,0.8749,Routine,-1,log_pix_in,count_chargeback_status,log_wire_outflow
+C100473,0.8744,Routine,-1,log_pix_in,log_wire_outflow,log_annual_income
+C100046,0.8743,Routine,-1,log_pix_in,count_anon_events,tx_count
+C100412,0.8727,Routine,-1,log_pix_in,count_anon_events,count_tor_events
+C102331,0.8719,Routine,-1,log_annual_income,log_pix_in,log_pix_outflow
+C100050,0.8717,Routine,-1,log_pix_in,log_annual_income,count_chargeback_status
+C100172,0.8714,Routine,-1,log_pix_in,count_chargeback_status,log_wire_outflow
+C102308,0.871,Routine,-1,count_tor_events,log_wire_outflow,log_pix_in
+C102406,0.8707,Routine,-1,log_annual_income,log_pix_in,log_pix_outflow
+C101560,0.8702,Routine,-1,log_pix_in,count_chargeback_status,log_wire_outflow
+C101322,0.8698,Routine,-1,log_pix_in,log_annual_income,distinct_merchants
+C101986,0.8693,Routine,-1,count_tor_events,count_anon_events,log_pix_in
+C102329,0.8692,Routine,-1,log_pix_in,log_annual_income,log_wire_outflow
+C101621,0.869,Routine,1,count_tor_events,log_pix_in,log_total_outflow
+C101757,0.8682,Routine,-1,log_pix_in,count_tor_events,count_anon_events
+C101730,0.8681,Routine,-1,log_pix_outflow,count_tor_events,log_total_outflow
+C100581,0.8677,Routine,-1,log_pix_in,distinct_merchants,log_annual_income
+C101211,0.8666,Routine,-1,log_wire_outflow,log_pix_in,log_annual_income
+C102451,0.8664,Routine,-1,count_anon_events,mean_merchant_chargeback,log_pix_in
+C101895,0.8663,Routine,-1,log_pix_in,count_tor_events,log_wire_outflow
+C100078,0.8657,Routine,-1,log_pix_in,count_tor_events,count_chargeback_status
+C100784,0.8649,Routine,-1,log_pix_in,log_wire_outflow,tx_count
+C100679,0.8642,Routine,1,log_pix_in,tx_count,log_wire_outflow
+C100755,0.8639,Routine,-1,log_pix_outflow,log_annual_income,log_pix_in
+C100180,0.8635,Routine,-1,count_tor_events,count_anon_events,log_pix_in
+C101824,0.863,Routine,-1,log_pix_in,distinct_merchants,log_wire_outflow
+C102209,0.8628,Routine,-1,log_pix_in,log_wire_outflow,distinct_merchants
+C101346,0.8627,Routine,-1,log_annual_income,log_pix_in,count_anon_events
+C101790,0.862,Routine,-1,log_annual_income,log_pix_in,log_wire_outflow
+C100053,0.8619,Routine,-1,log_pix_in,count_tor_events,count_anon_events
+C102293,0.8618,Routine,-1,log_annual_income,log_pix_in,log_wire_outflow
+C101059,0.8617,Routine,-1,log_pix_in,count_chargeback_status,log_wire_outflow
+C102120,0.8616,Routine,-1,log_pix_in,count_chargeback_status,log_wire_outflow
+C100395,0.8611,Routine,-1,log_pix_in,count_anon_events,log_annual_income
+C100203,0.8608,Routine,-1,log_pix_in,count_anon_events,log_wire_outflow
+C100729,0.8605,Routine,-1,log_pix_in,count_tor_events,count_anon_events
+C101966,0.8597,Routine,-1,log_pix_in,log_wire_outflow,mean_merchant_chargeback
+C100740,0.8596,Routine,-1,log_pix_in,distinct_merchants,log_pix_outflow
+C102391,0.8594,Routine,-1,log_total_outflow,log_wire_outflow,log_pix_in
+C100752,0.8591,Routine,-1,log_pix_in,count_anon_events,count_chargeback_status
+C102298,0.859,Routine,-1,count_anon_events,log_annual_income,log_wire_outflow
+C100944,0.8572,Routine,-1,log_annual_income,count_tor_events,count_chargeback_status
+C100685,0.8569,Routine,-1,log_pix_in,log_wire_outflow,distinct_merchants
+C101461,0.8563,Routine,-1,log_pix_in,log_wire_outflow,count_chargeback_status
+C100448,0.8563,Routine,-1,log_pix_in,log_total_outflow,count_chargeback_status
+C101900,0.856,Routine,-1,log_pix_in,count_chargeback_status,log_wire_outflow
+C101964,0.856,Routine,-1,log_pix_in,mean_merchant_chargeback,distinct_merchants
+C101734,0.8557,Routine,-1,log_pix_in,log_wire_outflow,log_pix_outflow
+C101911,0.8555,Routine,-1,count_tor_events,log_pix_outflow,log_total_outflow
+C101178,0.8546,Routine,-1,log_pix_in,count_chargeback_status,log_wire_outflow
+C100324,0.8544,Routine,-1,log_pix_in,distinct_merchants,log_annual_income
+C102288,0.8544,Routine,-1,log_pix_in,count_anon_events,distinct_merchants
+C100743,0.8543,Routine,-1,count_tor_events,log_annual_income,log_pix_in
+C102302,0.8541,Routine,-1,log_pix_in,count_anon_events,log_wire_outflow
+C100660,0.8537,Routine,-1,distinct_merchants,log_pix_in,log_wire_outflow
+C102279,0.8535,Routine,-1,log_pix_in,count_anon_events,log_wire_outflow
+C102162,0.8532,Routine,-1,log_pix_in,count_tor_events,count_anon_events
+C102488,0.851,Routine,-1,log_pix_in,log_annual_income,log_wire_outflow
+C102171,0.851,Routine,-1,count_anon_events,log_pix_in,log_wire_outflow
+C100503,0.8503,Routine,-1,log_pix_in,log_annual_income,distinct_merchants
+C102446,0.8488,Routine,-1,log_annual_income,count_anon_events,log_pix_in
+C101764,0.8479,Routine,-1,log_pix_in,count_anon_events,log_wire_outflow
+C102055,0.8478,Routine,1,log_annual_income,log_pix_in,mean_merchant_chargeback
+C101914,0.8469,Routine,1,log_pix_in,log_wire_outflow,log_pix_outflow
+C101398,0.8468,Routine,-1,log_annual_income,log_pix_in,count_tor_events
+C102030,0.8466,Routine,-1,log_pix_in,count_anon_events,log_annual_income
+C101318,0.8465,Routine,-1,log_pix_in,log_wire_outflow,distinct_merchants
+C102476,0.8463,Routine,-1,log_annual_income,log_pix_in,log_wire_outflow
+C102392,0.8457,Routine,-1,log_pix_in,count_anon_events,distinct_merchants
+C102325,0.8457,Routine,-1,log_wire_outflow,log_annual_income,distinct_merchants
+C101660,0.8452,Routine,-1,log_pix_in,count_anon_events,log_wire_outflow
+C100393,0.8447,Routine,1,count_tor_events,count_anon_events,log_pix_in
+C101479,0.8446,Routine,1,log_pix_in,log_annual_income,count_tor_events
+C100680,0.8443,Routine,-1,log_pix_in,count_anon_events,log_wire_outflow
+C100414,0.8419,Routine,-1,count_anon_events,count_chargeback_status,log_wire_outflow
+C100090,0.8419,Routine,-1,log_annual_income,log_pix_in,count_anon_events
+C102243,0.8414,Routine,-1,log_pix_in,log_annual_income,log_wire_outflow
+C101212,0.841,Routine,-1,log_pix_in,count_anon_events,log_pix_outflow
+C101775,0.8405,Routine,1,log_pix_in,count_anon_events,log_wire_outflow
+C101351,0.8397,Routine,-1,log_pix_in,mean_merchant_chargeback,log_wire_outflow
+C100337,0.8396,Routine,-1,log_pix_in,count_tor_events,log_wire_outflow
+C100912,0.8382,Routine,-1,count_chargeback_status,log_pix_in,log_wire_outflow
+C102022,0.8371,Routine,-1,log_annual_income,log_pix_in,count_chargeback_status
+C100353,0.8366,Routine,-1,distinct_merchants,log_wire_outflow,mean_merchant_chargeback
+C101053,0.836,Routine,-1,log_wire_outflow,distinct_merchants,tx_count
+C101274,0.8358,Routine,-1,log_pix_in,count_anon_events,tx_count
+C101458,0.8353,Routine,-1,log_pix_in,log_wire_outflow,fraction_high_mcc
+C100133,0.8353,Routine,-1,log_pix_in,log_annual_income,distinct_merchants
+C101699,0.8349,Routine,1,count_anon_events,log_wire_outflow,log_pix_in
+C101591,0.8346,Routine,-1,log_pix_in,count_tor_events,count_anon_events
+C101412,0.8338,Routine,-1,log_pix_in,distinct_merchants,log_annual_income
+C102382,0.8327,Routine,-1,log_pix_in,log_annual_income,log_wire_outflow
+C101239,0.8318,Routine,-1,log_annual_income,count_tor_events,log_pix_in
+C100305,0.8316,Routine,-1,count_tor_events,count_anon_events,log_wire_outflow
+C102320,0.8304,Routine,-1,log_pix_outflow,count_tor_events,log_pix_in
+C100769,0.8298,Routine,-1,log_pix_in,count_anon_events,mean_merchant_chargeback
+C101706,0.8295,Routine,-1,log_pix_in,log_annual_income,count_chargeback_status
+C101974,0.8284,Routine,-1,log_pix_in,log_annual_income,mean_merchant_chargeback
+C100670,0.828,Routine,1,count_tor_events,log_pix_outflow,count_anon_events
+C100045,0.828,Routine,-1,log_pix_in,count_chargeback_status,log_wire_outflow
+C102212,0.8259,Routine,-1,log_pix_in,fraction_high_mcc,log_wire_outflow
+C100372,0.8253,Routine,-1,log_pix_in,count_anon_events,tx_count
+C102228,0.8247,Routine,1,log_pix_in,log_wire_outflow,log_pix_outflow
+C100271,0.8232,Routine,-1,log_pix_in,count_anon_events,log_wire_outflow
+C101430,0.8231,Routine,-1,log_annual_income,log_pix_in,distinct_merchants
+C101609,0.8228,Routine,-1,log_annual_income,count_anon_events,log_pix_outflow
+C101002,0.8223,Routine,-1,log_pix_in,log_wire_outflow,log_annual_income
+C101110,0.8222,Routine,-1,log_annual_income,log_pix_in,log_pix_outflow
+C101170,0.8216,Routine,-1,log_annual_income,log_pix_in,log_wire_outflow
+C101852,0.8216,Routine,-1,count_anon_events,log_pix_in,mean_merchant_chargeback
+C100513,0.8207,Routine,-1,log_pix_in,log_total_outflow,log_annual_income
+C100613,0.8204,Routine,-1,log_pix_in,log_wire_outflow,count_chargeback_status
+C101424,0.8194,Routine,-1,log_pix_in,count_anon_events,tx_count
+C101683,0.8186,Routine,-1,log_pix_in,count_tor_events,count_chargeback_status
+C102448,0.818,Routine,-1,log_pix_in,count_anon_events,count_chargeback_status
+C101380,0.8178,Routine,-1,distinct_merchants,log_wire_outflow,tx_count
+C101118,0.8173,Routine,-1,log_pix_in,log_annual_income,distinct_merchants
+C101154,0.8158,Routine,-1,log_pix_in,count_anon_events,log_wire_outflow
+C100268,0.8152,Routine,-1,log_pix_in,log_annual_income,count_tor_events
+C100402,0.8149,Routine,-1,log_pix_in,count_chargeback_status,log_wire_outflow
+C101262,0.8148,Routine,-1,log_pix_in,count_anon_events,log_wire_outflow
+C101903,0.8147,Routine,-1,log_pix_in,log_annual_income,count_chargeback_status
+C101051,0.8146,Routine,-1,log_pix_in,log_annual_income,count_chargeback_status
+C100814,0.8138,Routine,-1,log_pix_in,log_total_outflow,log_wire_outflow
+C100023,0.8135,Routine,-1,log_pix_in,count_anon_events,count_chargeback_status
+C100810,0.8115,Routine,-1,log_pix_in,mean_merchant_chargeback,log_wire_outflow
+C101635,0.8112,Routine,-1,count_tor_events,count_anon_events,log_pix_in
+C101499,0.8105,Routine,-1,log_annual_income,log_pix_in,log_wire_outflow
+C101261,0.8104,Routine,-1,log_annual_income,log_pix_in,count_chargeback_status
+C100522,0.8102,Routine,-1,log_pix_in,count_anon_events,mean_merchant_chargeback
+C100126,0.8098,Routine,-1,count_chargeback_status,log_pix_in,log_wire_outflow
+C101350,0.807,Routine,-1,log_pix_in,distinct_merchants,log_annual_income
+C101196,0.8065,Routine,-1,log_pix_in,log_annual_income,count_anon_events
+C100563,0.8065,Routine,-1,log_pix_in,log_wire_outflow,mean_merchant_chargeback
+C100889,0.8057,Routine,-1,log_annual_income,log_pix_in,distinct_merchants
+C100289,0.8033,Routine,-1,log_annual_income,log_pix_in,count_anon_events
+C101436,0.8032,Routine,-1,log_annual_income,count_anon_events,distinct_merchants
+C101314,0.8027,Routine,-1,log_pix_in,log_annual_income,mean_merchant_chargeback
+C100827,0.8027,Routine,-1,log_pix_in,log_wire_outflow,mean_merchant_chargeback
+C102431,0.802,Routine,-1,log_pix_in,log_wire_outflow,log_annual_income
+C100411,0.8016,Routine,-1,log_pix_in,count_chargeback_status,tx_count
+C100571,0.7991,Routine,-1,count_tor_events,log_pix_in,count_anon_events
+C101762,0.799,Routine,-1,log_pix_in,count_anon_events,mean_merchant_chargeback
+C101466,0.7989,Routine,-1,log_pix_in,count_anon_events,log_wire_outflow
+C100986,0.7987,Routine,-1,log_pix_in,count_chargeback_status,log_wire_outflow
+C101281,0.7982,Routine,-1,log_pix_in,count_tor_events,count_anon_events
+C102107,0.7975,Routine,-1,log_annual_income,log_pix_in,distinct_merchants
+C100803,0.7975,Routine,-1,log_pix_in,log_wire_outflow,distinct_merchants
+C100239,0.7968,Routine,-1,log_pix_in,mean_merchant_chargeback,distinct_merchants
+C100939,0.7965,Routine,-1,log_pix_in,count_chargeback_status,fraction_high_mcc
+C100715,0.7955,Routine,-1,log_pix_in,count_chargeback_status,log_wire_outflow
+C102341,0.7951,Routine,-1,distinct_merchants,log_wire_outflow,count_anon_events
+C102277,0.795,Routine,-1,log_pix_in,log_wire_outflow,log_annual_income
+C102125,0.794,Routine,-1,log_pix_in,log_wire_outflow,distinct_merchants
+C101376,0.794,Routine,1,log_pix_in,count_anon_events,log_wire_outflow
+C101307,0.7922,Routine,-1,log_pix_in,tx_count,log_wire_outflow
+C102236,0.7921,Routine,-1,log_pix_in,count_anon_events,count_tor_events
+C100923,0.7917,Routine,-1,log_pix_in,count_tor_events,log_annual_income
+C100004,0.79,Routine,-1,count_tor_events,count_anon_events,log_wire_outflow
+C101596,0.7899,Routine,1,log_pix_in,log_wire_outflow,log_annual_income
+C100933,0.7897,Routine,-1,log_pix_in,count_tor_events,count_anon_events
+C101355,0.7887,Routine,-1,log_pix_in,count_chargeback_status,log_wire_outflow
+C102450,0.7883,Routine,-1,log_pix_in,count_anon_events,log_wire_outflow
+C101182,0.7844,Routine,-1,log_pix_in,log_total_outflow,count_anon_events
+C100143,0.7829,Routine,-1,log_annual_income,log_wire_outflow,distinct_merchants
+C101869,0.7825,Routine,-1,log_pix_in,count_tor_events,log_wire_outflow
+C100792,0.7799,Routine,-1,log_pix_in,tx_count,log_wire_outflow
+C102368,0.7798,Routine,-1,log_annual_income,log_wire_outflow,count_chargeback_status
+C101319,0.7786,Routine,-1,log_pix_in,distinct_merchants,log_annual_income
+C101444,0.7783,Routine,-1,log_pix_in,log_wire_outflow,tx_count
+C100129,0.7783,Routine,-1,log_pix_in,count_chargeback_status,mean_merchant_chargeback
+C100403,0.7781,Routine,-1,log_pix_in,mean_merchant_chargeback,log_annual_income
+C100588,0.7772,Routine,-1,log_pix_in,log_annual_income,distinct_merchants
+C100916,0.7769,Routine,-1,log_pix_in,log_wire_outflow,distinct_merchants
+C101067,0.7764,Routine,-1,log_pix_in,tx_count,log_wire_outflow
+C100852,0.7759,Routine,-1,log_pix_in,log_wire_outflow,mean_merchant_chargeback
+C100483,0.7758,Routine,-1,log_pix_in,count_anon_events,mean_merchant_chargeback
+C101045,0.7755,Routine,-1,log_pix_in,log_wire_outflow,log_pix_outflow
+C101849,0.7748,Routine,1,log_pix_in,log_wire_outflow,distinct_merchants
+C101014,0.7739,Routine,-1,log_pix_in,tx_count,count_tor_events
+C101420,0.7709,Routine,-1,mean_merchant_chargeback,log_wire_outflow,fraction_high_mcc
+C101531,0.7705,Routine,-1,log_total_outflow,log_annual_income,log_wire_outflow
+C101255,0.7701,Routine,-1,log_annual_income,log_pix_in,distinct_merchants
+C101805,0.7695,Routine,-1,log_pix_in,count_tor_events,log_annual_income
+C102427,0.7691,Routine,-1,count_anon_events,log_wire_outflow,mean_merchant_chargeback
+C100882,0.7686,Routine,-1,log_pix_in,count_chargeback_status,log_wire_outflow
+C100707,0.7675,Routine,-1,log_pix_in,count_anon_events,fraction_high_mcc
+C101374,0.7665,Routine,-1,log_pix_in,count_anon_events,log_wire_outflow
+C101058,0.7664,Routine,-1,log_pix_in,count_tor_events,mean_merchant_chargeback
+C102180,0.7652,Routine,-1,log_pix_in,count_chargeback_status,log_wire_outflow
+C102105,0.7647,Routine,-1,log_pix_in,log_annual_income,count_tor_events
+C100371,0.764,Routine,-1,log_annual_income,log_pix_in,distinct_merchants
+C101958,0.7637,Routine,-1,log_pix_in,count_tor_events,count_anon_events
+C101833,0.7631,Routine,-1,log_annual_income,count_tor_events,count_anon_events
+C101581,0.7622,Routine,-1,count_tor_events,log_annual_income,distinct_merchants
+C101156,0.7622,Routine,-1,log_pix_in,log_total_outflow,log_annual_income
+C100195,0.762,Routine,-1,log_pix_in,count_anon_events,log_wire_outflow
+C101124,0.762,Routine,-1,log_pix_in,count_chargeback_status,log_total_outflow
+C100943,0.7618,Routine,-1,count_anon_events,log_wire_outflow,count_chargeback_status
+C101693,0.7616,Routine,-1,log_pix_in,count_tor_events,count_anon_events
+C101284,0.7615,Routine,1,log_annual_income,count_anon_events,log_pix_in
+C101777,0.7612,Routine,1,count_tor_events,log_pix_in,mean_merchant_chargeback
+C100253,0.7611,Routine,-1,log_wire_outflow,log_pix_in,log_annual_income
+C101091,0.761,Routine,-1,log_pix_in,log_annual_income,log_total_outflow
+C101610,0.76,Routine,-1,log_pix_in,mean_merchant_chargeback,log_annual_income
+C100288,0.7592,Routine,-1,count_chargeback_status,mean_merchant_chargeback,log_wire_outflow
+C102338,0.7559,Routine,-1,log_pix_in,log_wire_outflow,distinct_merchants
+C100310,0.7558,Routine,-1,log_annual_income,log_pix_in,fraction_high_mcc
+C101800,0.7556,Routine,-1,count_chargeback_status,log_pix_in,log_wire_outflow
+C100978,0.7529,Routine,-1,log_pix_in,log_annual_income,count_chargeback_status
+C101574,0.7524,Routine,-1,log_pix_in,log_annual_income,log_wire_outflow
+C100277,0.749,Routine,-1,log_pix_in,count_chargeback_status,log_wire_outflow
+C100320,0.7486,Routine,-1,log_pix_in,log_annual_income,log_total_outflow
+C102442,0.7485,Routine,-1,log_pix_in,count_chargeback_status,log_total_outflow
+C101758,0.7484,Routine,-1,log_pix_outflow,log_annual_income,count_anon_events
+C101578,0.7471,Routine,-1,log_pix_in,log_wire_outflow,tx_count
+C100040,0.7463,Routine,-1,log_pix_in,count_anon_events,distinct_merchants
+C100449,0.7461,Routine,-1,log_pix_in,log_total_outflow,log_annual_income
+C100247,0.746,Routine,-1,count_anon_events,mean_merchant_chargeback,log_wire_outflow
+C102119,0.744,Routine,-1,count_chargeback_status,log_pix_in,log_wire_outflow
+C102235,0.7436,Routine,-1,count_chargeback_status,log_pix_in,mean_merchant_chargeback
+C101515,0.7421,Routine,-1,log_pix_in,count_anon_events,log_wire_outflow
+C101288,0.7421,Routine,-1,log_pix_in,count_anon_events,count_chargeback_status
+C102429,0.7401,Routine,-1,log_annual_income,log_pix_in,distinct_merchants
+C101694,0.7398,Routine,-1,log_pix_outflow,log_pix_in,log_total_outflow
+C100524,0.7396,Routine,-1,log_annual_income,log_pix_in,log_wire_outflow
+C101395,0.7391,Routine,-1,log_pix_in,log_wire_outflow,log_annual_income
+C102090,0.7389,Routine,-1,log_pix_in,log_pix_outflow,count_anon_events
+C100190,0.7382,Routine,-1,log_pix_in,log_wire_outflow,log_annual_income
+C101639,0.7378,Routine,-1,log_pix_in,log_total_outflow,log_annual_income
+C100000,0.7354,Routine,-1,log_pix_in,count_chargeback_status,log_wire_outflow
+C102051,0.7353,Routine,-1,log_annual_income,log_pix_in,count_anon_events
+C101477,0.735,Routine,-1,log_pix_in,log_wire_outflow,log_annual_income
+C101877,0.7334,Routine,-1,log_pix_in,tx_count,log_wire_outflow
+C102215,0.733,Routine,-1,log_pix_outflow,count_chargeback_status,log_wire_outflow
+C100766,0.732,Routine,-1,distinct_merchants,log_wire_outflow,tx_count
+C100049,0.7315,Routine,-1,log_pix_in,count_chargeback_status,log_wire_outflow
+C101952,0.7308,Routine,-1,log_pix_in,log_annual_income,count_chargeback_status
+C102016,0.7306,Routine,-1,log_annual_income,log_pix_in,fraction_high_mcc
+C101016,0.7306,Routine,-1,count_tor_events,count_anon_events,log_total_outflow
+C100957,0.7286,Routine,-1,log_pix_in,log_wire_outflow,fraction_high_mcc
+C100099,0.7286,Routine,1,log_pix_in,log_annual_income,distinct_merchants
+C101865,0.7284,Routine,-1,log_pix_in,log_annual_income,log_total_outflow
+C100857,0.7282,Routine,-1,log_annual_income,log_pix_in,count_chargeback_status
+C101602,0.7279,Routine,-1,log_annual_income,count_anon_events,log_total_outflow
+C102083,0.7278,Routine,-1,count_anon_events,log_wire_outflow,log_annual_income
+C100487,0.7278,Routine,1,count_anon_events,log_wire_outflow,mean_merchant_chargeback
+C101740,0.726,Routine,-1,log_pix_in,log_wire_outflow,log_annual_income
+C100938,0.7252,Routine,-1,log_pix_in,count_chargeback_status,log_wire_outflow
+C100031,0.7246,Routine,-1,count_tor_events,log_pix_in,count_chargeback_status
+C102418,0.7235,Routine,-1,count_anon_events,log_pix_in,distinct_merchants
+C100471,0.7229,Routine,-1,log_pix_outflow,log_pix_in,count_anon_events
+C101554,0.7223,Routine,-1,log_pix_in,log_annual_income,mean_merchant_chargeback
+C101100,0.7222,Routine,-1,log_pix_in,log_annual_income,count_anon_events
+C100541,0.7208,Routine,-1,log_pix_in,count_tor_events,log_annual_income
+C101803,0.7202,Routine,-1,count_chargeback_status,log_pix_in,log_wire_outflow
+C101227,0.7202,Routine,-1,count_chargeback_status,log_pix_in,log_wire_outflow
+C100838,0.7201,Routine,-1,log_pix_in,count_anon_events,distinct_merchants
+C101439,0.7194,Routine,-1,log_pix_in,log_wire_outflow,mean_merchant_chargeback
+C101116,0.7185,Routine,-1,log_pix_in,log_wire_outflow,log_annual_income
+C100561,0.7183,Routine,-1,log_annual_income,log_pix_in,mean_merchant_chargeback
+C100764,0.7181,Routine,-1,log_pix_in,count_chargeback_status,log_wire_outflow
+C101438,0.7174,Routine,-1,log_annual_income,log_pix_in,log_wire_outflow
+C101536,0.7169,Routine,-1,log_pix_in,tx_count,log_wire_outflow
+C102186,0.7162,Routine,-1,log_pix_in,distinct_merchants,tx_count
+C102131,0.7147,Routine,-1,log_pix_in,log_total_outflow,log_annual_income
+C102189,0.714,Routine,-1,log_pix_outflow,count_anon_events,log_pix_in
+C100527,0.7134,Routine,-1,log_annual_income,log_wire_outflow,distinct_merchants
+C100787,0.7134,Routine,-1,log_annual_income,log_pix_in,distinct_merchants
+C102423,0.7132,Routine,-1,log_pix_in,count_anon_events,count_tor_events
+C100484,0.713,Routine,-1,log_pix_in,log_annual_income,log_wire_outflow
+C101356,0.71,Routine,-1,count_anon_events,log_pix_in,distinct_merchants
+C102048,0.7099,Routine,-1,log_pix_in,count_anon_events,fraction_high_mcc
+C100702,0.7076,Routine,-1,log_pix_in,log_annual_income,log_wire_outflow
+C100735,0.7073,Routine,-1,log_pix_in,log_annual_income,log_total_outflow
+C101285,0.7073,Routine,-1,count_tor_events,log_pix_in,count_anon_events
+C101087,0.7073,Routine,-1,log_pix_in,log_annual_income,count_anon_events
+C101520,0.7062,Routine,-1,count_tor_events,count_anon_events,fraction_high_mcc
+C100888,0.7047,Routine,-1,count_chargeback_status,log_wire_outflow,log_annual_income
+C101891,0.7045,Routine,-1,log_wire_outflow,log_annual_income,distinct_merchants
+C102118,0.7038,Routine,-1,count_chargeback_status,log_pix_in,mean_merchant_chargeback
+C102440,0.7032,Routine,-1,count_tor_events,count_anon_events,log_annual_income
+C101160,0.6977,Routine,-1,log_annual_income,log_pix_outflow,log_pix_in
+C100600,0.6959,Routine,-1,log_pix_in,count_anon_events,mean_merchant_chargeback
+C101917,0.6952,Routine,-1,log_pix_in,count_anon_events,count_chargeback_status
+C102265,0.6914,Routine,-1,log_pix_in,distinct_merchants,log_pix_outflow
+C101238,0.6907,Routine,-1,count_tor_events,log_pix_outflow,count_anon_events
+C101987,0.6907,Routine,-1,log_pix_in,count_chargeback_status,distinct_merchants
+C101185,0.69,Routine,-1,log_pix_in,count_anon_events,log_wire_outflow
+C100873,0.6896,Routine,-1,log_pix_in,log_wire_outflow,log_annual_income
+C100977,0.6895,Routine,-1,log_pix_in,count_chargeback_status,log_wire_outflow
+C100116,0.6884,Routine,-1,count_tor_events,count_anon_events,log_wire_outflow
+C101417,0.6877,Routine,-1,log_pix_in,log_wire_outflow,log_annual_income
+C100235,0.6874,Routine,-1,log_annual_income,log_pix_in,count_chargeback_status
+C102092,0.6865,Routine,-1,log_annual_income,count_tor_events,count_anon_events
+C100024,0.6854,Routine,-1,mean_merchant_chargeback,log_pix_in,fraction_high_mcc
+C101984,0.684,Routine,-1,log_wire_outflow,log_annual_income,distinct_merchants
+C102139,0.6832,Routine,1,log_pix_in,log_wire_outflow,log_annual_income
+C101670,0.6804,Routine,-1,log_pix_in,count_chargeback_status,log_wire_outflow
+C100022,0.6796,Routine,-1,count_anon_events,log_pix_in,log_wire_outflow
+C102042,0.677,Routine,-1,log_pix_in,log_wire_outflow,distinct_merchants
+C100672,0.6767,Routine,-1,log_pix_in,count_anon_events,log_wire_outflow
+C101224,0.6763,Routine,-1,count_anon_events,log_pix_in,log_wire_outflow
+C101714,0.6758,Routine,-1,log_pix_in,log_wire_outflow,log_annual_income
+C100799,0.6755,Routine,-1,log_pix_in,count_anon_events,distinct_merchants
+C100489,0.6754,Routine,-1,log_pix_in,log_wire_outflow,log_annual_income
+C101172,0.6753,Routine,-1,count_chargeback_status,log_pix_in,log_wire_outflow
+C102430,0.6743,Routine,-1,log_pix_in,log_wire_outflow,log_annual_income
+C100583,0.6739,Routine,-1,log_pix_in,count_anon_events,log_wire_outflow
+C102484,0.6735,Routine,-1,log_annual_income,log_pix_in,fraction_high_mcc
+C101472,0.6733,Routine,-1,log_pix_in,log_wire_outflow,log_total_outflow
+C102202,0.6718,Routine,-1,log_annual_income,log_pix_outflow,count_chargeback_status
+C102441,0.6711,Routine,-1,log_pix_outflow,count_tor_events,count_anon_events
+C101686,0.6691,Routine,-1,log_pix_in,log_wire_outflow,log_annual_income
+C100307,0.6682,Routine,-1,log_pix_in,count_tor_events,log_total_outflow
+C100884,0.6661,Routine,-1,log_pix_in,log_wire_outflow,log_annual_income
+C101027,0.6659,Routine,-1,log_pix_in,count_tor_events,log_wire_outflow
+C101929,0.6658,Routine,-1,count_tor_events,log_pix_outflow,count_anon_events
+C100867,0.6651,Routine,-1,log_pix_in,count_anon_events,log_wire_outflow
+C101813,0.6651,Routine,-1,count_anon_events,mean_merchant_chargeback,distinct_merchants
+C102079,0.6645,Routine,-1,log_annual_income,distinct_merchants,log_pix_in
+C101864,0.662,Routine,-1,log_annual_income,log_pix_in,distinct_merchants
+C102365,0.6607,Routine,-1,log_pix_in,count_chargeback_status,log_total_outflow
+C101692,0.6598,Routine,1,log_annual_income,distinct_merchants,log_wire_outflow
+C101052,0.6585,Routine,-1,log_pix_in,count_anon_events,log_total_outflow
+C100063,0.6583,Routine,-1,log_pix_in,count_chargeback_status,log_wire_outflow
+C102026,0.6569,Routine,-1,count_tor_events,count_anon_events,log_total_outflow
+C101371,0.6543,Routine,-1,log_pix_in,count_chargeback_status,log_wire_outflow
+C100770,0.6533,Routine,-1,count_chargeback_status,log_pix_in,mean_merchant_chargeback
+C100089,0.6531,Routine,-1,log_pix_in,log_annual_income,count_chargeback_status
+C100512,0.6528,Routine,-1,log_pix_in,log_annual_income,count_chargeback_status
+C101828,0.6516,Routine,-1,log_pix_in,log_wire_outflow,fraction_high_mcc
+C101455,0.6495,Routine,-1,count_tor_events,log_pix_in,count_anon_events
+C101042,0.6491,Routine,-1,log_annual_income,log_pix_in,count_tor_events
+C100257,0.6464,Routine,-1,count_anon_events,log_pix_in,log_wire_outflow
+C100540,0.6461,Routine,-1,log_pix_in,log_wire_outflow,tx_count
+C100122,0.6454,Routine,0,log_annual_income,log_pix_in,count_anon_events
+C100112,0.6452,Routine,-1,log_pix_in,count_anon_events,count_chargeback_status
+C102357,0.6445,Routine,-1,count_anon_events,log_pix_outflow,count_chargeback_status
+C102145,0.6441,Routine,-1,log_pix_in,count_tor_events,fraction_high_mcc
+C101841,0.644,Routine,-1,log_annual_income,log_pix_in,distinct_merchants
+C101085,0.6435,Routine,-1,count_tor_events,count_anon_events,log_pix_in
+C102393,0.6426,Routine,-1,log_pix_in,log_pix_outflow,mean_merchant_chargeback
+C100181,0.6418,Routine,-1,log_pix_in,log_annual_income,log_wire_outflow
+C100903,0.6409,Routine,0,log_pix_in,log_annual_income,distinct_merchants
+C100529,0.6408,Routine,-1,log_wire_outflow,mean_merchant_chargeback,distinct_merchants
+C100881,0.6396,Routine,-1,log_total_outflow,log_annual_income,count_chargeback_status
+C100073,0.639,Routine,-1,log_pix_in,count_anon_events,log_annual_income
+C100211,0.6389,Routine,-1,log_wire_outflow,mean_merchant_chargeback,log_annual_income
+C102153,0.6388,Routine,-1,log_pix_in,count_chargeback_status,log_wire_outflow
+C102127,0.6369,Routine,-1,log_annual_income,log_pix_in,count_tor_events
+C101705,0.6369,Routine,-1,count_tor_events,count_anon_events,log_pix_in
+C102157,0.6367,Routine,-1,log_pix_in,distinct_merchants,log_wire_outflow
+C101871,0.63,Routine,-1,count_tor_events,log_total_outflow,log_annual_income
+C101792,0.63,Routine,-1,count_chargeback_status,log_wire_outflow,log_annual_income
+C102260,0.6295,Routine,-1,log_pix_in,log_wire_outflow,distinct_merchants
+C101553,0.6294,Routine,-1,count_chargeback_status,log_wire_outflow,log_annual_income
+C101187,0.6293,Routine,-1,log_annual_income,log_pix_in,distinct_merchants
+C102102,0.6285,Routine,-1,log_annual_income,log_pix_in,count_chargeback_status
+C100461,0.6283,Routine,-1,log_pix_in,tx_count,log_wire_outflow
+C101872,0.6279,Routine,-1,log_pix_in,log_annual_income,distinct_merchants
+C101799,0.6278,Routine,-1,count_anon_events,count_chargeback_status,fraction_high_mcc
+C101246,0.6268,Routine,-1,log_pix_in,log_wire_outflow,log_annual_income
+C101519,0.6267,Routine,-1,log_pix_in,log_annual_income,log_wire_outflow
+C100952,0.6251,Routine,-1,log_annual_income,log_pix_in,log_wire_outflow
+C101360,0.6244,Routine,-1,log_pix_in,log_pix_outflow,log_wire_outflow
+C100518,0.6225,Routine,-1,log_pix_in,log_wire_outflow,log_annual_income
+C101526,0.6201,Routine,-1,count_tor_events,log_pix_in,log_total_outflow
+C100392,0.6198,Routine,0,count_tor_events,mean_merchant_chargeback,log_wire_outflow
+C102007,0.6198,Routine,-1,log_pix_in,tx_count,log_wire_outflow
+C101268,0.6196,Routine,-1,log_pix_outflow,count_tor_events,log_annual_income
+C100429,0.6179,Routine,-1,log_pix_in,log_wire_outflow,log_annual_income
+C102336,0.6167,Routine,-1,log_pix_in,count_anon_events,log_wire_outflow
+C100934,0.6167,Routine,-1,log_pix_in,log_wire_outflow,distinct_merchants
+C100233,0.6162,Routine,-1,log_pix_in,log_wire_outflow,tx_count
+C100992,0.616,Routine,-1,count_tor_events,log_pix_in,count_anon_events
+C101832,0.6155,Routine,-1,log_pix_in,mean_merchant_chargeback,log_annual_income
+C101213,0.6115,Routine,-1,log_pix_in,distinct_merchants,log_wire_outflow
+C102075,0.6104,Routine,-1,log_annual_income,log_pix_in,log_wire_outflow
+C102422,0.6091,Routine,-1,log_pix_in,log_annual_income,count_anon_events
+C101218,0.6087,Routine,-1,log_pix_in,log_annual_income,log_wire_outflow
+C102178,0.6082,Routine,-1,log_pix_in,log_wire_outflow,log_total_outflow
+C100730,0.6045,Routine,-1,log_pix_in,tx_count,log_wire_outflow
+C101684,0.6021,Routine,-1,log_pix_in,count_anon_events,mean_merchant_chargeback
+C101399,0.5989,Routine,-1,count_chargeback_status,log_pix_in,log_wire_outflow
+C100416,0.597,Routine,-1,log_annual_income,distinct_merchants,log_wire_outflow
+C101774,0.5956,Routine,-1,log_pix_in,count_anon_events,log_wire_outflow
+C101604,0.5948,Routine,-1,log_pix_in,count_chargeback_status,log_wire_outflow
+C101963,0.5946,Routine,-1,count_anon_events,log_pix_outflow,log_wire_outflow
+C101965,0.5941,Routine,-1,log_pix_in,count_chargeback_status,log_annual_income
+C101137,0.5935,Routine,-1,count_anon_events,log_total_outflow,count_chargeback_status
+C100364,0.593,Routine,-1,log_pix_in,count_chargeback_status,log_wire_outflow
+C102478,0.5928,Routine,-1,log_pix_in,count_chargeback_status,mean_merchant_chargeback
+C101332,0.5927,Routine,-1,log_annual_income,log_wire_outflow,distinct_merchants
+C101286,0.5923,Routine,-1,log_pix_in,log_wire_outflow,log_annual_income
+C100198,0.5916,Routine,-1,log_pix_in,log_annual_income,log_wire_outflow
+C101150,0.5915,Routine,-1,log_annual_income,log_pix_outflow,log_wire_outflow
+C100586,0.5906,Routine,-1,count_tor_events,log_pix_outflow,count_anon_events
+C100432,0.5885,Routine,-1,log_pix_in,log_wire_outflow,distinct_merchants
+C101171,0.5882,Routine,-1,log_wire_outflow,log_pix_in,distinct_merchants
+C100980,0.5871,Routine,-1,log_annual_income,log_pix_in,log_wire_outflow
+C100557,0.5864,Routine,-1,count_tor_events,count_anon_events,log_annual_income
+C102436,0.5858,Routine,-1,log_annual_income,log_pix_in,mean_merchant_chargeback
+C100840,0.5846,Routine,1,log_pix_in,log_wire_outflow,log_annual_income
+C100101,0.5842,Routine,-1,log_pix_in,count_anon_events,log_wire_outflow
+C101648,0.5814,Routine,-1,log_wire_outflow,log_annual_income,distinct_merchants
+C100029,0.5799,Routine,-1,log_wire_outflow,log_pix_in,mean_merchant_chargeback
+C101680,0.5785,Routine,-1,log_pix_in,log_annual_income,log_wire_outflow
+C100343,0.5757,Routine,-1,log_pix_in,count_tor_events,count_anon_events
+C100924,0.5746,Routine,-1,log_pix_in,log_wire_outflow,log_annual_income
+C102438,0.5741,Routine,-1,log_pix_in,count_anon_events,log_wire_outflow
+C102403,0.574,Routine,-1,mean_merchant_chargeback,log_annual_income,log_wire_outflow
+C102231,0.5723,Routine,-1,log_pix_in,tx_count,log_wire_outflow
+C101088,0.5719,Routine,-1,log_pix_outflow,log_annual_income,count_anon_events
+C101359,0.5718,Routine,-1,log_pix_in,log_wire_outflow,mean_merchant_chargeback
+C102263,0.5714,Routine,-1,count_anon_events,mean_merchant_chargeback,log_wire_outflow
+C102318,0.5714,Routine,-1,log_pix_in,log_annual_income,log_wire_outflow
+C100646,0.5697,Routine,-1,mean_merchant_chargeback,log_annual_income,log_wire_outflow
+C101855,0.5661,Routine,-1,log_pix_in,log_wire_outflow,log_annual_income
+C101168,0.5649,Routine,-1,log_pix_in,log_wire_outflow,log_annual_income
+C101241,0.5649,Routine,-1,log_pix_in,count_chargeback_status,log_wire_outflow
+C101545,0.5646,Routine,-1,log_pix_in,fraction_high_mcc,log_wire_outflow
+C102150,0.5644,Routine,-1,log_annual_income,log_pix_in,count_anon_events
+C100210,0.5637,Routine,-1,mean_merchant_chargeback,log_wire_outflow,log_annual_income
+C101892,0.5634,Routine,-1,count_anon_events,log_wire_outflow,log_annual_income
+C100901,0.5633,Routine,-1,log_annual_income,log_total_outflow,log_pix_in
+C100816,0.5605,Routine,1,log_annual_income,count_anon_events,log_total_outflow
+C101039,0.5582,Routine,-1,count_chargeback_status,log_pix_in,log_total_outflow
+C102129,0.5581,Routine,-1,log_pix_in,count_chargeback_status,log_wire_outflow
+C101482,0.5568,Routine,-1,log_pix_in,log_annual_income,log_wire_outflow
+C100845,0.5556,Routine,-1,log_pix_in,count_chargeback_status,log_annual_income
+C100973,0.5548,Routine,-1,log_pix_outflow,log_annual_income,log_total_outflow
+C101457,0.5495,Routine,-1,log_pix_in,count_anon_events,log_annual_income
+C102335,0.5487,Routine,1,count_anon_events,log_wire_outflow,log_pix_in
+C100436,0.5472,Routine,-1,log_pix_in,log_wire_outflow,distinct_merchants
+C100582,0.5457,Routine,-1,log_pix_in,log_total_outflow,log_pix_outflow
+C101950,0.5432,Routine,-1,log_annual_income,log_pix_in,distinct_merchants
+C100520,0.5427,Routine,-1,count_tor_events,log_pix_in,log_annual_income
+C101495,0.542,Routine,-1,log_pix_in,count_chargeback_status,log_wire_outflow
+C100976,0.5401,Routine,-1,log_annual_income,count_chargeback_status,log_wire_outflow
+C101945,0.5397,Routine,-1,mean_merchant_chargeback,log_pix_in,log_wire_outflow
+C100030,0.5357,Routine,1,count_chargeback_status,log_pix_in,log_wire_outflow
+C100608,0.5349,Routine,-1,log_pix_outflow,count_chargeback_status,log_wire_outflow
+C101275,0.5345,Routine,-1,log_pix_in,count_chargeback_status,log_wire_outflow
+C100763,0.5318,Routine,-1,log_pix_in,log_annual_income,log_wire_outflow
+C102284,0.531,Routine,-1,log_pix_in,count_tor_events,log_annual_income
+C101169,0.5305,Routine,-1,log_pix_outflow,log_pix_in,count_anon_events
+C101721,0.5304,Routine,-1,log_pix_in,log_wire_outflow,log_annual_income
+C100440,0.5277,Routine,-1,log_wire_outflow,log_pix_in,distinct_merchants
+C100495,0.5272,Routine,-1,log_annual_income,log_pix_in,log_wire_outflow
+C100819,0.5272,Routine,-1,log_wire_outflow,log_pix_in,log_annual_income
+C100092,0.5267,Routine,-1,log_annual_income,log_pix_in,log_total_outflow
+C100958,0.5262,Routine,-1,log_pix_in,count_anon_events,log_total_outflow
+C102019,0.5261,Routine,-1,count_tor_events,log_pix_outflow,count_anon_events
+C101389,0.5257,Routine,-1,log_wire_outflow,log_pix_in,log_annual_income
+C100216,0.5238,Routine,-1,log_annual_income,log_pix_in,log_wire_outflow
+C102321,0.5196,Routine,-1,log_pix_in,count_anon_events,count_chargeback_status
+C101462,0.5164,Routine,-1,log_pix_outflow,count_chargeback_status,log_wire_outflow
+C101347,0.5162,Routine,-1,log_pix_in,log_wire_outflow,log_total_outflow
+C102326,0.5153,Routine,-1,log_pix_in,distinct_merchants,log_wire_outflow
+C101004,0.5148,Routine,-1,log_pix_in,log_annual_income,count_anon_events
+C100876,0.5146,Routine,-1,log_pix_in,count_anon_events,log_total_outflow
+C101422,0.5144,Routine,-1,count_tor_events,log_pix_in,count_anon_events
+C100400,0.5144,Routine,-1,log_pix_in,count_chargeback_status,mean_merchant_chargeback
+C100612,0.5144,Routine,-1,log_pix_in,log_wire_outflow,mean_merchant_chargeback
+C101846,0.514,Routine,1,log_pix_in,count_anon_events,count_chargeback_status
+C101301,0.514,Routine,-1,log_pix_in,log_wire_outflow,distinct_merchants
+C100871,0.5122,Routine,1,log_pix_in,mean_merchant_chargeback,log_wire_outflow
+C101295,0.5121,Routine,-1,log_pix_in,mean_merchant_chargeback,log_wire_outflow
+C100212,0.5114,Routine,-1,log_pix_in,count_tor_events,log_wire_outflow
+C101781,0.5108,Routine,-1,log_pix_in,log_wire_outflow,mean_merchant_chargeback
+C102078,0.51,Routine,-1,log_pix_in,distinct_merchants,log_wire_outflow
+C101062,0.5058,Routine,-1,log_annual_income,log_pix_in,log_pix_outflow
+C100479,0.5057,Routine,-1,log_pix_in,log_annual_income,log_total_outflow
+C100970,0.5048,Routine,-1,log_pix_in,tx_count,count_chargeback_status
+C101527,0.5036,Routine,-1,log_annual_income,log_pix_in,distinct_merchants
+C100578,0.5031,Routine,-1,log_annual_income,log_pix_in,fraction_high_mcc
+C100936,0.502,Routine,-1,log_pix_in,log_annual_income,log_wire_outflow
+C100530,0.5013,Routine,-1,count_anon_events,distinct_merchants,log_pix_outflow
+C101947,0.498,Routine,-1,count_tor_events,count_anon_events,log_pix_in
+C101452,0.4946,Routine,-1,log_annual_income,log_pix_in,count_tor_events
+C101559,0.4939,Routine,-1,count_tor_events,log_pix_outflow,log_wire_outflow
+C100649,0.4927,Routine,-1,log_pix_outflow,log_annual_income,log_total_outflow
+C101731,0.4913,Routine,-1,log_pix_in,distinct_merchants,log_wire_outflow
+C101449,0.4892,Routine,-1,log_pix_in,log_total_outflow,log_wire_outflow
+C100762,0.4889,Routine,-1,log_pix_in,log_annual_income,distinct_merchants
+C101656,0.4869,Routine,-1,log_annual_income,log_wire_outflow,distinct_merchants
+C100893,0.4867,Routine,-1,log_pix_in,count_tor_events,count_chargeback_status
+C100515,0.4846,Routine,-1,count_tor_events,count_chargeback_status,log_wire_outflow
+C100560,0.4816,Routine,-1,log_pix_in,count_tor_events,log_wire_outflow
+C102437,0.4761,Routine,-1,log_pix_in,log_annual_income,mean_merchant_chargeback
+C100135,0.4738,Routine,-1,log_pix_in,count_anon_events,log_wire_outflow
+C101875,0.4717,Routine,-1,log_pix_in,count_chargeback_status,log_wire_outflow
+C100242,0.4717,Routine,-1,log_pix_in,count_chargeback_status,log_wire_outflow
+C101367,0.4714,Routine,-1,count_tor_events,count_anon_events,log_pix_in
+C102164,0.4714,Routine,-1,log_pix_in,mean_merchant_chargeback,log_wire_outflow
+C100165,0.4688,Routine,-1,log_pix_in,distinct_merchants,log_pix_outflow
+C100386,0.4667,Routine,-1,log_annual_income,log_pix_in,count_chargeback_status
+C100258,0.464,Routine,-1,log_annual_income,log_pix_in,fraction_high_mcc
+C100423,0.4639,Routine,-1,log_pix_in,log_wire_outflow,distinct_merchants
+C101188,0.4626,Routine,-1,count_tor_events,mean_merchant_chargeback,log_wire_outflow
+C100793,0.4609,Routine,-1,log_pix_in,count_tor_events,count_anon_events
+C100856,0.4596,Routine,-1,log_annual_income,count_chargeback_status,log_wire_outflow
+C101131,0.4584,Routine,-1,count_anon_events,log_pix_in,count_chargeback_status
+C100068,0.4576,Routine,-1,log_pix_in,count_tor_events,log_annual_income
+C101860,0.4575,Routine,-1,log_pix_in,log_pix_outflow,count_anon_events
+C100119,0.4572,Routine,-1,log_pix_in,count_chargeback_status,log_wire_outflow
+C101951,0.4565,Routine,-1,log_pix_in,log_wire_outflow,log_annual_income
+C100389,0.4552,Routine,-1,log_annual_income,log_pix_in,distinct_merchants
+C100718,0.4548,Routine,-1,log_pix_in,log_wire_outflow,log_annual_income
+C100883,0.4547,Routine,-1,count_chargeback_status,log_pix_in,log_total_outflow
+C102453,0.4537,Routine,-1,log_annual_income,log_pix_in,mean_merchant_chargeback
+C102306,0.4536,Routine,-1,log_pix_in,count_anon_events,count_tor_events
+C100890,0.4518,Routine,-1,log_pix_in,log_wire_outflow,distinct_merchants
+C100485,0.4496,Routine,-1,log_annual_income,log_pix_in,count_chargeback_status
+C100689,0.4475,Routine,-1,log_pix_in,log_wire_outflow,count_chargeback_status
+C102270,0.4469,Routine,-1,log_pix_in,count_anon_events,fraction_high_mcc
+C100005,0.4468,Routine,-1,log_pix_in,log_annual_income,mean_merchant_chargeback
+C100771,0.446,Routine,-1,count_anon_events,log_pix_in,log_pix_outflow
+C100443,0.4459,Routine,-1,log_pix_outflow,log_pix_in,log_wire_outflow
+C100052,0.444,Routine,-1,count_anon_events,log_pix_in,log_total_outflow
+C100015,0.4431,Routine,-1,log_pix_in,distinct_merchants,log_annual_income
+C101291,0.4421,Routine,-1,log_pix_in,log_wire_outflow,log_pix_outflow
+C102072,0.4407,Routine,-1,log_pix_in,count_anon_events,log_wire_outflow
+C102184,0.4401,Routine,-1,log_pix_in,log_wire_outflow,log_annual_income
+C102332,0.44,Routine,-1,log_annual_income,log_pix_in,count_chargeback_status
+C101882,0.4379,Routine,-1,log_pix_in,log_wire_outflow,distinct_merchants
+C102121,0.4373,Routine,-1,count_tor_events,count_anon_events,log_pix_in
+C102160,0.4349,Routine,-1,count_tor_events,log_pix_outflow,count_anon_events
+C102068,0.4341,Routine,-1,log_pix_in,count_tor_events,count_chargeback_status
+C101153,0.4339,Routine,-1,log_pix_in,log_total_outflow,log_wire_outflow
+C101711,0.4318,Routine,0,count_chargeback_status,mean_merchant_chargeback,log_annual_income
+C101883,0.4316,Routine,-1,log_pix_in,mean_merchant_chargeback,tx_count
+C100311,0.4289,Routine,-1,log_pix_in,count_chargeback_status,log_wire_outflow
+C100499,0.4272,Routine,-1,log_pix_outflow,log_annual_income,count_anon_events
+C100542,0.4247,Routine,-1,count_tor_events,log_total_outflow,log_annual_income
+C101147,0.4244,Routine,-1,log_pix_in,log_annual_income,log_total_outflow
+C100671,0.4238,Routine,-1,log_pix_in,distinct_merchants,log_wire_outflow
+C101055,0.4228,Routine,-1,log_pix_in,log_annual_income,distinct_merchants
+C102381,0.4227,Routine,-1,log_pix_outflow,count_chargeback_status,log_wire_outflow
+C100647,0.4222,Routine,-1,log_pix_in,count_anon_events,tx_count
+C101548,0.4221,Routine,-1,count_chargeback_status,log_wire_outflow,log_annual_income
+C101159,0.4206,Routine,-1,log_wire_outflow,log_annual_income,distinct_merchants
+C101794,0.4201,Routine,-1,log_pix_in,log_wire_outflow,log_annual_income
+C102420,0.4197,Routine,1,count_anon_events,log_pix_in,log_wire_outflow
+C101494,0.4186,Routine,-1,count_tor_events,log_pix_in,count_anon_events
+C100711,0.4171,Routine,-1,log_pix_in,log_annual_income,log_wire_outflow
+C101896,0.4165,Routine,-1,log_pix_in,log_pix_outflow,log_wire_outflow
+C100105,0.4164,Routine,-1,log_pix_in,log_annual_income,log_wire_outflow
+C101031,0.4157,Routine,-1,log_pix_in,count_anon_events,distinct_merchants
+C100295,0.4142,Routine,-1,count_anon_events,log_pix_in,log_wire_outflow
+C102292,0.411,Routine,-1,log_pix_in,count_anon_events,count_chargeback_status
+C100405,0.4109,Routine,-1,log_wire_outflow,log_pix_in,log_annual_income
+C100820,0.4076,Routine,-1,log_annual_income,log_pix_in,log_total_outflow
+C100139,0.4053,Routine,-1,log_annual_income,log_pix_outflow,log_pix_in
+C100849,0.405,Routine,-1,log_pix_in,log_annual_income,log_total_outflow
+C102211,0.4043,Routine,0,log_pix_in,log_annual_income,mean_merchant_chargeback
+C100422,0.4038,Routine,-1,log_pix_outflow,log_pix_in,count_chargeback_status
+C100570,0.4037,Routine,1,log_annual_income,log_pix_in,distinct_merchants
+C100016,0.403,Routine,-1,log_pix_in,log_total_outflow,mean_merchant_chargeback
+C101324,0.4015,Routine,-1,log_pix_in,log_wire_outflow,distinct_merchants
+C100693,0.4006,Routine,-1,log_pix_in,count_chargeback_status,log_annual_income
+C101437,0.4001,Routine,-1,log_pix_in,mean_merchant_chargeback,log_annual_income
+C101567,0.3992,Routine,-1,log_pix_in,log_annual_income,mean_merchant_chargeback
+C101089,0.3977,Routine,0,log_pix_in,log_annual_income,mean_merchant_chargeback
+C102342,0.3973,Routine,-1,log_pix_in,count_anon_events,mean_merchant_chargeback
+C100848,0.3951,Routine,-1,count_anon_events,log_pix_in,log_wire_outflow
+C100336,0.394,Routine,-1,log_pix_in,log_annual_income,count_chargeback_status
+C100727,0.394,Routine,-1,count_tor_events,log_pix_in,log_wire_outflow
+C100084,0.3928,Routine,-1,log_pix_in,count_anon_events,log_wire_outflow
+C100652,0.3923,Routine,-1,log_annual_income,log_total_outflow,log_pix_in
+C102486,0.3917,Routine,-1,log_pix_in,mean_merchant_chargeback,log_wire_outflow
+C101926,0.3915,Routine,-1,count_anon_events,log_wire_outflow,log_annual_income
+C101613,0.3908,Routine,-1,log_pix_in,log_wire_outflow,mean_merchant_chargeback
+C101148,0.3901,Routine,-1,log_pix_outflow,log_total_outflow,log_annual_income
+C101970,0.3879,Routine,-1,log_annual_income,count_anon_events,log_pix_in
+C101149,0.3845,Routine,-1,log_pix_in,count_tor_events,count_chargeback_status
+C100623,0.384,Routine,-1,log_pix_in,log_total_outflow,mean_merchant_chargeback
+C101442,0.3836,Routine,-1,log_pix_in,count_chargeback_status,log_total_outflow
+C102155,0.3806,Routine,-1,count_chargeback_status,log_pix_in,log_wire_outflow
+C100020,0.3792,Routine,-1,log_pix_outflow,log_pix_in,count_anon_events
+C100543,0.3774,Routine,-1,log_pix_in,log_wire_outflow,count_chargeback_status
+C100158,0.3755,Routine,-1,count_anon_events,log_total_outflow,log_wire_outflow
+C101982,0.375,Routine,-1,log_pix_in,fraction_high_mcc,mean_merchant_chargeback
+C101298,0.3732,Routine,-1,log_pix_in,log_wire_outflow,distinct_merchants
+C101478,0.3727,Routine,-1,log_pix_in,count_anon_events,log_wire_outflow
+C101786,0.3717,Routine,-1,log_pix_in,log_total_outflow,log_wire_outflow
+C102032,0.3716,Routine,-1,log_pix_outflow,log_pix_in,count_anon_events
+C100514,0.3704,Routine,-1,log_pix_in,log_annual_income,log_wire_outflow
+C101916,0.37,Routine,-1,log_pix_in,mean_merchant_chargeback,log_wire_outflow
+C101645,0.3661,Routine,-1,log_wire_outflow,log_pix_in,distinct_merchants
+C100350,0.3644,Routine,-1,log_pix_in,log_annual_income,distinct_merchants
+C100083,0.3639,Routine,-1,log_pix_in,log_annual_income,log_wire_outflow
+C100390,0.3626,Routine,-1,log_pix_in,log_wire_outflow,log_annual_income
+C101988,0.3618,Routine,-1,log_annual_income,log_total_outflow,log_wire_outflow
+C100168,0.3594,Routine,-1,log_pix_in,log_wire_outflow,log_annual_income
+C100209,0.3575,Routine,-1,log_pix_in,log_annual_income,count_anon_events
+C102337,0.3573,Routine,-1,log_pix_in,log_wire_outflow,log_annual_income
+C100946,0.3507,Routine,-1,log_pix_in,count_chargeback_status,log_wire_outflow
+C101129,0.3498,Routine,-1,log_pix_in,log_total_outflow,log_wire_outflow
+C101310,0.3485,Routine,-1,log_pix_in,log_annual_income,count_anon_events
+C101484,0.3464,Routine,-1,count_tor_events,count_anon_events,mean_merchant_chargeback
+C100664,0.3463,Routine,-1,log_pix_in,count_anon_events,log_total_outflow
+C101013,0.3443,Routine,-1,count_anon_events,log_annual_income,log_wire_outflow
+C101601,0.3434,Routine,-1,log_pix_in,log_wire_outflow,distinct_merchants
+C100823,0.3426,Routine,-1,log_pix_in,log_wire_outflow,log_annual_income
+C101493,0.342,Routine,-1,log_annual_income,log_pix_in,count_chargeback_status
+C101843,0.3415,Routine,-1,log_pix_in,log_annual_income,log_total_outflow
+C101655,0.3412,Routine,-1,log_pix_in,distinct_merchants,log_wire_outflow
+C101097,0.3391,Routine,0,log_pix_in,log_annual_income,distinct_merchants
+C100574,0.338,Routine,-1,log_annual_income,log_total_outflow,count_anon_events
+C102086,0.3377,Routine,-1,log_pix_in,count_chargeback_status,log_total_outflow
+C100355,0.3344,Routine,-1,count_anon_events,log_wire_outflow,log_annual_income
+C102161,0.3343,Routine,-1,log_pix_in,log_annual_income,log_wire_outflow
+C101992,0.3339,Routine,-1,log_annual_income,log_pix_in,mean_merchant_chargeback
+C101768,0.329,Routine,-1,log_pix_in,count_tor_events,count_anon_events
+C102296,0.3254,Routine,-1,log_annual_income,log_pix_in,count_anon_events
+C102050,0.3253,Routine,-1,log_pix_in,distinct_merchants,log_wire_outflow
+C102056,0.325,Routine,-1,log_pix_outflow,count_chargeback_status,mean_merchant_chargeback
+C102106,0.325,Routine,-1,log_pix_in,log_wire_outflow,log_annual_income
+C102199,0.3247,Routine,-1,log_pix_in,log_wire_outflow,log_annual_income
+C101464,0.3242,Routine,-1,log_pix_in,log_annual_income,distinct_merchants
+C100013,0.3227,Routine,-1,log_pix_in,count_anon_events,log_pix_outflow
+C100339,0.3209,Routine,-1,log_pix_in,log_total_outflow,log_wire_outflow
+C101752,0.32,Routine,-1,log_pix_in,log_total_outflow,log_wire_outflow
+C101524,0.32,Routine,-1,log_pix_in,count_chargeback_status,log_wire_outflow
+C100966,0.3181,Routine,-1,log_annual_income,log_pix_in,log_wire_outflow
+C101393,0.3165,Routine,-1,log_annual_income,log_pix_in,log_total_outflow
+C101507,0.3148,Routine,-1,log_pix_in,count_chargeback_status,log_wire_outflow
+C101005,0.3146,Routine,-1,log_pix_in,count_anon_events,log_wire_outflow
+C101364,0.3143,Routine,-1,log_pix_in,count_chargeback_status,log_wire_outflow
+C101447,0.3131,Routine,-1,log_pix_in,count_chargeback_status,log_wire_outflow
+C101598,0.313,Routine,-1,log_annual_income,log_pix_outflow,log_wire_outflow
+C102346,0.3098,Routine,-1,log_pix_in,log_annual_income,log_wire_outflow
+C100725,0.3078,Routine,-1,log_pix_in,tx_count,log_wire_outflow
+C100954,0.3073,Routine,-1,log_wire_outflow,log_annual_income,distinct_merchants
+C101271,0.305,Routine,-1,log_pix_in,count_chargeback_status,log_pix_outflow
+C102333,0.3012,Routine,-1,log_pix_in,count_tor_events,log_annual_income
+C101269,0.3006,Routine,-1,log_annual_income,log_pix_in,distinct_merchants
+C101641,0.2998,Routine,-1,log_pix_in,log_wire_outflow,log_annual_income
+C100713,0.2986,Routine,-1,log_pix_in,log_wire_outflow,log_annual_income
+C101253,0.2984,Routine,-1,log_pix_in,log_wire_outflow,log_annual_income
+C100788,0.2976,Routine,-1,count_anon_events,log_total_outflow,log_pix_outflow
+C101333,0.2943,Routine,-1,mean_merchant_chargeback,log_pix_in,log_wire_outflow
+C102374,0.2933,Routine,-1,count_tor_events,log_pix_in,log_pix_outflow
+C100352,0.2912,Routine,-1,count_tor_events,log_pix_outflow,log_wire_outflow
+C102345,0.2891,Routine,-1,log_pix_in,count_chargeback_status,log_pix_outflow
+C101300,0.2884,Routine,-1,log_pix_outflow,count_anon_events,log_pix_in
+C101685,0.2862,Routine,-1,log_annual_income,log_pix_in,count_chargeback_status
+C100572,0.2841,Routine,-1,log_wire_outflow,log_pix_in,log_annual_income
+C100668,0.2837,Routine,-1,log_pix_in,log_wire_outflow,log_total_outflow
+C100928,0.2837,Routine,-1,log_pix_in,mean_merchant_chargeback,log_wire_outflow
+C100407,0.2803,Routine,-1,log_pix_in,count_chargeback_status,log_pix_outflow
+C101379,0.2788,Routine,-1,log_pix_outflow,log_annual_income,log_total_outflow
+C100705,0.2781,Routine,-1,log_pix_in,log_total_outflow,count_chargeback_status
+C100095,0.2778,Routine,-1,log_pix_in,log_wire_outflow,count_anon_events
+C101636,0.2773,Routine,-1,log_pix_outflow,count_chargeback_status,log_wire_outflow
+C100286,0.2753,Routine,-1,log_pix_in,log_pix_outflow,count_anon_events
+C100597,0.2752,Routine,-1,log_pix_in,count_anon_events,log_wire_outflow
+C100920,0.2739,Routine,-1,count_tor_events,log_pix_outflow,count_anon_events
+C102363,0.2709,Routine,-1,log_annual_income,count_anon_events,log_pix_in
+C101454,0.2708,Routine,-1,log_pix_in,count_anon_events,log_wire_outflow
+C102475,0.2703,Routine,-1,log_total_outflow,log_pix_in,distinct_merchants
+C102445,0.2686,Routine,-1,count_chargeback_status,log_total_outflow,log_wire_outflow
+C102271,0.2675,Routine,-1,log_annual_income,log_pix_in,log_wire_outflow
+C101321,0.2672,Routine,-1,log_pix_in,tx_count,log_wire_outflow
+C101861,0.2672,Routine,-1,log_pix_in,log_annual_income,log_pix_outflow
+C102133,0.2648,Routine,-1,log_pix_in,count_chargeback_status,mean_merchant_chargeback
+C102394,0.2641,Routine,-1,log_pix_in,log_pix_outflow,log_total_outflow
+C100441,0.2615,Routine,-1,log_annual_income,log_pix_in,mean_merchant_chargeback
+C101209,0.2611,Routine,-1,log_annual_income,log_pix_in,distinct_merchants
+C100107,0.2599,Routine,-1,log_pix_in,count_anon_events,count_chargeback_status
+C100626,0.2593,Routine,0,log_pix_in,log_annual_income,fraction_high_mcc
+C102327,0.2592,Routine,-1,log_pix_in,log_wire_outflow,log_annual_income
+C102143,0.2579,Routine,-1,log_pix_in,log_total_outflow,count_chargeback_status
+C101200,0.2573,Routine,-1,log_pix_in,log_wire_outflow,distinct_merchants
+C102417,0.2564,Routine,-1,log_wire_outflow,mean_merchant_chargeback,log_annual_income
+C102350,0.2547,Routine,-1,log_wire_outflow,log_annual_income,distinct_merchants
+C100538,0.2545,Routine,-1,count_anon_events,log_total_outflow,mean_merchant_chargeback
+C101831,0.2535,Routine,-1,log_pix_in,count_anon_events,log_wire_outflow
+C102148,0.2525,Routine,-1,log_pix_in,fraction_high_mcc,distinct_merchants
+C101631,0.2518,Routine,-1,log_annual_income,log_pix_in,distinct_merchants
+C100385,0.2497,Routine,-1,log_pix_in,log_annual_income,distinct_merchants
+C101115,0.2492,Routine,1,log_pix_in,log_wire_outflow,mean_merchant_chargeback
+C100559,0.2489,Routine,-1,log_pix_in,count_anon_events,count_chargeback_status
+C101844,0.2471,Routine,-1,log_pix_in,log_wire_outflow,log_annual_income
+C101538,0.247,Routine,-1,log_pix_in,log_wire_outflow,distinct_merchants
+C100124,0.2437,Routine,-1,count_tor_events,count_anon_events,log_pix_in
+C101557,0.2411,Routine,-1,log_annual_income,log_pix_in,distinct_merchants
+C101703,0.2394,Routine,-1,log_annual_income,log_pix_in,log_total_outflow
+C101806,0.2373,Routine,-1,log_pix_in,count_anon_events,log_wire_outflow
+C101802,0.2366,Routine,-1,count_anon_events,log_pix_in,log_pix_outflow
+C100482,0.2362,Routine,-1,log_pix_in,log_annual_income,log_wire_outflow
+C100491,0.2341,Routine,-1,log_pix_in,log_wire_outflow,mean_merchant_chargeback
+C102208,0.234,Routine,-1,log_pix_in,tx_count,log_wire_outflow
+C100950,0.2325,Routine,-1,mean_merchant_chargeback,log_wire_outflow,count_anon_events
+C100446,0.2316,Routine,-1,log_pix_in,log_wire_outflow,mean_merchant_chargeback
+C101132,0.231,Routine,-1,log_pix_in,count_chargeback_status,log_wire_outflow
+C101719,0.2305,Routine,-1,log_pix_in,count_anon_events,distinct_merchants
+C101603,0.2295,Routine,-1,log_pix_in,log_total_outflow,log_wire_outflow
+C101128,0.2293,Routine,-1,log_pix_in,log_wire_outflow,log_total_outflow
+C101340,0.2266,Routine,-1,log_annual_income,log_pix_in,log_pix_outflow
+C101084,0.2259,Routine,-1,log_pix_in,log_pix_outflow,mean_merchant_chargeback
+C102426,0.2246,Routine,-1,log_pix_in,log_pix_outflow,distinct_merchants
+C102485,0.2228,Routine,-1,log_pix_outflow,log_total_outflow,log_pix_in
+C100562,0.2209,Routine,-1,log_pix_in,log_total_outflow,log_wire_outflow
+C102103,0.2199,Routine,-1,log_pix_in,log_total_outflow,log_wire_outflow
+C101845,0.2193,Routine,-1,log_pix_in,log_total_outflow,log_wire_outflow
+C101369,0.2192,Routine,-1,count_anon_events,log_pix_in,log_total_outflow
+C100462,0.2189,Routine,-1,log_annual_income,log_pix_in,distinct_merchants
+C101840,0.2184,Routine,-1,log_pix_in,count_chargeback_status,log_wire_outflow
+C100017,0.2163,Routine,0,count_tor_events,log_total_outflow,log_wire_outflow
+C100144,0.2155,Routine,-1,log_annual_income,log_pix_in,count_chargeback_status
+C100279,0.2153,Routine,-1,log_pix_in,log_pix_outflow,mean_merchant_chargeback
+C101161,0.2131,Routine,-1,log_annual_income,log_pix_in,log_total_outflow
+C100749,0.213,Routine,-1,log_pix_in,log_wire_outflow,log_annual_income
+C101296,0.2099,Routine,-1,log_pix_in,log_annual_income,log_wire_outflow
+C102220,0.2095,Routine,-1,log_pix_outflow,log_pix_in,log_wire_outflow
+C101235,0.2094,Routine,-1,log_pix_in,count_anon_events,log_total_outflow
+C102115,0.2084,Routine,-1,log_pix_in,count_chargeback_status,log_annual_income
+C101459,0.206,Routine,-1,log_annual_income,log_pix_in,log_total_outflow
+C100347,0.2057,Routine,-1,log_pix_in,log_pix_outflow,count_anon_events
+C100800,0.205,Routine,-1,count_chargeback_status,log_total_outflow,log_wire_outflow
+C102094,0.2038,Routine,-1,distinct_merchants,log_wire_outflow,mean_merchant_chargeback
+C100675,0.1999,Routine,-1,log_pix_in,log_annual_income,log_total_outflow
+C100260,0.1994,Routine,-1,log_pix_in,count_chargeback_status,log_total_outflow
+C101245,0.1988,Routine,-1,log_total_outflow,log_pix_outflow,log_annual_income
+C100293,0.1981,Routine,-1,log_pix_outflow,log_pix_in,log_total_outflow
+C100999,0.1972,Routine,-1,log_pix_outflow,log_pix_in,log_total_outflow
+C101540,0.1962,Routine,-1,log_pix_in,count_anon_events,mean_merchant_chargeback
+C101959,0.1957,Routine,-1,log_annual_income,log_pix_in,distinct_merchants
+C102340,0.1952,Routine,-1,log_pix_in,mean_merchant_chargeback,log_wire_outflow
+C101111,0.195,Routine,-1,log_pix_in,count_anon_events,log_pix_outflow
+C100157,0.1948,Routine,-1,count_tor_events,count_anon_events,log_pix_in
+C101060,0.1943,Routine,-1,log_pix_in,count_chargeback_status,mean_merchant_chargeback
+C101226,0.1942,Routine,-1,log_pix_in,log_total_outflow,count_chargeback_status
+C101475,0.1926,Routine,0,log_annual_income,log_pix_in,mean_merchant_chargeback
+C100306,0.1917,Routine,-1,count_chargeback_status,log_pix_in,log_total_outflow
+C101665,0.1911,Routine,-1,log_annual_income,log_pix_in,count_chargeback_status
+C100309,0.19,Routine,-1,log_wire_outflow,log_total_outflow,log_pix_in
+C101726,0.1891,Routine,-1,log_pix_outflow,count_anon_events,log_annual_income
+C100081,0.189,Routine,-1,log_annual_income,log_pix_in,log_total_outflow
+C102307,0.1887,Routine,-1,log_pix_in,count_anon_events,log_wire_outflow
+C102052,0.1885,Routine,-1,count_tor_events,log_total_outflow,log_pix_outflow
+C101480,0.1878,Routine,-1,log_pix_in,count_anon_events,log_wire_outflow
+C101599,0.1862,Routine,-1,log_pix_outflow,log_wire_outflow,distinct_merchants
+C100294,0.1847,Routine,-1,log_pix_in,tx_count,log_wire_outflow
+C100259,0.1816,Routine,-1,log_pix_in,log_total_outflow,log_wire_outflow
+C102207,0.1816,Routine,-1,count_tor_events,log_wire_outflow,mean_merchant_chargeback
+C101676,0.1806,Routine,-1,log_annual_income,log_pix_in,distinct_merchants
+C100839,0.1805,Routine,-1,log_pix_in,count_anon_events,count_chargeback_status
+C101348,0.18,Routine,-1,log_pix_in,log_total_outflow,mean_merchant_chargeback
+C100452,0.1789,Routine,-1,log_pix_outflow,count_anon_events,count_chargeback_status
+C101732,0.178,Routine,0,log_pix_in,log_wire_outflow,distinct_merchants
+C102460,0.1773,Routine,-1,log_pix_in,count_chargeback_status,log_pix_outflow
+C100200,0.1767,Routine,-1,log_pix_outflow,log_wire_outflow,log_pix_in
+C100437,0.1751,Routine,-1,log_pix_in,count_chargeback_status,log_wire_outflow
+C101044,0.175,Routine,-1,log_pix_in,log_wire_outflow,distinct_merchants
+C101272,0.1742,Routine,-1,log_pix_in,log_annual_income,log_wire_outflow
+C101032,0.1735,Routine,-1,log_pix_in,count_chargeback_status,log_annual_income
+C100975,0.1726,Routine,-1,log_pix_in,mean_merchant_chargeback,count_anon_events
+C101729,0.1721,Routine,0,log_pix_in,tx_count,distinct_merchants
+C102384,0.1719,Routine,-1,log_pix_in,count_chargeback_status,log_annual_income
+C102473,0.1717,Routine,-1,log_pix_in,count_anon_events,log_wire_outflow
+C102175,0.1707,Routine,-1,log_pix_in,log_wire_outflow,mean_merchant_chargeback
+C102264,0.1707,Routine,-1,log_pix_in,log_wire_outflow,distinct_merchants
+C100741,0.1704,Routine,-1,count_anon_events,log_annual_income,distinct_merchants
+C100738,0.1704,Routine,-1,count_chargeback_status,log_wire_outflow,log_pix_in
+C100537,0.1696,Routine,-1,log_pix_in,log_annual_income,log_wire_outflow
+C100298,0.1695,Routine,-1,log_pix_in,log_annual_income,log_total_outflow
+C101997,0.1685,Routine,-1,log_pix_outflow,count_anon_events,log_total_outflow
+C101312,0.1681,Routine,-1,log_pix_in,log_wire_outflow,mean_merchant_chargeback
+C102400,0.1679,Routine,-1,log_annual_income,log_pix_in,log_total_outflow
+C100602,0.1676,Routine,-1,log_pix_in,log_wire_outflow,mean_merchant_chargeback
+C100982,0.1673,Routine,-1,log_pix_in,count_chargeback_status,fraction_high_mcc
+C101818,0.1672,Routine,-1,log_pix_in,count_tor_events,log_wire_outflow
+C100836,0.1651,Routine,-1,log_pix_in,log_wire_outflow,log_annual_income
+C100152,0.1648,Routine,-1,log_pix_in,log_wire_outflow,fraction_high_mcc
+C100316,0.1643,Routine,-1,log_pix_in,log_pix_outflow,mean_merchant_chargeback
+C101551,0.1636,Routine,-1,log_pix_in,distinct_merchants,log_wire_outflow
+C100617,0.1615,Routine,0,log_pix_in,log_wire_outflow,tx_count
+C101077,0.1588,Routine,-1,log_annual_income,log_pix_in,log_pix_outflow
+C100074,0.1583,Routine,0,log_pix_outflow,log_pix_in,log_annual_income
+C101944,0.1582,Routine,-1,log_pix_in,log_total_outflow,log_wire_outflow
+C100360,0.1577,Routine,-1,count_anon_events,log_pix_in,count_chargeback_status
+C100399,0.1575,Routine,0,log_annual_income,count_tor_events,log_pix_in
+C101747,0.1563,Routine,-1,log_pix_in,count_chargeback_status,log_wire_outflow
+C102034,0.1562,Routine,-1,log_pix_in,log_wire_outflow,distinct_merchants
+C100678,0.1562,Routine,-1,log_pix_in,log_wire_outflow,mean_merchant_chargeback
+C100494,0.1548,Routine,-1,log_pix_in,count_chargeback_status,log_wire_outflow
+C100218,0.1531,Routine,-1,log_pix_outflow,count_chargeback_status,mean_merchant_chargeback
+C100193,0.1524,Routine,-1,log_pix_in,count_anon_events,log_wire_outflow
+C101337,0.152,Routine,-1,log_pix_in,count_anon_events,log_wire_outflow
+C100531,0.1502,Routine,-1,log_annual_income,log_pix_in,log_wire_outflow
+C100904,0.1499,Routine,-1,log_pix_in,count_anon_events,log_wire_outflow
+C100344,0.1487,Routine,-1,log_pix_in,log_wire_outflow,mean_merchant_chargeback
+C102073,0.1486,Routine,-1,log_annual_income,log_pix_in,log_wire_outflow
+C100041,0.1468,Routine,-1,count_tor_events,log_pix_outflow,count_chargeback_status
+C101931,0.1463,Routine,-1,log_pix_in,distinct_merchants,log_wire_outflow
+C102385,0.1463,Routine,-1,log_pix_in,log_annual_income,log_total_outflow
+C100120,0.1461,Routine,-1,count_anon_events,log_pix_in,log_total_outflow
+C100340,0.1458,Routine,-1,log_pix_outflow,count_anon_events,log_pix_in
+C102122,0.1456,Routine,0,log_pix_outflow,log_total_outflow,log_annual_income
+C101305,0.1444,Routine,-1,log_pix_in,count_chargeback_status,log_total_outflow
+C100362,0.1439,Routine,-1,log_pix_outflow,log_pix_in,count_anon_events
+C100687,0.142,Routine,-1,log_pix_in,count_anon_events,count_chargeback_status
+C101804,0.1407,Routine,-1,log_pix_in,log_pix_outflow,mean_merchant_chargeback
+C101556,0.1395,Routine,-1,count_anon_events,log_total_outflow,mean_merchant_chargeback
+C100851,0.1393,Routine,-1,log_pix_in,log_annual_income,distinct_merchants
+C100430,0.1387,Routine,-1,log_pix_in,log_total_outflow,log_annual_income
+C101242,0.1383,Routine,-1,count_tor_events,count_anon_events,log_pix_in
+C101316,0.1382,Routine,-1,log_pix_in,log_annual_income,distinct_merchants
+C101139,0.1382,Routine,-1,log_pix_in,log_annual_income,log_wire_outflow
+C100891,0.1381,Routine,-1,log_pix_in,count_anon_events,log_wire_outflow
+C100454,0.1379,Routine,-1,log_pix_in,log_annual_income,log_wire_outflow
+C100140,0.1371,Routine,-1,log_annual_income,log_pix_in,log_total_outflow
+C100869,0.1365,Routine,-1,log_pix_in,log_annual_income,distinct_merchants
+C101403,0.1358,Routine,-1,log_total_outflow,log_pix_outflow,log_annual_income
+C102085,0.1354,Routine,-1,log_pix_in,log_annual_income,distinct_merchants
+C101512,0.1351,Routine,-1,log_pix_in,count_chargeback_status,log_wire_outflow
+C101158,0.135,Routine,-1,log_pix_in,log_pix_outflow,log_total_outflow
+C100108,0.1346,Routine,-1,log_pix_in,mean_merchant_chargeback,log_pix_outflow
+C101383,0.1338,Routine,-1,count_anon_events,log_pix_in,log_annual_income
+C100658,0.1326,Routine,0,log_pix_in,log_wire_outflow,log_annual_income
+C100438,0.1325,Routine,-1,distinct_merchants,log_pix_in,log_pix_outflow
+C101617,0.1319,Routine,-1,log_pix_in,count_anon_events,count_chargeback_status
+C100296,0.1319,Routine,-1,log_pix_in,count_anon_events,log_wire_outflow
+C102498,0.13,Routine,-1,log_pix_outflow,count_chargeback_status,log_pix_in
+C102323,0.1297,Routine,0,log_pix_in,log_wire_outflow,count_anon_events
+C101862,0.1284,Routine,-1,log_pix_in,log_annual_income,log_pix_outflow
+C102464,0.1266,Routine,-1,log_pix_in,log_wire_outflow,log_annual_income
+C101662,0.126,Routine,-1,log_pix_in,log_wire_outflow,log_annual_income
+C100898,0.1248,Routine,-1,log_pix_in,log_wire_outflow,log_annual_income
+C101244,0.1243,Routine,0,log_pix_in,log_pix_outflow,log_wire_outflow
+C100219,0.1243,Routine,-1,log_pix_in,count_chargeback_status,mean_merchant_chargeback
+C100072,0.124,Routine,-1,log_pix_in,log_wire_outflow,distinct_merchants
+C101381,0.1234,Routine,-1,log_pix_in,log_wire_outflow,log_annual_income
+C102278,0.1229,Routine,-1,log_pix_in,log_wire_outflow,mean_merchant_chargeback
+C101884,0.1202,Routine,-1,log_pix_in,log_wire_outflow,log_annual_income
+C100066,0.1193,Routine,-1,log_pix_in,distinct_merchants,log_wire_outflow
+C101695,0.1182,Routine,-1,log_pix_in,log_annual_income,distinct_merchants
+C100511,0.1171,Routine,-1,log_annual_income,count_chargeback_status,log_pix_in
+C101954,0.1168,Routine,-1,log_pix_in,log_wire_outflow,log_annual_income
+C102010,0.1164,Routine,-1,count_chargeback_status,log_pix_in,log_wire_outflow
+C101205,0.1159,Routine,-1,log_pix_in,log_pix_outflow,log_total_outflow
+C100455,0.1151,Routine,-1,log_pix_in,count_chargeback_status,mean_merchant_chargeback
+C101386,0.1142,Routine,-1,log_pix_outflow,log_pix_in,count_chargeback_status
+C101565,0.1137,Routine,-1,log_pix_outflow,log_pix_in,mean_merchant_chargeback
+C101550,0.1136,Routine,-1,log_pix_in,count_chargeback_status,log_wire_outflow
+C101152,0.1133,Routine,-1,log_pix_outflow,log_pix_in,log_total_outflow
+C100783,0.1127,Routine,-1,log_pix_in,count_chargeback_status,log_wire_outflow
+C101134,0.1123,Routine,-1,log_pix_outflow,log_pix_in,distinct_merchants
+C101509,0.1117,Routine,-1,log_pix_in,count_chargeback_status,log_annual_income
+C102108,0.1106,Routine,-1,log_pix_outflow,log_annual_income,log_pix_in
+C101822,0.1105,Routine,-1,log_pix_in,count_anon_events,log_annual_income
+C101697,0.1103,Routine,-1,log_pix_in,log_annual_income,log_total_outflow
+C100501,0.1094,Routine,-1,log_wire_outflow,log_pix_in,mean_merchant_chargeback
+C100622,0.1082,Routine,-1,log_pix_in,log_wire_outflow,mean_merchant_chargeback
+C101093,0.1077,Routine,-1,count_chargeback_status,log_pix_in,log_total_outflow
+C101566,0.1062,Routine,0,log_annual_income,distinct_merchants,mean_merchant_chargeback
+C101176,0.1052,Routine,1,log_pix_in,log_total_outflow,log_annual_income
+C100523,0.1036,Routine,-1,log_pix_in,log_wire_outflow,log_annual_income
+C102182,0.1015,Routine,0,log_pix_in,log_annual_income,log_wire_outflow
+C100207,0.101,Routine,0,log_wire_outflow,log_annual_income,distinct_merchants
+C101434,0.0994,Routine,-1,count_anon_events,log_pix_in,log_total_outflow
+C101972,0.0994,Routine,-1,log_pix_outflow,log_pix_in,count_chargeback_status
+C100038,0.0979,Routine,-1,log_total_outflow,log_annual_income,log_pix_outflow
+C100401,0.0978,Routine,-1,log_wire_outflow,log_annual_income,log_pix_in
+C101679,0.0977,Routine,-1,count_anon_events,log_annual_income,log_pix_outflow
+C101910,0.0972,Routine,-1,log_pix_in,log_total_outflow,log_annual_income
+C100627,0.0954,Routine,-1,log_pix_in,log_annual_income,mean_merchant_chargeback
+C101247,0.0952,Routine,-1,log_pix_in,count_chargeback_status,log_total_outflow
+C100719,0.0949,Routine,0,log_pix_outflow,count_anon_events,log_annual_income
+C101313,0.0945,Routine,-1,log_pix_outflow,log_pix_in,log_total_outflow
+C100748,0.0942,Routine,-1,count_chargeback_status,log_total_outflow,log_annual_income
+C102317,0.094,Routine,-1,log_pix_in,log_wire_outflow,mean_merchant_chargeback
+C102230,0.0935,Routine,-1,log_pix_in,mean_merchant_chargeback,count_chargeback_status
+C102482,0.0927,Routine,-1,count_anon_events,log_pix_in,count_chargeback_status
+C100565,0.0926,Routine,-1,log_pix_in,log_wire_outflow,count_anon_events
+C100453,0.0924,Routine,-1,log_pix_in,log_annual_income,log_pix_outflow
+C102097,0.0923,Routine,0,log_annual_income,log_pix_in,log_wire_outflow
+C101885,0.0921,Routine,-1,log_pix_in,log_total_outflow,count_chargeback_status
+C100379,0.0921,Routine,-1,log_pix_in,log_wire_outflow,log_annual_income
+C100694,0.0912,Routine,-1,log_pix_in,mean_merchant_chargeback,log_annual_income
+C101309,0.0912,Routine,-1,log_annual_income,log_pix_outflow,count_anon_events
+C101441,0.0911,Routine,-1,log_pix_in,mean_merchant_chargeback,log_total_outflow
+C102359,0.0909,Routine,-1,log_pix_in,count_chargeback_status,log_pix_outflow
+C100614,0.0907,Routine,0,log_pix_outflow,mean_merchant_chargeback,count_anon_events
+C101614,0.0885,Routine,0,log_pix_outflow,count_chargeback_status,log_pix_in
+C100802,0.0881,Routine,-1,log_pix_outflow,count_anon_events,log_total_outflow
+C102066,0.088,Routine,-1,log_pix_outflow,log_pix_in,log_wire_outflow
+C102024,0.0878,Routine,-1,log_pix_in,mean_merchant_chargeback,log_total_outflow
+C100396,0.0877,Routine,-1,log_pix_in,log_wire_outflow,log_annual_income
+C100281,0.0869,Routine,-1,log_pix_in,log_total_outflow,log_annual_income
+C101206,0.0865,Routine,-1,log_pix_in,log_total_outflow,distinct_merchants
+C101428,0.0859,Routine,-1,log_annual_income,log_total_outflow,count_chargeback_status
+C100170,0.0842,Routine,0,log_pix_in,log_wire_outflow,distinct_merchants
+C100750,0.0841,Routine,-1,count_anon_events,log_pix_in,log_wire_outflow
+C101741,0.0833,Routine,-1,count_anon_events,log_pix_in,log_pix_outflow
+C101104,0.0829,Routine,-1,log_pix_outflow,log_annual_income,log_total_outflow
+C100186,0.0827,Routine,-1,count_tor_events,count_anon_events,log_pix_outflow
+C101687,0.0823,Routine,-1,log_pix_in,count_chargeback_status,log_pix_outflow
+C101259,0.0822,Routine,-1,log_annual_income,log_pix_in,distinct_merchants
+C102483,0.0816,Routine,-1,count_chargeback_status,log_total_outflow,mean_merchant_chargeback
+C100841,0.0814,Routine,1,log_pix_in,count_anon_events,log_total_outflow
+C102142,0.0812,Routine,0,log_annual_income,log_pix_in,log_wire_outflow
+C102272,0.0811,Routine,-1,log_pix_in,log_total_outflow,log_annual_income
+C102168,0.0809,Routine,0,log_annual_income,log_wire_outflow,fraction_high_mcc
+C100659,0.0807,Routine,0,count_anon_events,log_wire_outflow,mean_merchant_chargeback
+C101342,0.08,Routine,-1,log_pix_in,count_chargeback_status,log_wire_outflow
+C101810,0.0796,Routine,0,log_pix_in,log_annual_income,log_wire_outflow
+C102349,0.0784,Routine,0,log_pix_in,log_annual_income,distinct_merchants
+C102477,0.0765,Routine,-1,log_pix_outflow,log_pix_in,log_wire_outflow
+C102358,0.0762,Routine,-1,log_pix_outflow,log_pix_in,count_chargeback_status
+C100086,0.0757,Routine,0,log_pix_in,count_tor_events,count_anon_events
+C100606,0.0755,Routine,0,count_chargeback_status,log_pix_in,log_wire_outflow
+C100154,0.0735,Routine,0,log_pix_in,log_annual_income,tx_count
+C101194,0.0724,Routine,-1,log_total_outflow,log_wire_outflow,mean_merchant_chargeback
+C100425,0.072,Routine,-1,log_annual_income,log_total_outflow,log_pix_in
+C100895,0.0709,Routine,-1,log_pix_in,log_total_outflow,mean_merchant_chargeback
+C100765,0.0708,Routine,-1,log_pix_in,count_anon_events,log_wire_outflow
+C102047,0.0703,Routine,-1,log_pix_in,log_wire_outflow,log_annual_income
+C100661,0.0701,Routine,-1,count_chargeback_status,log_pix_outflow,log_pix_in
+C100109,0.0699,Routine,-1,log_pix_outflow,log_total_outflow,mean_merchant_chargeback
+C101767,0.0689,Routine,-1,log_pix_in,log_total_outflow,log_wire_outflow
+C101402,0.0688,Routine,-1,log_pix_in,log_total_outflow,log_wire_outflow
+C100365,0.0685,Routine,-1,log_pix_outflow,log_annual_income,log_total_outflow
+C102138,0.0675,Routine,-1,log_pix_in,count_chargeback_status,log_pix_outflow
+C101969,0.0675,Routine,-1,log_pix_outflow,log_pix_in,log_annual_income
+C102027,0.0666,Routine,0,log_annual_income,log_pix_in,distinct_merchants
+C101069,0.0664,Routine,-1,log_pix_outflow,count_chargeback_status,log_total_outflow
+C100843,0.0663,Routine,-1,log_pix_in,count_chargeback_status,log_pix_outflow
+C101468,0.0655,Routine,0,log_pix_in,log_wire_outflow,log_annual_income
+C102435,0.0644,Routine,-1,log_wire_outflow,log_pix_outflow,log_pix_in
+C101709,0.0643,Routine,0,log_pix_in,log_wire_outflow,log_annual_income
+C101197,0.0641,Routine,0,log_annual_income,count_anon_events,log_total_outflow
+C102141,0.0637,Routine,-1,log_pix_in,count_chargeback_status,log_annual_income
+C100368,0.0637,Routine,0,log_pix_outflow,log_annual_income,log_total_outflow
+C100528,0.0631,Routine,-1,log_pix_in,distinct_merchants,log_pix_outflow
+C100533,0.0627,Routine,-1,log_pix_in,log_annual_income,log_total_outflow
+C101049,0.0626,Routine,0,log_pix_in,mean_merchant_chargeback,count_chargeback_status
+C101446,0.0623,Routine,-1,log_pix_in,log_total_outflow,log_wire_outflow
+C100333,0.0622,Routine,-1,log_annual_income,log_pix_in,log_total_outflow
+C100252,0.0611,Routine,-1,log_annual_income,log_total_outflow,count_anon_events
+C101020,0.0611,Routine,-1,log_pix_in,log_wire_outflow,log_annual_income
+C102074,0.0584,Routine,-1,log_pix_outflow,count_anon_events,log_total_outflow
+C100795,0.058,Routine,-1,log_pix_outflow,log_wire_outflow,log_total_outflow
+C102014,0.0579,Routine,-1,count_anon_events,log_pix_in,log_total_outflow
+C102249,0.0571,Routine,-1,count_chargeback_status,log_pix_outflow,log_wire_outflow
+C102370,0.0567,Routine,-1,log_pix_in,count_anon_events,log_annual_income
+C100655,0.0564,Routine,0,log_pix_in,log_total_outflow,log_wire_outflow
+C102352,0.0562,Routine,-1,log_pix_in,log_wire_outflow,log_pix_outflow
+C101851,0.0562,Routine,-1,log_pix_in,count_chargeback_status,log_wire_outflow
+C102461,0.0557,Routine,0,log_annual_income,log_total_outflow,log_pix_in
+C102416,0.0553,Routine,-1,log_pix_in,count_anon_events,log_wire_outflow
+C100539,0.0552,Routine,-1,log_pix_outflow,log_annual_income,log_total_outflow
+C101260,0.0552,Routine,-1,log_pix_in,count_anon_events,log_annual_income
+C100276,0.0551,Routine,-1,log_pix_in,count_chargeback_status,log_wire_outflow
+C101619,0.0543,Routine,-1,log_pix_in,log_wire_outflow,log_pix_outflow
+C100897,0.0526,Routine,-1,log_pix_in,mean_merchant_chargeback,log_total_outflow
+C102100,0.0521,Routine,-1,log_pix_in,count_chargeback_status,log_pix_outflow
+C101007,0.0513,Routine,0,log_pix_outflow,log_pix_in,log_total_outflow
+C101094,0.051,Routine,-1,log_pix_in,log_wire_outflow,log_total_outflow
+C100974,0.051,Routine,-1,log_pix_in,log_wire_outflow,log_annual_income
+C100669,0.0508,Routine,-1,distinct_merchants,log_wire_outflow,log_pix_in
+C102424,0.0502,Routine,-1,distinct_merchants,log_wire_outflow,log_annual_income
+C100125,0.0493,Routine,-1,log_pix_outflow,log_wire_outflow,log_pix_in
+C102232,0.0493,Routine,0,log_annual_income,log_wire_outflow,distinct_merchants
+C100255,0.0491,Routine,0,log_pix_in,count_chargeback_status,log_annual_income
+C102214,0.0489,Routine,0,count_chargeback_status,log_total_outflow,log_pix_outflow
+C100991,0.0481,Routine,-1,log_pix_in,log_pix_outflow,log_total_outflow
+C100042,0.0471,Routine,-1,log_pix_in,log_pix_outflow,log_wire_outflow
+C100079,0.0471,Routine,-1,log_pix_outflow,log_annual_income,log_pix_in
+C100826,0.0469,Routine,-1,log_annual_income,count_anon_events,log_total_outflow
+C100354,0.0468,Routine,-1,count_anon_events,log_pix_in,mean_merchant_chargeback
+C102259,0.0466,Routine,-1,count_chargeback_status,log_pix_in,log_pix_outflow
+C100981,0.0462,Routine,0,log_pix_in,log_pix_outflow,distinct_merchants
+C100160,0.0458,Routine,-1,mean_merchant_chargeback,log_annual_income,log_wire_outflow
+C100232,0.0453,Routine,0,mean_merchant_chargeback,log_total_outflow,log_wire_outflow
+C100818,0.0446,Routine,1,log_pix_in,log_annual_income,distinct_merchants
+C100918,0.0446,Routine,-1,log_pix_in,log_wire_outflow,log_total_outflow
+C101183,0.0444,Routine,-1,log_pix_in,log_annual_income,distinct_merchants
+C101216,0.0442,Routine,-1,log_pix_in,count_anon_events,log_wire_outflow
+C100643,0.0442,Routine,-1,log_pix_in,log_total_outflow,log_wire_outflow
+C100481,0.044,Routine,0,log_pix_in,log_annual_income,mean_merchant_chargeback
+C101788,0.0439,Routine,-1,log_pix_in,log_total_outflow,log_wire_outflow
+C101724,0.0433,Routine,-1,log_pix_in,count_anon_events,mean_merchant_chargeback
+C101668,0.0423,Routine,0,log_pix_in,log_wire_outflow,fraction_high_mcc
+C101335,0.0422,Routine,-1,log_pix_in,count_anon_events,count_chargeback_status
+C100327,0.0421,Routine,-1,log_pix_in,log_pix_outflow,log_annual_income
+C101949,0.0421,Routine,0,log_pix_in,log_annual_income,log_wire_outflow
+C102196,0.0418,Routine,-1,log_pix_in,log_annual_income,log_wire_outflow
+C101625,0.0416,Routine,0,log_pix_outflow,log_annual_income,log_total_outflow
+C101010,0.0415,Routine,-1,log_pix_outflow,mean_merchant_chargeback,log_total_outflow
+C100616,0.0414,Routine,-1,log_pix_outflow,log_pix_in,log_total_outflow
+C101873,0.0414,Routine,-1,log_pix_in,log_wire_outflow,log_annual_income
+C100684,0.0405,Routine,0,log_wire_outflow,distinct_merchants,count_anon_events
+C101585,0.04,Routine,0,log_wire_outflow,log_annual_income,count_anon_events
+C102081,0.0399,Routine,-1,log_pix_outflow,log_total_outflow,log_annual_income
+C100833,0.0398,Routine,-1,log_pix_outflow,count_anon_events,log_pix_in
+C100442,0.0397,Routine,-1,log_pix_in,log_annual_income,log_wire_outflow
+C102159,0.0396,Routine,-1,log_wire_outflow,log_annual_income,distinct_merchants
+C100315,0.0394,Routine,-1,log_pix_in,count_anon_events,log_total_outflow
+C101491,0.0388,Routine,-1,log_pix_outflow,log_pix_in,log_total_outflow
+C100798,0.0377,Routine,0,count_chargeback_status,log_wire_outflow,fraction_high_mcc
+C102319,0.0377,Routine,-1,log_pix_outflow,log_pix_in,log_total_outflow
+C101123,0.0372,Routine,-1,log_pix_in,log_wire_outflow,log_annual_income
+C100708,0.037,Routine,0,count_anon_events,log_wire_outflow,mean_merchant_chargeback
+C101079,0.037,Routine,0,log_pix_in,count_chargeback_status,log_wire_outflow
+C102421,0.0369,Routine,0,log_pix_in,log_annual_income,fraction_high_mcc
+C100174,0.0366,Routine,-1,log_pix_in,log_annual_income,log_wire_outflow
+C101486,0.0366,Routine,-1,log_pix_outflow,mean_merchant_chargeback,log_total_outflow
+C102070,0.0362,Routine,-1,log_annual_income,log_total_outflow,log_pix_outflow
+C100330,0.0359,Routine,-1,log_pix_in,log_annual_income,log_total_outflow
+C101202,0.0353,Routine,0,log_pix_outflow,log_annual_income,log_total_outflow
+C100065,0.0353,Routine,-1,log_pix_in,log_wire_outflow,mean_merchant_chargeback
+C100673,0.0353,Routine,-1,count_anon_events,count_chargeback_status,log_pix_in
+C100768,0.0349,Routine,-1,log_pix_in,log_total_outflow,log_wire_outflow
+C101517,0.0348,Routine,1,log_annual_income,log_pix_in,log_total_outflow
+C100704,0.0347,Routine,-1,log_pix_in,log_pix_outflow,log_total_outflow
+C101075,0.0342,Routine,0,log_annual_income,log_pix_in,log_total_outflow
+C100070,0.034,Routine,-1,count_tor_events,log_pix_in,log_wire_outflow
+C101661,0.0336,Routine,0,log_annual_income,log_pix_in,log_total_outflow
+C101099,0.0333,Routine,-1,log_pix_in,log_pix_outflow,log_total_outflow
+C101936,0.0331,Routine,-1,log_pix_in,count_chargeback_status,log_annual_income
+C100269,0.0327,Routine,-1,log_pix_in,log_annual_income,log_wire_outflow
+C101223,0.0327,Routine,0,log_pix_in,mean_merchant_chargeback,tx_count
+C101009,0.0324,Routine,-1,log_annual_income,log_total_outflow,log_pix_outflow
+C102210,0.0317,Routine,-1,log_pix_outflow,log_pix_in,log_total_outflow
+C100215,0.0317,Routine,-1,log_pix_in,log_wire_outflow,mean_merchant_chargeback
+C102291,0.0314,Routine,-1,log_annual_income,log_wire_outflow,log_pix_in
+C100444,0.0314,Routine,0,log_annual_income,log_pix_in,log_wire_outflow
+C101663,0.0308,Routine,0,log_pix_in,count_chargeback_status,log_wire_outflow
+C101387,0.0303,Routine,0,count_anon_events,log_pix_outflow,log_total_outflow
+C102217,0.0302,Routine,-1,log_pix_in,log_wire_outflow,count_anon_events
+C101955,0.0302,Routine,0,log_pix_outflow,log_pix_in,log_wire_outflow
+C100226,0.0299,Routine,0,log_pix_in,log_wire_outflow,log_annual_income
+C101698,0.0297,Routine,0,log_pix_in,log_wire_outflow,distinct_merchants
+C101401,0.0296,Routine,-1,log_pix_in,log_annual_income,log_wire_outflow
+C100192,0.0296,Routine,-1,log_pix_in,log_total_outflow,distinct_merchants
+C102020,0.0295,Routine,0,log_annual_income,log_pix_in,log_total_outflow
+C100056,0.0294,Routine,0,log_pix_in,log_wire_outflow,mean_merchant_chargeback
+C101921,0.0289,Routine,-1,log_pix_in,log_wire_outflow,mean_merchant_chargeback
+C101394,0.0289,Routine,0,log_wire_outflow,log_annual_income,count_anon_events
+C101562,0.0289,Routine,-1,log_pix_outflow,log_annual_income,log_total_outflow
+C100855,0.0284,Routine,-1,log_pix_in,log_annual_income,log_pix_outflow
+C101034,0.0281,Routine,-1,log_pix_in,log_wire_outflow,log_annual_income
+C102037,0.0279,Routine,0,log_pix_in,log_total_outflow,fraction_high_mcc
+C101516,0.0276,Routine,-1,log_pix_outflow,log_pix_in,log_total_outflow
+C100791,0.0276,Routine,0,log_pix_outflow,log_total_outflow,distinct_merchants
+C102242,0.0261,Routine,-1,log_pix_in,log_pix_outflow,log_total_outflow
+C101905,0.026,Routine,-1,log_pix_in,log_wire_outflow,log_annual_income
+C101173,0.0255,Routine,-1,log_annual_income,log_pix_outflow,log_pix_in
+C100011,0.0253,Routine,0,log_pix_outflow,log_annual_income,log_total_outflow
+C100240,0.0252,Routine,0,log_pix_outflow,log_total_outflow,log_annual_income
+C100742,0.0252,Routine,-1,log_annual_income,log_pix_in,log_total_outflow
+C101935,0.0251,Routine,0,log_pix_in,log_wire_outflow,log_annual_income
+C100477,0.0249,Routine,-1,log_pix_in,log_wire_outflow,mean_merchant_chargeback
+C100227,0.0248,Routine,0,log_pix_in,log_annual_income,log_wire_outflow
+C101923,0.0246,Routine,-1,count_anon_events,log_pix_outflow,log_pix_in
+C101012,0.0242,Routine,0,log_pix_in,distinct_merchants,count_anon_events
+C101233,0.0241,Routine,0,log_pix_in,log_wire_outflow,fraction_high_mcc
+C101620,0.024,Routine,-1,log_pix_outflow,log_wire_outflow,log_total_outflow
+C100123,0.0239,Routine,-1,count_chargeback_status,log_pix_outflow,log_pix_in
+C102280,0.0237,Routine,-1,log_pix_in,log_wire_outflow,log_annual_income
+C101915,0.0234,Routine,0,log_annual_income,log_pix_in,log_total_outflow
+C102499,0.0231,Routine,-1,log_pix_in,count_anon_events,log_total_outflow
+C101101,0.023,Routine,0,log_pix_outflow,count_anon_events,log_total_outflow
+C101248,0.0229,Routine,-1,log_pix_outflow,log_pix_in,log_wire_outflow
+C102467,0.0227,Routine,-1,count_tor_events,log_pix_in,log_total_outflow
+C101682,0.0226,Routine,0,log_pix_outflow,log_pix_in,log_total_outflow
+C101425,0.0225,Routine,-1,log_pix_in,distinct_merchants,log_wire_outflow
+C100516,0.0224,Routine,-1,count_tor_events,log_pix_in,log_wire_outflow
+C102216,0.0221,Routine,0,log_annual_income,log_pix_in,distinct_merchants
+C101498,0.0219,Routine,-1,log_pix_outflow,log_pix_in,count_anon_events
+C101090,0.0219,Routine,0,log_pix_outflow,log_pix_in,log_annual_income
+C101234,0.0219,Routine,-1,log_pix_in,log_wire_outflow,log_annual_income
+C102380,0.0219,Routine,-1,log_pix_in,log_wire_outflow,log_total_outflow
+C101130,0.0214,Routine,-1,log_annual_income,log_total_outflow,count_chargeback_status
+C101672,0.0212,Routine,-1,log_pix_in,log_total_outflow,mean_merchant_chargeback
+C101231,0.0209,Routine,-1,log_pix_in,log_total_outflow,log_wire_outflow
+C101704,0.0207,Routine,0,log_pix_in,mean_merchant_chargeback,log_annual_income
+C101678,0.0206,Routine,-1,log_total_outflow,log_wire_outflow,log_pix_in
+C101688,0.0203,Routine,-1,log_pix_in,count_anon_events,log_wire_outflow
+C100055,0.02,Routine,0,log_pix_outflow,log_annual_income,log_total_outflow
+C100051,0.02,Routine,-1,log_pix_in,log_wire_outflow,log_total_outflow
+C100862,0.02,Routine,-1,count_anon_events,count_chargeback_status,log_pix_in
+C102112,0.0199,Routine,0,log_wire_outflow,mean_merchant_chargeback,log_pix_outflow
+C102434,0.0197,Routine,-1,log_pix_outflow,log_total_outflow,log_pix_in
+C100781,0.0194,Routine,0,log_pix_in,log_annual_income,log_total_outflow
+C101666,0.0192,Routine,0,log_pix_in,log_total_outflow,count_chargeback_status
+C100834,0.0187,Routine,-1,log_pix_in,log_wire_outflow,mean_merchant_chargeback
+C100733,0.0185,Routine,-1,log_pix_in,count_chargeback_status,log_wire_outflow
+C100082,0.0184,Routine,0,log_pix_in,log_wire_outflow,log_annual_income
+C100285,0.0183,Routine,-1,log_pix_in,count_anon_events,log_annual_income
+C101798,0.0181,Routine,-1,log_pix_in,count_anon_events,log_total_outflow
+C101404,0.018,Routine,0,log_pix_in,count_chargeback_status,log_wire_outflow
+C100377,0.018,Routine,-1,count_anon_events,log_pix_in,log_total_outflow
+C102256,0.0177,Routine,-1,log_pix_in,log_annual_income,log_wire_outflow
+C100644,0.0174,Routine,-1,log_annual_income,log_total_outflow,log_pix_in
+C100645,0.0172,Routine,-1,log_pix_outflow,log_total_outflow,log_wire_outflow
+C102224,0.0171,Routine,0,log_pix_in,mean_merchant_chargeback,log_wire_outflow
+C100349,0.017,Routine,0,log_pix_in,log_annual_income,log_wire_outflow
+C100709,0.017,Routine,-1,log_pix_in,log_wire_outflow,log_annual_income
+C101264,0.0169,Routine,0,log_pix_in,count_chargeback_status,log_total_outflow
+C101041,0.0168,Routine,-1,log_pix_in,log_wire_outflow,log_annual_income
+C101040,0.0167,Routine,-1,log_pix_in,log_wire_outflow,log_pix_outflow
+C100265,0.0167,Routine,0,log_wire_outflow,log_annual_income,mean_merchant_chargeback
+C101080,0.0165,Routine,0,log_total_outflow,log_pix_in,log_wire_outflow
+C100967,0.0165,Routine,-1,log_pix_in,log_wire_outflow,distinct_merchants
+C100545,0.0165,Routine,0,log_annual_income,log_pix_in,log_total_outflow
+C100381,0.016,Routine,0,log_wire_outflow,distinct_merchants,count_anon_events
+C101510,0.0157,Routine,-1,log_pix_in,log_annual_income,log_wire_outflow
+C100728,0.0156,Routine,0,log_wire_outflow,log_annual_income,distinct_merchants
+C101727,0.0154,Routine,0,log_pix_in,log_total_outflow,log_wire_outflow
+C101254,0.0153,Routine,0,log_annual_income,log_wire_outflow,mean_merchant_chargeback
+C100178,0.0153,Routine,0,log_pix_in,log_wire_outflow,log_pix_outflow
+C100048,0.0152,Routine,0,log_pix_outflow,mean_merchant_chargeback,log_total_outflow
+C100919,0.015,Routine,-1,log_annual_income,log_total_outflow,log_pix_in
+C100137,0.0149,Routine,0,log_pix_in,count_anon_events,log_total_outflow
+C101414,0.0149,Routine,-1,log_pix_in,log_total_outflow,log_pix_outflow
+C100921,0.0149,Routine,0,log_pix_in,log_annual_income,log_wire_outflow
+C102064,0.0147,Routine,0,log_pix_in,log_wire_outflow,log_annual_income
+C101751,0.0143,Routine,-1,log_annual_income,log_total_outflow,log_pix_in
+C102369,0.0141,Routine,0,log_pix_in,mean_merchant_chargeback,log_total_outflow
+C101334,0.0141,Routine,0,log_annual_income,log_pix_outflow,log_total_outflow
+C101573,0.0139,Routine,0,log_pix_outflow,log_total_outflow,log_wire_outflow
+C100700,0.0137,Routine,0,log_pix_outflow,log_annual_income,log_total_outflow
+C100599,0.0135,Routine,0,log_pix_in,count_chargeback_status,log_total_outflow
+C102376,0.0134,Routine,-1,log_pix_in,log_wire_outflow,log_total_outflow
+C101463,0.0133,Routine,-1,log_annual_income,log_pix_outflow,log_pix_in
+C101549,0.0133,Routine,-1,log_pix_in,count_chargeback_status,log_wire_outflow
+C100202,0.013,Routine,-1,log_pix_in,log_total_outflow,log_wire_outflow
+C102005,0.0129,Routine,0,log_pix_outflow,log_pix_in,log_wire_outflow
+C101943,0.0128,Routine,-1,log_pix_in,count_anon_events,log_wire_outflow
+C100075,0.0126,Routine,0,log_annual_income,log_pix_outflow,log_total_outflow
+C100204,0.0124,Routine,-1,log_total_outflow,distinct_merchants,log_annual_income
+C101778,0.0119,Routine,0,log_pix_in,count_anon_events,log_annual_income
+C101718,0.0118,Routine,0,log_annual_income,log_pix_outflow,log_total_outflow
+C100908,0.0118,Routine,0,log_pix_in,count_anon_events,log_wire_outflow
+C102258,0.0117,Routine,-1,log_pix_in,log_wire_outflow,log_annual_income
+C102134,0.0116,Routine,0,log_pix_outflow,log_pix_in,log_total_outflow
+C100397,0.0115,Routine,0,log_annual_income,log_pix_outflow,log_total_outflow
+C100189,0.0115,Routine,0,log_pix_in,log_annual_income,log_total_outflow
+C100988,0.0114,Routine,-1,log_pix_in,log_wire_outflow,log_pix_outflow
+C100794,0.0114,Routine,0,log_wire_outflow,log_total_outflow,log_annual_income
+C101827,0.0111,Routine,-1,log_pix_in,log_wire_outflow,log_total_outflow
+C100267,0.011,Routine,-1,log_pix_outflow,log_pix_in,mean_merchant_chargeback
+C101492,0.011,Routine,0,log_pix_outflow,log_annual_income,log_total_outflow
+C101329,0.0105,Routine,-1,log_pix_in,mean_merchant_chargeback,log_annual_income
+C101311,0.0105,Routine,0,log_pix_in,count_anon_events,log_total_outflow
+C100106,0.0101,Routine,-1,log_pix_in,mean_merchant_chargeback,log_annual_income
+C100338,0.0101,Routine,0,log_annual_income,log_pix_in,log_total_outflow
+C100085,0.0097,Routine,-1,log_pix_in,log_total_outflow,log_annual_income
+C100806,0.0096,Routine,0,log_annual_income,log_pix_in,log_total_outflow
+C101570,0.0095,Routine,0,log_pix_in,distinct_merchants,log_wire_outflow
+C100222,0.0092,Routine,0,log_pix_outflow,log_pix_in,log_total_outflow
+C101638,0.0091,Routine,-1,log_pix_in,log_pix_outflow,log_total_outflow
+C100087,0.0089,Routine,0,log_pix_in,log_annual_income,log_wire_outflow
+C101363,0.0089,Routine,0,log_pix_in,count_anon_events,log_total_outflow
+C101236,0.0088,Routine,-1,count_chargeback_status,log_pix_in,log_total_outflow
+C100780,0.0088,Routine,0,log_pix_outflow,log_pix_in,log_total_outflow
+C100775,0.0087,Routine,0,log_pix_in,log_wire_outflow,log_annual_income
+C101109,0.0086,Routine,0,log_pix_in,log_pix_outflow,log_total_outflow
+C100723,0.0085,Routine,-1,log_annual_income,log_total_outflow,log_pix_in
+C100996,0.0085,Routine,-1,log_pix_in,log_total_outflow,distinct_merchants
+C100960,0.0085,Routine,0,log_pix_outflow,log_pix_in,log_total_outflow
+C101771,0.0082,Routine,0,log_pix_outflow,log_total_outflow,mean_merchant_chargeback
+C101308,0.0082,Routine,0,log_pix_in,log_annual_income,log_wire_outflow
+C102169,0.0081,Routine,-1,log_pix_outflow,log_total_outflow,distinct_merchants
+C101707,0.008,Routine,0,count_chargeback_status,log_pix_in,log_total_outflow
+C100972,0.0079,Routine,0,log_pix_in,log_wire_outflow,log_annual_income
+C102283,0.0079,Routine,-1,log_pix_in,log_total_outflow,count_anon_events
+C102383,0.0078,Routine,0,log_pix_in,mean_merchant_chargeback,log_annual_income
+C102187,0.0077,Routine,-1,log_pix_outflow,log_pix_in,log_total_outflow
+C100431,0.0077,Routine,-1,log_pix_in,distinct_merchants,log_wire_outflow
+C100322,0.0076,Routine,0,log_pix_outflow,log_pix_in,log_total_outflow
+C102354,0.0074,Routine,0,log_total_outflow,log_annual_income,log_wire_outflow
+C100464,0.0073,Routine,0,log_pix_in,log_wire_outflow,mean_merchant_chargeback
+C101880,0.0072,Routine,0,log_pix_outflow,log_pix_in,log_total_outflow
+C101214,0.007,Routine,0,log_pix_outflow,log_annual_income,log_total_outflow
+C102449,0.007,Routine,-1,count_chargeback_status,log_pix_in,log_total_outflow
+C100243,0.007,Routine,0,log_pix_in,log_wire_outflow,log_annual_income
+C101994,0.0069,Routine,0,mean_merchant_chargeback,log_total_outflow,log_wire_outflow
+C101294,0.0067,Routine,0,log_pix_in,log_wire_outflow,log_annual_income
+C101331,0.0067,Routine,0,log_pix_in,count_chargeback_status,log_total_outflow
+C102386,0.0066,Routine,0,count_anon_events,log_pix_in,log_total_outflow
+C101186,0.006,Routine,-1,log_pix_outflow,log_pix_in,log_annual_income
+C101396,0.0057,Routine,0,log_total_outflow,log_pix_outflow,distinct_merchants
+C101043,0.0055,Routine,0,log_pix_in,log_annual_income,log_wire_outflow
+C100720,0.0054,Routine,-1,log_pix_in,log_annual_income,log_wire_outflow
+C102197,0.0052,Routine,0,log_pix_outflow,log_total_outflow,log_wire_outflow
+C102387,0.0052,Routine,0,log_pix_in,log_wire_outflow,log_annual_income
+C100508,0.0051,Routine,0,log_pix_in,log_annual_income,log_wire_outflow
+C101834,0.0051,Routine,0,count_anon_events,log_pix_in,log_total_outflow
+C101144,0.005,Routine,0,log_pix_in,log_wire_outflow,mean_merchant_chargeback
+C100717,0.0049,Routine,-1,log_pix_outflow,log_annual_income,log_pix_in
+C100249,0.0049,Routine,0,log_pix_outflow,log_annual_income,distinct_merchants
+C101345,0.0047,Routine,0,count_tor_events,log_pix_in,log_annual_income
+C101618,0.0047,Routine,0,log_total_outflow,distinct_merchants,log_annual_income
+C102490,0.0047,Routine,0,log_pix_outflow,log_pix_in,log_total_outflow
+C102229,0.0046,Routine,0,log_pix_outflow,log_pix_in,log_annual_income
+C100373,0.0046,Routine,-1,log_pix_in,log_pix_outflow,log_total_outflow
+C101024,0.0044,Routine,0,log_pix_in,log_wire_outflow,mean_merchant_chargeback
+C100413,0.0044,Routine,-1,log_pix_in,log_annual_income,log_wire_outflow
+C100879,0.0044,Routine,0,log_pix_in,log_annual_income,log_wire_outflow
+C100683,0.0044,Routine,0,log_pix_in,log_annual_income,log_wire_outflow
+C100858,0.0043,Routine,0,log_pix_in,log_pix_outflow,log_total_outflow
+C100813,0.0043,Routine,-1,log_pix_in,count_anon_events,log_annual_income
+C101071,0.0042,Routine,0,log_pix_outflow,log_pix_in,log_total_outflow
+C102203,0.0042,Routine,-1,log_pix_in,log_annual_income,log_wire_outflow
+C100824,0.0042,Routine,0,count_anon_events,log_pix_in,log_total_outflow
+C102167,0.0041,Routine,0,log_pix_outflow,log_total_outflow,distinct_merchants
+C100342,0.0041,Routine,0,log_pix_in,log_annual_income,count_anon_events
+C101361,0.0039,Routine,0,log_pix_in,log_wire_outflow,log_annual_income
+C102286,0.0039,Routine,-1,log_pix_in,log_pix_outflow,log_total_outflow
+C102098,0.0037,Routine,0,log_pix_in,log_wire_outflow,log_annual_income
+C101250,0.0037,Routine,0,log_pix_in,log_annual_income,log_wire_outflow
+C102343,0.0036,Routine,0,log_pix_outflow,log_total_outflow,distinct_merchants
+C101490,0.0036,Routine,0,log_total_outflow,mean_merchant_chargeback,log_wire_outflow
+C102088,0.0036,Routine,0,log_pix_in,log_annual_income,log_wire_outflow
+C100927,0.0035,Routine,0,log_pix_in,log_wire_outflow,log_annual_income
+C100162,0.0034,Routine,0,log_pix_in,log_wire_outflow,log_annual_income
+C101525,0.0033,Routine,0,log_pix_in,log_wire_outflow,mean_merchant_chargeback
+C100724,0.0032,Routine,0,log_pix_outflow,log_total_outflow,log_wire_outflow
+C101890,0.0032,Routine,0,log_pix_in,log_wire_outflow,distinct_merchants
+C102009,0.0032,Routine,0,log_pix_in,mean_merchant_chargeback,log_pix_outflow
+C100619,0.0031,Routine,0,log_pix_in,log_total_outflow,log_wire_outflow
+C100341,0.0031,Routine,0,log_pix_outflow,log_total_outflow,mean_merchant_chargeback
+C102401,0.003,Routine,0,log_pix_outflow,log_total_outflow,log_wire_outflow
+C101228,0.0028,Routine,0,log_pix_in,log_total_outflow,log_pix_outflow
+C101674,0.0028,Routine,-1,log_pix_in,log_annual_income,log_wire_outflow
+C100989,0.0028,Routine,0,log_pix_outflow,log_pix_in,log_total_outflow
+C100758,0.0028,Routine,-1,log_pix_in,log_annual_income,log_wire_outflow
+C100223,0.0028,Routine,0,log_pix_in,log_wire_outflow,distinct_merchants
+C102239,0.0026,Routine,-1,log_pix_in,log_wire_outflow,log_annual_income
+C100566,0.0026,Routine,0,log_pix_in,log_wire_outflow,distinct_merchants
+C101453,0.0026,Routine,0,log_pix_outflow,log_pix_in,log_total_outflow
+C101572,0.0025,Routine,0,log_pix_in,log_pix_outflow,log_wire_outflow
+C100163,0.0025,Routine,0,log_pix_in,log_wire_outflow,log_annual_income
+C101616,0.0025,Routine,-1,log_pix_in,log_annual_income,log_wire_outflow
+C100010,0.0024,Routine,0,log_pix_in,log_wire_outflow,log_annual_income
+C100796,0.0024,Routine,-1,log_pix_in,log_total_outflow,log_pix_outflow
+C101894,0.0023,Routine,0,count_chargeback_status,log_pix_in,log_total_outflow
+C101257,0.0022,Routine,0,log_pix_in,log_wire_outflow,log_total_outflow
+C100995,0.0022,Routine,0,log_pix_in,log_annual_income,log_wire_outflow
+C100875,0.0021,Routine,0,log_pix_in,log_wire_outflow,log_annual_income
+C100284,0.0021,Routine,0,log_total_outflow,log_pix_outflow,distinct_merchants
+C100985,0.002,Routine,0,log_pix_in,mean_merchant_chargeback,log_annual_income
+C100033,0.0019,Routine,0,log_pix_in,log_wire_outflow,log_annual_income
+C101163,0.0018,Routine,0,log_pix_in,log_annual_income,log_wire_outflow
+C102407,0.0017,Routine,0,log_pix_in,log_annual_income,log_wire_outflow
+C100369,0.0017,Routine,0,log_pix_in,log_total_outflow,log_pix_outflow
+C100868,0.0017,Routine,-1,log_pix_outflow,log_total_outflow,log_wire_outflow
+C102059,0.0015,Routine,0,log_pix_outflow,log_total_outflow,log_pix_in
+C101496,0.0013,Routine,-1,log_pix_in,log_annual_income,log_wire_outflow
+C101375,0.0013,Routine,0,log_pix_in,log_annual_income,log_wire_outflow
+C101837,0.0013,Routine,0,log_pix_in,log_total_outflow,log_pix_outflow
+C101606,0.0013,Routine,0,log_pix_in,log_pix_outflow,log_annual_income
+C100732,0.0011,Routine,-1,log_pix_in,log_annual_income,log_wire_outflow
+C102328,0.0011,Routine,0,log_pix_in,log_wire_outflow,log_annual_income
+C102104,0.0011,Routine,0,log_pix_in,log_annual_income,log_total_outflow
+C102432,0.001,Routine,0,log_pix_in,log_wire_outflow,log_total_outflow
+C100625,0.001,Routine,0,log_pix_in,log_total_outflow,log_wire_outflow
+C101651,0.001,Routine,0,log_pix_in,log_total_outflow,log_pix_outflow
+C101934,0.0009,Routine,0,log_pix_in,log_annual_income,log_total_outflow
+C101133,0.0008,Routine,0,log_pix_in,log_annual_income,distinct_merchants
+C100329,0.0008,Routine,0,log_pix_in,mean_merchant_chargeback,log_wire_outflow
+C100964,0.0007,Routine,0,log_pix_in,log_total_outflow,distinct_merchants
+C100275,0.0006,Routine,0,log_pix_in,log_wire_outflow,log_total_outflow
+C101938,0.0006,Routine,0,log_pix_in,log_annual_income,log_total_outflow
+C100686,0.0006,Routine,0,log_pix_in,log_total_outflow,log_wire_outflow
