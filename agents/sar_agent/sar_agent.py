@@ -11,10 +11,29 @@ import json
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
-from shared import RunContext, load_json, save_json, llm_available, call_anthropic, now_iso, soften_language, ml_confidence_band, COHORT_RELATIVE_NOTE
+from shared import RunContext, load_json, save_json, llm_available, call_anthropic, now_iso, soften_language, ml_confidence_band, render_sar_metadata, validate_sar_metadata, COHORT_RELATIVE_NOTE
 from aml_constants import RULE_DESCRIPTIONS, sanctions_status
 
 PROMPT_FILE = Path(__file__).parent / "prompt.md"
+
+
+def _get_priority_metadata(run_id: str, customer_id: str):
+    """Look up priority_score, severity, escalation_band, ml_confidence_band from detection queue."""
+    from pathlib import Path
+    ROOT = Path(__file__).resolve().parents[2]
+    queue_path = ROOT / "outputs" / "phase4_demo" / "runs" / run_id / "prioritized_alert_queue.json"
+    if not queue_path.exists():
+        return None, None, None, None
+    queue = load_json(queue_path)
+    for cust in queue.get("customers", []):
+        if cust["customer_id"] == customer_id:
+            return (
+                cust.get("priority_score"),
+                cust.get("severity"),
+                cust.get("escalation_band"),
+                cust.get("ml_confidence_band_cohort"),  # Use cohort-relative band
+            )
+    return None, None, None, None
 
 
 def _template_sar(case, bundle, run_id):
@@ -28,6 +47,9 @@ def _template_sar(case, bundle, run_id):
 
     sar_ref = f"SAR-{run_id}-{cid}-01"
 
+    # Load priority metadata from detection queue
+    priority_score, severity, escalation_band, ml_confidence_band_val = _get_priority_metadata(run_id, cid)
+
     triggered_alerts = []
     for r in rules:
         if r not in RULE_DESCRIPTIONS:
@@ -40,11 +62,15 @@ def _template_sar(case, bundle, run_id):
             "relevance": "Contributes to composite risk indicator",
         })
 
+    prepared_at = now_iso()
     structured = {
         "customer_id": cid,
         "sar_reference": sar_ref,
-        "prepared_at": now_iso(),
-        "severity": case.get("severity", bundle.get("severity", "unknown")),
+        "prepared_at": prepared_at,
+        "priority_score": priority_score,
+        "severity": severity or case.get("severity", bundle.get("severity", "unknown")),
+        "escalation_band": escalation_band,
+        "ml_confidence_band": ml_confidence_band_val,
         "executive_summary": case["summary"],
         "triggered_alerts": triggered_alerts,
         "detailed_findings": case["key_facts"],
@@ -70,7 +96,7 @@ def _template_sar(case, bundle, run_id):
             "anonymization_events_total": sum(agg["anonymization_events"].values()) if agg["anonymization_events"] else 0,
             "kyc_risk_score": kyc["kyc_risk_score"],
             "pep": kyc.get("pep"),
-            "ml_confidence_band": ml_confidence_band(bundle.get("detection_signals", {}).get("ml_probability", 0.0)),
+            "ml_confidence_band": ml_confidence_band_val or ml_confidence_band(bundle.get("detection_signals", {}).get("ml_probability", 0.0)),
         },
         "sanctions_status": sanctions_status(
             kyc.get("sanctions_list_hit"),
@@ -86,66 +112,57 @@ def _template_sar(case, bundle, run_id):
     structured["executive_summary"] = soften_language(structured["executive_summary"])
 
     # Render markdown SAR using the structured payload
-    md = _render_markdown(structured, case, bundle)
+    md = _render_markdown(structured, case, bundle, run_id)
     return structured, md
 
 
-def _render_markdown(s, case, bundle):
+def _render_markdown(s, case, bundle, run_id):
     """Render markdown SAR mirroring the docs/phase1/SAR-2025-C102290-01.md structure."""
     kyc = bundle["kyc"]
     lines = [
         f"# SUSPICIOUS ACTIVITY REPORT (SAR)",
-        f"**Internal Reference:** {s['sar_reference']}",
-        f"**Filing Institution:** CloudWalk INC — AML/FT Compliance Unit",
-        f"**Prepared at:** {s['prepared_at']}",
-        f"**Classification:** Internal — Compliance Restricted",
+        "",
+        "## Case Identification",
+        "",
+        render_sar_metadata(
+            customer_id=s['customer_id'],
+            run_id=run_id,
+            prepared_at=s['prepared_at'],
+            priority_score=s.get('priority_score'),
+            severity=s.get('severity'),
+            escalation_band=s.get('escalation_band'),
+            ml_confidence_band=s.get('ml_confidence_band'),
+        ),
         "",
         "---",
         "",
-        "## 1. CASE IDENTIFICATION",
-        "",
-        "| Field | Value |",
-        "|---|---|",
-        f"| Primary Subject | {s['customer_id']} |",
-        f"| Declared Occupation | {kyc.get('declared_occupation') or '—'} |",
-        f"| Declared Annual Income | R${kyc['annual_income_brl']:,.0f} |",
-        f"| PEP Status | {kyc.get('pep')} |",
-        f"| KYC Risk Score | {kyc['kyc_risk_score']} / 100 |",
-        f"| Risk Rating | {kyc.get('risk_rating')} |",
-        f"| KYC Tier | {kyc.get('kyc_tier')} |",
-        f"| Total Outflow (review period) | R${s['key_metrics']['total_outflow_brl']:,.0f} |",
-        f"| Sanctions Status | {s.get('sanctions_status', {}).get('label', '—')} |",
-        f"| ML Confidence | {s['key_metrics'].get('ml_confidence_band', '—')} |",
-        "",
-        "---",
-        "",
-        "## 2. EXECUTIVE SUMMARY",
+        "## 1. Executive Summary",
         "",
         s["executive_summary"],
         "",
         "---",
         "",
-        "## 3. TRIGGERED ALERTS",
+        "## 2. Triggered Alerts",
         "",
-        "| Alert | Detection logic | Relevance |",
+        "| Alert Code | Detection logic | Relevance |",
         "|---|---|---|",
     ]
     for a in s["triggered_alerts"]:
         lines.append(f"| {a['alert_code']} | {a['detection_logic']} | {a['relevance']} |")
 
-    lines += ["", "---", "", "## 4. DETAILED FINDINGS", ""]
+    lines += ["", "---", "", "## 3. Detailed Findings", ""]
     for f in s["detailed_findings"]:
         lines.append(f"- {f}")
 
-    lines += ["", "---", "", "## 5. REGULATORY BASIS", ""]
+    lines += ["", "---", "", "## 4. Regulatory Basis", ""]
     for r in s["regulatory_basis"]:
         lines.append(f"- {r}")
 
-    lines += ["", "---", "", "## 6. RECOMMENDED ACTIONS", ""]
+    lines += ["", "---", "", "## 5. Recommended Actions", ""]
     for i, a in enumerate(s["recommended_actions"], 1):
         lines.append(f"{i}. {a}")
 
-    lines += ["", "---", "", "## 7. LINKED ENTITIES", ""]
+    lines += ["", "---", "", "## 6. Linked Entities", ""]
     if s["linked_entities"]:
         lines += ["| Entity | Relationship | Status |", "|---|---|---|"]
         for e in s["linked_entities"]:
@@ -206,6 +223,10 @@ def run(ctx: RunContext, use_llm=False):
             s, md = _llm_sar(case, bundle, ctx.run_id)
         else:
             s, md = _template_sar(case, bundle, ctx.run_id)
+
+        # Validate metadata schema
+        validate_sar_metadata(md, case["customer_id"])
+
         structured_list.append(s)
         md_parts.append(md)
         ctx.log("sar_agent", "sar_drafted",

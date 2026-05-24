@@ -162,3 +162,88 @@ COHORT_RELATIVE_NOTE = (
     "ML confidence labels are calibrated relative to the investigated escalation cohort, "
     "not the full customer population."
 )
+
+
+def render_sar_metadata(customer_id: str, run_id: str, prepared_at: str = None,
+                        priority_score: float = None, severity: str = None,
+                        escalation_band: str = None, ml_confidence_band: str = None) -> str:
+    """
+    Canonical SAR metadata table renderer.
+
+    Ensures every SAR has consistent Case Identification section with all 8 required fields.
+    Accepts None values and substitutes sensible defaults to guarantee completeness.
+
+    Returns markdown table (no header, no trailing newlines).
+    """
+    if prepared_at is None:
+        prepared_at = now_iso()
+
+    sar_ref = f"SAR-{run_id}-{customer_id}-01"
+
+    # Fallback defaults if any field is missing
+    priority_str = f"{priority_score:.2f}" if priority_score is not None else "—"
+    severity_str = severity or "—"
+    escalation_str = escalation_band or "—"
+    ml_str = ml_confidence_band or "—"
+
+    rows = [
+        ("SAR Reference", sar_ref),
+        ("Customer ID", customer_id),
+        ("Run ID", run_id),
+        ("Prepared At", prepared_at),
+        ("Priority Score", priority_str),
+        ("Severity", severity_str),
+        ("Escalation Band", escalation_str),
+        ("ML Confidence Band", ml_str),
+    ]
+
+    lines = [
+        "| Field | Value |",
+        "|-------|-------|",
+    ]
+    for field, value in rows:
+        lines.append(f"| **{field}** | {value} |")
+
+    return "\n".join(lines)
+
+
+def validate_sar_metadata(sar_markdown: str, customer_id: str) -> bool:
+    """
+    Validate that SAR markdown has all required metadata fields.
+
+    Checks that the Case Identification section includes all 8 required fields:
+    - SAR Reference
+    - Customer ID
+    - Run ID
+    - Prepared At
+    - Priority Score
+    - Severity
+    - Escalation Band
+    - ML Confidence Band
+
+    Raises ValueError if any field is missing.
+    """
+    required_fields = [
+        "SAR Reference",
+        "Customer ID",
+        "Run ID",
+        "Prepared At",
+        "Priority Score",
+        "Severity",
+        "Escalation Band",
+        "ML Confidence Band",
+    ]
+
+    missing = []
+    for field in required_fields:
+        # Look for the field in the markdown (either bold or not)
+        if f"| **{field}**" not in sar_markdown and f"| {field}" not in sar_markdown:
+            missing.append(field)
+
+    if missing:
+        raise ValueError(
+            f"SAR for customer {customer_id} missing required metadata fields: {', '.join(missing)}. "
+            f"All SARs must include the canonical Case Identification schema."
+        )
+
+    return True
