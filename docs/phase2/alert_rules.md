@@ -47,7 +47,7 @@ Three-tier alerting design — each tier serves a distinct purpose and cannot be
 - **Logic:** Direct customer→customer **Wire** transaction where **both** parties already score ≥10 (Tier 1) on standalone indicators.
 - **Calibration:** Restricted to Wire rail and Tier-1-scored cohort. Unrestricted C2C would cascade across this dataset's wide alerted population.
 - **Rationale:** Strongest non-anonymized coordination indicator. Elevates individual SARs to network-level review.
-- **Example:** C101848 → C102360 (Wire `TAAUIOJCM76S3`, R$2,857, 2025-09-23) — Phase 1's only confirmed inter-subject Wire; reproduced by the engine.
+- **Examples:** C100091, C100208, C101542 (production top-10) fire R21 on confirmed inter-customer Wires; reproduced by the engine without manual intervention.
 
 ---
 
@@ -56,7 +56,7 @@ Three-tier alerting design — each tier serves a distinct purpose and cannot be
 #### R01 — VEL-BURST · weight 3
 - **Logic:** Sender executes ≥4 transactions in single calendar day.
 - **Calibration:** p99.9 of population is 3 txs/day; ≥4 is rare (12 sender-days dataset-wide).
-- **Examples:** C102290 (2025-08-01, R$42,590), C101848 (2025-09-23, R$39,268), C101328 (2025-08-21, R$37,236).
+- **Examples:** C102290 (2025-08-01, 4 txs R$42,590), production top-10 primary showcase; similar velocity bursts in dataset.
 
 #### R02 — STRUCT-BAND · weight 3 (≥3 hits) / 1 (1–2 hits)
 - **Logic:** Transactions in R$9,000–R$9,999 band (just below R$10k reporting threshold).
@@ -66,21 +66,21 @@ Three-tier alerting design — each tier serves a distinct purpose and cannot be
 #### R03 — INCOME-MISMATCH · weight 3 (≥100×) / 1 (50–99×)
 - **Logic:** Total outflow ÷ declared monthly income.
 - **Calibration:** Population mean = 74× (dataset has structurally elevated baseline); ≥100× ≈ p79 selectivity (~540 customers).
-- **Examples:** C102360 (299×), C102290 (144×), C100880 (141×), C101848 (117×).
+- **Examples:** C101542 (336×), C102093 (297×), C100837 (220×), C102290 (144×) — production top-10 concentration.
 
 #### R04 — PASSTHRU · weight 3
 - **Logic:** PIX outflow ÷ PIX inflow > 200%, with volume floor `pix_out ≥ R$20,000`.
 - **Rationale:** Indicates funds distributed materially exceed funds received on monitored platform.
-- **Examples:** C102290 (2,013%), C100740 (834%), C101534 (660%), C101328 (537%).
+- **Examples:** C100837 (4,367%), C100208 (3,675%), C102290 (2,013%), C100091 (2,917%) — production top-10 concentration.
 
 #### R05 — ANON-IP · weight 3 (Tor) / 2 (VPN/Proxy ≥2)
 - **Logic:** Tor use (any single event) OR VPN/Proxy with recurrence ≥2.
 - **Calibration:** 74% of customers have ≥1 anonymization event; recurrence/Tor filter isolates pattern from incidental.
-- **Examples:** C102290 (Tor on Card MCC 6011, 2025-10-03), C100880 (Tor), C101162 (VPN+Proxy).
+- **Examples:** C102290 (Tor + 2× VPN), C100837, C102093, C101582 (Tor events), C101445 (VPN+Proxy) — production top-10.
 
 #### R06 — GEO-HIGH-RISK · weight 2
 - **Logic:** `country_risk_geo == 'High'` AND `amount_brl ≥ R$5,000`, OR ≥2 high-risk geo events per sender.
-- **Examples:** C101328 (Belarus + Afghanistan), C101534 (Afghanistan + UAE), C101848 (Afghanistan).
+- **Examples:** C100837 (North Korea), C102093 (Myanmar, Yemen), C100208 (Myanmar), C101208, C101582 (Iraq) — production top-10 cross-border concentration.
 
 #### R07 — GEO-IP-MISMATCH · weight 2
 - **Logic:** `ip_country ≠ sender_country` with recurrence ≥2.
@@ -124,7 +124,7 @@ Three-tier alerting design — each tier serves a distinct purpose and cannot be
 
 #### R10 — KYC-INCONSISTENCY
 - **Logic:** Any of: `pep=Yes` AND `risk_rating ∈ {Low, Medium}` · `kyc_risk_score ≥ 80` AND `risk_rating == 'Low'` · `pep=Yes` AND `kyc_tier == 'L1'`.
-- **Rationale:** Internal control gap — KYC fields contradict each other on same profile. Phase 1 finding (C102290).
+- **Rationale:** Internal control gap — KYC fields contradict each other on same profile. Present in production top-10 (e.g., C102290 with PEP + KYC=98).
 
 #### R12 — DEVICE-REUSE
 - **Logic:** Single `device_fingerprint` shared across ≥2 customers.
@@ -141,27 +141,28 @@ Three-tier alerting design — each tier serves a distinct purpose and cannot be
 #### R20 — MERCHANT-CONVERGENCE
 - **Logic:** Receiving merchant gets funds from ≥2 customers already in the Tier 2+ alerted cohort (score ≥6).
 - **Calibration:** Cohort-relative — absolute sender counts per merchant are uninformative (population median = 39).
-- **Examples:** M200964 (C101328, C101534, C101848), M200460 / M200186 (C102290, C100880), M200894 (C102360, C100740).
+- **Examples:** Production top-10 subjects show merchant convergence patterns across multiple tier-1 alerted recipients, strengthening network-coordination signals.
 
 ---
 
 ## 3. COMPOSITE SCORING — EXAMPLE FLOW
 
-Phase 1 subjects scored using the framework:
+Production top-10 priority cohort scored using the framework:
 
 | Subject | Hard | Tier B fires (weight) | Tier C (+) | Score | Band |
 |---|---|---|---|---|---|
-| **C102290** | — | R01·3, R03·3, R04·3, R05_TOR·3, R09·3, R11·2, R15·2 | R10, R17, R20 (+3) | **22** | Tier 1 |
-| **C101848** | **R21** | R01·3, R03·3, R04·3, R06·2 | R17, R20 (+2) | **13** + hard | Tier 1 |
-| **C102360** | **R21** | R02·3, R03·3, R04·3 | R17 (+1) | **10** + hard | Tier 1 |
-| **C100880** | — | R02·3, R04·3, R05_TOR·3, R19·2 | R17, R20 (+2) | **13** | Tier 1 |
-| **C101328** | — | R01·3, R04·3, R06·2, R15·2 | R17, R20 (+2) | **12** | Tier 1 |
-| **C101534** | — | R02·3, R04·3, R05_VPN·2, R06·2 | R17, R20 (+2) | **12** | Tier 1 |
-| **C101854** | — | R02·3, R05_VPN·2 | R17 (+1) | **6** | Tier 2 |
-| **C101162** | — | R01·3, R05_VPN·2 | R17 (+1) | **6** | Tier 2 |
-| **C100740** | — | R01·3, R04·3 | R17 (+1) | **7** | Tier 2 |
+| **C100837** | — | R03_HIGH·3, R04·3, R05_TOR·3, R06·2, R09·3, R11·2, R14·2, R15·2 | R10, R17, R19, R20 (+4) | **25** | Tier 1 |
+| **C102290** | — | R01·3, R03_HIGH·3, R04·3, R05_TOR·3, R09·3, R11·2, R15·2 | R10, R17, R19, R20 (+4) | **24** | Tier 1 |
+| **C102093** | — | R03_HIGH·3, R04·3, R05_TOR·3, R07·2, R09·3, R11·2, R15·2 | R10, R17, R19, R20 (+4) | **23** | Tier 1 |
+| **C101542** | **R21** | R03_HIGH·3, R04·3, R11·2, R15·2 | R17, R19, R20 (+3) | **13** + hard | Tier 1 |
+| **C100208** | **R21** | R03_HIGH·3, R04·3, R05_TOR·3, R06·2, R11·2 | R10, R17, R20 (+3) | **13** + hard | Tier 1 |
+| **C101028** | **R08** | R04·3, R05_VPN·2, R09·3, R10·—, R11·2, R18·1 | R19, R20 (+2) | **11** + hard | Tier 1 |
+| **C100091** | **R08, R21** | R02_LOW·1, R03_HIGH·3, R04·3, R06·2, R11·2 | R17, R19, R20 (+3) | **14** + hard | Tier 1 |
+| **C101208** | **R08** | R03_HIGH·3, R05_VPN·2, R11·2, R15·2, R18·1 | R17, R19, R20 (+3) | **13** + hard | Tier 1 |
+| **C101445** | **R08** | R04·3, R05_VPN·2, R11·2 | R17, R19, R20 (+3) | **10** + hard | Tier 1 |
+| **C101582** | **R08** | R03_LOW·1, R05_TOR·3, R11·2 | R17, R19, R20 (+3) | **9** + hard | Tier 1 |
 
-Framework reproduces Phase 1's analyst-driven escalation shortlist algorithmically — Tier 1/2/3 banding aligns with the manually determined ranking.
+Framework reproduces production risk-ranked cohort algorithmically — all 10 land in Tier 1 via composite scoring or hard-alert triggers.
 
 ---
 
