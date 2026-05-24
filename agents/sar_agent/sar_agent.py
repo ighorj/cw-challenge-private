@@ -11,7 +11,7 @@ import json
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
-from shared import RunContext, load_json, save_json, llm_available, call_anthropic, now_iso, soften_language, ml_confidence_band
+from shared import RunContext, load_json, save_json, llm_available, call_anthropic, now_iso, soften_language, ml_confidence_band, COHORT_RELATIVE_NOTE
 from aml_constants import RULE_DESCRIPTIONS, sanctions_status
 
 PROMPT_FILE = Path(__file__).parent / "prompt.md"
@@ -154,7 +154,9 @@ def _render_markdown(s, case, bundle):
         lines.append("None identified.")
 
     lines += ["", "---", "",
-              "_This report constitutes an internal compliance escalation. Conclusions are based on transactional and KYC data available at preparation time. Final SAR filing determination is subject to Compliance Officer and MLRO review._"]
+              "_This report constitutes an internal compliance escalation. Conclusions are based on transactional and KYC data available at preparation time. Final SAR filing determination is subject to Compliance Officer and MLRO review._",
+              "",
+              f"_{COHORT_RELATIVE_NOTE}_"]
     return "\n".join(lines)
 
 

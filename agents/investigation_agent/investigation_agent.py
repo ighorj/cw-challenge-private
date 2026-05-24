@@ -11,7 +11,7 @@ from pathlib import Path
 import pandas as pd
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
-from shared import RunContext, save_json, load_json, llm_available, call_anthropic, now_iso, soften_language, ml_confidence_band
+from shared import RunContext, save_json, load_json, llm_available, call_anthropic, now_iso, soften_language, ml_confidence_band, COHORT_RELATIVE_NOTE
 from aml_constants import RULE_DESCRIPTIONS, sanctions_status
 
 ROOT = Path(__file__).resolve().parents[2]
@@ -244,7 +244,11 @@ def build_evidence_bundle(customer, txs, kyc, ml_df, alerts):
                 kyc_row.get("sanctions_list_hit"),
                 int((cust_txs.sanctions_screening_hit == "Yes").sum()) if "sanctions_screening_hit" in cust_txs.columns else 0,
             ),
-            "ml_confidence_band": ml_confidence_band(float(ml_row.get("predicted_probability", 0.0))),
+            "ml_confidence_band": (
+                customer.get("ml_confidence_band_cohort")
+                or ml_confidence_band(float(ml_row.get("predicted_probability", 0.0)))
+            ),
+            "ml_cohort_rank": customer.get("ml_cohort_rank"),
         },
         "detection_signals": {
             "rules_score": customer["rules_score"],
@@ -466,11 +470,16 @@ def run(ctx: RunContext, use_llm=False):
 
     # Human-readable summary (markdown)
     md = [f"# Investigation Summary — run {ctx.run_id}",
-          f"_Backend: {backend} · Generated: {now_iso()}_", ""]
-    for case in cases:
+          f"_Backend: {backend} · Generated: {now_iso()}_",
+          f"_{COHORT_RELATIVE_NOTE}_", ""]
+    for case, bundle in zip(cases, bundles):
+        ml_band = bundle["kyc"].get("ml_confidence_band", "—")
+        ml_rank = bundle["kyc"].get("ml_cohort_rank")
+        ml_note = f"ML confidence: **{ml_band}**" + (f" (cohort rank #{ml_rank})" if ml_rank else "")
         md += [f"## {case['customer_id']}",
                f"**Recommendation:** {case['recommended_next_step']}",
-               f"**Confidence:** {case['confidence']}", "",
+               f"**Confidence:** {case['confidence']}",
+               ml_note, "",
                case["summary"], "",
                "**Triggered typologies:** " + ", ".join(case["triggered_typologies"]), "",
                "### Key facts"]

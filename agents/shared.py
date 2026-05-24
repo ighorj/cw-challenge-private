@@ -122,7 +122,7 @@ def soften_language(text: str) -> str:
 
 
 def ml_confidence_band(probability: float) -> str:
-    """Map raw ML probability to an operational confidence band for display."""
+    """Absolute ML confidence band (population-level fallback)."""
     if probability >= 0.95:
         return "Very High"
     if probability >= 0.80:
@@ -132,3 +132,33 @@ def ml_confidence_band(probability: float) -> str:
     if probability >= 0.40:
         return "Moderate"
     return "Low"
+
+
+def ml_confidence_band_cohort(rank: int, total: int, fallback_probability: float = 0.0) -> str:
+    """
+    Cohort-relative ML confidence band.
+
+    Labels are calibrated to the current escalation queue distribution —
+    not the full customer population. Preserves meaningful differentiation
+    inside the top-risk cohort where absolute bands collapse to a single label.
+
+    rank=1 is the highest ML probability in the cohort.
+    """
+    if total <= 2:
+        return ml_confidence_band(fallback_probability)
+    pct = rank / total
+    if pct <= 0.10:
+        return "Extreme"
+    if pct <= 0.25:
+        return "Very High"
+    if pct <= 0.55:
+        return "High"
+    if pct <= 0.80:
+        return "Moderate-High"
+    return "Moderate"
+
+
+COHORT_RELATIVE_NOTE = (
+    "ML confidence labels are calibrated relative to the investigated escalation cohort, "
+    "not the full customer population."
+)

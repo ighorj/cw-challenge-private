@@ -17,7 +17,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 sys.path.insert(0, str(ROOT / "src" / "rules"))
 sys.path.insert(0, str(ROOT / "src" / "ml"))
 
-from shared import RunContext, save_json, load_json, now_iso, llm_available, call_anthropic, ml_confidence_band  # noqa: E402
+from shared import RunContext, save_json, load_json, now_iso, llm_available, call_anthropic, ml_confidence_band, ml_confidence_band_cohort, COHORT_RELATIVE_NOTE  # noqa: E402
 from priority import priority_score, severity_band, typology_families_hit  # noqa: E402
 import alerts_engine as ae  # noqa: E402
 import ml_pipeline as mp    # noqa: E402
@@ -153,6 +153,17 @@ def run(ctx: RunContext, top_n=10, use_llm=False):
             for i, r in queue.iterrows()
         ],
     }
+    # Cohort-relative ML confidence bands (rank within this queue, not full population)
+    ml_sorted = sorted(queue_obj["customers"], key=lambda c: c["ml_probability"], reverse=True)
+    ml_rank_map = {c["customer_id"]: i for i, c in enumerate(ml_sorted, 1)}
+    total = len(queue_obj["customers"])
+    for customer in queue_obj["customers"]:
+        ml_rank = ml_rank_map[customer["customer_id"]]
+        customer["ml_confidence_band_cohort"] = ml_confidence_band_cohort(
+            ml_rank, total, fallback_probability=customer["ml_probability"])
+        customer["ml_cohort_rank"] = ml_rank
+    queue_obj["ml_calibration_note"] = COHORT_RELATIVE_NOTE
+
     # LLM triage — adds qualitative rationale per alert and cross-customer patterns
     backend = "anthropic" if (use_llm and llm_available()) else "template"
     ctx.log("detection_agent", "backend_selected", backend=backend)
