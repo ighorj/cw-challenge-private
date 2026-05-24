@@ -36,6 +36,8 @@ XGBoost classifier trained on weak labels derived from the rules engine outputs 
 
 **Important methodological note:** ML probabilities in the top cohort are compressed in the 0.98–0.9999 range due to weak-label correlation with the rules. The presentation layer therefore uses **cohort-relative confidence bands** (Extreme / Very High / High / Moderate-High / Moderate) calibrated to the queue distribution, not the full population.
 
+**Dual-model approach — XGBoost + Isolation Forest:** Because XGBoost is trained on rules-derived labels, its confidence scores reflect agreement with existing typologies rather than an independent view of the data. To address this, a complementary **Isolation Forest** model (`src/ml/isolation_forest.py`) was added, trained exclusively on nine raw transaction features — amount, hour, MCC risk, geo risk, anonymization type, device root status, rail, card-present flag, and 3DS status — with no access to rule scores or labels. When both models flag the same customer, the signals reinforce each other from structurally independent evidence bases, which materially strengthens the case for escalation. When they diverge — a customer ranks high in XGBoost but mid-population in Isolation Forest, as with C102290 — it indicates that the risk comes from composite rule convergence rather than raw transaction-level outlier behavior. That distinction is operationally useful: a purely transaction-anomaly customer (high IF, low XGBoost) may represent an emerging typology the rules have not yet codified.
+
 ## Operational vs investigative distinction
 
 Two distinct ranking concepts are surfaced explicitly:

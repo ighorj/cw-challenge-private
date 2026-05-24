@@ -49,6 +49,8 @@ CW/
 ├── src/
 │   ├── rules/                 21-rule alerts engine (Phase 2)
 │   └── ml/                    XGBoost prioritization + SHAP (Phase 3)
+│       ├── ml_pipeline.py     XGBoost supervised ranking
+│       └── isolation_forest.py Unsupervised anomaly detection (raw features only)
 ├── docs/
 │   ├── architecture/          Pipeline diagram (mmd + png)
 │   ├── phase1/                Phase 1 manual investigation + SAR-2025-C102290
@@ -73,7 +75,7 @@ CW/
 |---|---|---|
 | **1 — Investigation** | 9-subject manual cohort + 1 showcase SAR (C102290) | [`docs/phase1/`](docs/phase1/) |
 | **2 — Rules engine** | 21 deterministic rules, composite scoring, escalation bands | [`src/rules/alerts_engine.py`](src/rules/alerts_engine.py) |
-| **3 — ML prioritization** | XGBoost classifier, SHAP explanations, ranked queue | [`src/ml/ml_pipeline.py`](src/ml/ml_pipeline.py) |
+| **3 — ML prioritization** | XGBoost + Isolation Forest: supervised ranking with SHAP + unsupervised anomaly detection on raw features | [`src/ml/ml_pipeline.py`](src/ml/ml_pipeline.py) · [`src/ml/isolation_forest.py`](src/ml/isolation_forest.py) |
 | **4 — Multi-agent orchestration** | 5 LLM agents + orchestrator with deterministic fallback | [`agents/`](agents/) |
 
 ---
@@ -138,7 +140,7 @@ A committed canonical run lives under [`outputs/examples/showcase_run/`](outputs
 ## Limitations
 
 - **Synthetic dataset.** Behavior was not validated against real customer ground truth.
-- **Weak-label ML training.** Labels were derived from the rules engine, not from analyst judgment, so ML probabilities correlate with rule fires by construction. The presentation layer uses cohort-relative confidence bands to avoid implying that 0.99+ probability means "guaranteed".
+- **Weak-label ML training (mitigated).** Labels were derived from the rules engine, not from analyst judgment, so XGBoost probabilities correlate with rule fires by construction. This circularity was identified and partially mitigated by adding an Isolation Forest model (`src/ml/isolation_forest.py`) trained exclusively on raw transaction features — no labels, no rule scores. The two models provide independent signals: agreement strengthens confidence; divergence flags customers whose behavior is anomalous in ways the current rules do not fully capture.
 - **No real sanctions verification.** OFAC, BACEN, EU sanctions lists are not integrated. Sanctions screening events are treated as preliminary indicators only.
 - **No human-in-the-loop feedback.** There is no analyst-decision capture or model retraining loop.
 - **No production monitoring or drift handling.** This is a delivery prototype, not a deployed system.
