@@ -9,17 +9,19 @@
 
 Nine entities flagged by composite risk profile (structuring · velocity · income-to-volume · passthrough · network · geo/IP):
 
+> The final investigative cohort below reflects the refined production-oriented scoring and orchestration framework developed during later phases of the project. Ranking now accounts for hard-alert rule bonuses (R08 sanctions, R05_TOR anonymization, R21 network-link), typology family diversity, and dangerous-combination multipliers in addition to raw transaction volume.
+
 | Rank | ID | Occupation | Income | Outflow | Ratio | Key Indicators |
 |---|---|---|---|---|---|---|
-| 🔴 1 | **C102290** | Driver | R$11k | R$134k | 144× | PEP, KYC=98, VPN×2+Tor, 2,013% passthrough, burst |
-| 🔴 2 | **C102360** | Consultant | R$3k | R$74k | 299× | 3 structuring, Wire-linked to C101848, 276% passthrough |
-| 🔴 3 | **C101328** | Entrepreneur | R$23k | R$153k | 78× | Highest absolute volume, Belarus+AF geo, 4-tx burst |
-| 🔴 4 | **C101848** | Accountant | R$10k | R$97k | 117× | Wire → C102360, AF geo, same-day burst, KYC=30 |
-| 🔴 5 | **C100880** | Entrepreneur | R$9k | R$106k | 141× | Tor, 3 structuring, chargeback on structuring tx |
-| 🟠 6 | C101534 | Entrepreneur | R$8k | R$99k | 142× | AF+UAE geo, Proxy, 3 structuring, shared merchant |
-| 🟠 7 | C101854 | Trader | R$12k | R$103k | 105× | 4 structuring (cohort high), VPN |
-| 🟠 8 | C101162 | Teacher | R$11k | R$96k | 103× | Two velocity bursts, Proxy+VPN |
-| 🟡 9 | C100740 | Nurse | R$14k | R$80k | 69× | 834% passthrough, Proxy, R$26k single PIX |
+| 🔴 1 | **C102290** | Driver | R$11k | R$134k | 144× | PEP, KYC=98, VPN×2+Tor, 2,013% passthrough, burst · 7 typology families · priority 66.0 |
+| 🔴 2 | **C100880** | Entrepreneur | R$9k | R$106k | 141× | Tor, 3 structuring, chargeback on structuring tx, R21 network-link (C101647→) · priority 41.6 |
+| 🔴 3 | **C101848** | Accountant | R$10k | R$97k | 117× | Wire → C102360 (only inter-subject Wire), AF geo, same-day burst, KYC=30 · priority 37.9 |
+| 🔴 4 | **C102360** | Consultant | R$3k | R$74k | 299× | 3 structuring, Wire-linked to C101848, 276% passthrough, R21 · priority 37.6 |
+| 🟠 5 | C101854 | Trader | R$12k | R$103k | 105× | 4 structuring (cohort high), VPN · priority 29.8 |
+| 🟠 6 | C101534 | Entrepreneur | R$8k | R$99k | 142× | AF+UAE geo, Proxy, 3 structuring, shared merchant · priority 27.9 |
+| 🟠 7 | C101328 | Entrepreneur | R$23k | R$153k | 78× | Highest absolute volume, Belarus+AF geo, 4-tx burst · priority 23.8 |
+| 🟠 8 | C100740 | Nurse | R$14k | R$80k | 69× | 834% passthrough, Proxy, R$26k single PIX · priority 23.6 |
+| 🟡 9 | C101162 | Teacher | R$11k | R$96k | 103× | Two velocity bursts, Proxy+VPN · priority 20.8 |
 
 ---
 
@@ -135,15 +137,16 @@ The confirmed Wire and four shared-merchant convergence points support a network
 
 | ID | Basis |
 |---|---|
-| **C102290** | PEP + KYC=98; activity materially inconsistent with profile (Tor+VPN, R$134k, 2,013% passthrough, burst). Mandatory EDD applies. |
-| **C101848** | Only confirmed inter-subject Wire (→ C102360); AF geo; same-day burst; KYC=30 monitoring gap; shared-merchant convergence node. |
-| **C102360** | 299× income disparity; 3 structuring hits; Wire counterparty to C101848. |
+| **C102290** | PEP + KYC=98; activity materially inconsistent with profile (Tor+VPN, R$134k, 2,013% passthrough, burst). Mandatory EDD applies. Highest investigative priority in cohort. |
+| **C100880** | Tor anonymization + R21 hard alert (Wire received from flagged C101647) + 3 structuring hits + chargeback on structuring tx; shared merchants with C102290. |
+| **C101848** | Only confirmed inter-subject Wire (→ C102360); AF geo; same-day burst; KYC=30 monitoring gap; shared-merchant convergence node; R21 hard alert. |
+| **C102360** | 299× income disparity; 3 structuring hits; Wire counterparty to C101848; R21 hard alert. |
 
 ### TIER 2 — SAR RECOMMENDED (STANDARD WINDOW)
 
 | ID | Basis |
 |---|---|
-| C100880 | Tor + 3 structuring hits + chargeback on band tx; shared merchants with C102290. |
+| C101854 | 4 structuring hits (cohort high); VPN. |
 | C101534 | AF+UAE geo; 3 structuring hits; Proxy; shared merchant M200964. |
 | C101328 | R$153k highest outflow; Belarus+AF geo; velocity burst. |
 
@@ -151,9 +154,8 @@ The confirmed Wire and four shared-merchant convergence points support a network
 
 | ID | Basis |
 |---|---|
-| C101854 | 4 structuring hits (cohort high); VPN. |
-| C101162 | Two velocity-burst dates; Proxy+VPN. |
 | C100740 | 834% passthrough; Proxy; upstream Wire from C100543. |
+| C101162 | Two velocity-burst dates; Proxy+VPN. |
 
 ### SECONDARY REVIEW
 
