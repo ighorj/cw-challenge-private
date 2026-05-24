@@ -90,15 +90,22 @@ Top drivers map cleanly to AML typologies: PIX inflow, income mismatch, Wire out
 
 **Income ablation.** Dropping `log_annual_income` changes PR-AUC by +0.0006 with ranking stability of 0.957. Income is not driving predictions.
 
-### Local explanations — Phase 1 SAR subjects
+### Local explanations — Phase 1 cohort subjects
 
-| Subject | Probability | Top SHAP drivers |
-|---|---|---|
-| **C102290** | 0.9998 | `log_pix_in` · `log_annual_income` · `count_anon_events` |
-| **C101848** | 0.9856 | `log_annual_income` · `log_pix_in` · `count_chargeback_status` |
-| **C102360** | 0.9621 | `log_annual_income` · `log_wire_outflow` · `log_pix_in` |
+| Subject | Priority | Probability | Top SHAP drivers |
+|---|---|---|---|
+| **C100091** | #1 · 80.46 | 0.9962 | `log_pix_in` · `log_annual_income` · `log_wire_outflow` |
+| **C101208** | #2 · 74.39 | 0.9889 | `log_pix_in` · `count_anon_events` · `tx_count` |
+| **C101028** | #3 · 74.36 | 0.9862 | `log_pix_in` · `count_anon_events` · `count_chargeback_status` |
+| **C100837** | #4 · 67.40 | 0.9996 | `log_pix_in` · `log_annual_income` · `count_tor_events` |
+| **C101582** | #5 · 66.96 | 0.9955 | `log_pix_in` · `log_annual_income` · `count_anon_events` |
+| **C102290** | #6 · 66.00 ★ | 0.9998 | `log_pix_in` · `log_annual_income` · `count_anon_events` |
+| **C102093** | #7 · 64.59 | 0.9991 | `log_pix_in` · `log_annual_income` · `count_anon_events` |
+| **C100208** | #8 · 63.20 | 0.9996 | `log_pix_in` · `log_annual_income` · `count_anon_events` |
+| **C101445** | #9 · 62.49 | 0.9987 | `log_pix_in` · `log_wire_outflow` · `count_anon_events` |
+| **C101542** | #10 · 61.79 | 0.9993 | `log_annual_income` · `count_anon_events` · `log_pix_in` |
 
-All three match the manually authored SAR reasoning: anonymization + income mismatch + passthrough for C102290; income mismatch + chargeback + Wire link for C101848; extreme income mismatch + Wire (network signal) for C102360.
+All 10 subjects score ≥ 0.986 ML probability. SHAP drivers align with the SAR reasoning for each: PIX passthrough (`log_pix_in`), income mismatch (`log_annual_income`), anonymization events (`count_anon_events`), and wire outflow for subjects with network-link or wire sanctions events.
 
 ---
 
@@ -106,7 +113,7 @@ All three match the manually authored SAR reasoning: anonymization + income mism
 
 ![PCA — customer behavioral space (PC1 20.8 % + PC2 9.3 % variance)](../../outputs/figures/ml_pca_clusters.png)
 
-High-risk customers concentrate in the upper-right region of the projection. C102290, C101848, and C102360 sit within this concentrated band — confirming shared behavioral typologies, not isolated outliers.
+High-risk customers concentrate in the upper-right region of the projection. All 10 production top-10 subjects sit within this concentrated band — confirming shared behavioral typologies, not isolated outliers.
 
 ---
 
@@ -132,4 +139,4 @@ High-risk customers concentrate in the upper-right region of the projection. C10
 
 ## 8. Conclusion
 
-The ML layer is a defensible prioritization tool with three honest contributions: continuous ranking within rules-engine bands, per-customer SHAP attributions usable in SAR narratives, and a disagreement signal when ML and rules diverge on a specific customer. It does not beat the rule engine on labeled extremes — and is not framed as if it did. C102290 ranks #2 of 2,500 by ML probability, and SHAP drivers for all three Phase 1 SAR subjects reproduce the manual analyst reasoning. The pipeline is designed to be re-tuned, not rebuilt.
+The ML layer is a defensible prioritization tool with three honest contributions: continuous ranking within rules-engine bands, per-customer SHAP attributions usable in SAR narratives, and a disagreement signal when ML and rules diverge on a specific customer. It does not beat the rule engine on labeled extremes — and is not framed as if it did. C102290 ranks #2 of 2,500 by ML probability, and SHAP drivers for all 10 Phase 1 cohort subjects align with the manual analyst reasoning. The pipeline is designed to be re-tuned, not rebuilt.
