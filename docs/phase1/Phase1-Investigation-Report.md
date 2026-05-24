@@ -11,16 +11,16 @@ Ten entities flagged by composite risk profile — ranked by **operational escal
 
 | Rank | ID | Occupation | Income | Outflow | Ratio | Key Indicators | Priority |
 |---|---|---|---|---|---|---|---|
-| 🔴 1 | **C100091** | Store Owner | R$10k | R$91k | 108× | 898% passthrough, R08 sanctions screening, R21 wire-link (→C100236), KYC=66 | 80.46 |
-| 🔴 2 | **C101208** | Chef | R$13k | R$150k | 138× | 822% passthrough, R08 sanctions screening, VPN, 29 counterparties (R15), 6 geo-risk events | 74.39 |
-| 🔴 3 | **C101028** | Designer | R$47k | R$71k | 18× | PEP + confirmed sanctions match (R08), KYC=64, R10 KYC-inconsistency, multi-rail | 74.36 |
-| 🔴 4 | **C100837** | Accountant | R$8k | R$139k | 220× | PEP + 4,367% passthrough (extreme), Tor anonymization, R09 EDD, 30 counterparties, Myanmar geo | 67.40 |
-| 🔴 5 | **C101582** | Nurse | R$11k | R$89k | 98× | 1,467% passthrough, R08 sanctions screening (Iraq cross-border), Tor ×2, KYC=73 | 66.96 |
-| 🔴 6 | **C102290** | Driver | R$11k | R$134k | 144× | **PRIMARY SAR CASE** — PEP, KYC=98, Tor + VPN×2, 2,013% passthrough, velocity burst (4 txs, R$42.6k), 7 typologies | 66.00 |
-| 🔴 7 | **C102093** | Chef | R$8k | R$192k | 297× | PEP, 1,130% passthrough, Tor, 30 counterparties (highest fan-out), Myanmar + Yemen geo, KYC=63 | 64.59 |
-| 🔴 8 | **C100208** | Dentist | R$9k | R$144k | 198× | 3,675% passthrough, Tor, R21 wire-link (→C102252), KYC=89, Myanmar cross-border (R$51k) | 63.20 |
-| 🔴 9 | **C101445** | Designer | R$21k | R$68k | 38× | R08 confirmed sanctions match (hard alert), 328% passthrough, VPN + Proxy, merchant convergence | 62.49 |
-| 🔴 10 | **C101542** | Freelancer | R$4k | R$103k | 336× | 303% passthrough, Tor ×2, R21 wire-link (→C100375), 28 counterparties, 7 typologies | 61.79 |
+| #1 | **C100091** | Store Owner | R$10k | R$91k | 108× | 898% passthrough, R08 sanctions screening, R21 wire-link (→C100236), KYC=66 | 80.46 |
+| #2 | **C101208** | Chef | R$13k | R$150k | 138× | 822% passthrough, R08 sanctions screening, VPN, 29 counterparties (R15), 6 geo-risk events | 74.39 |
+| #3 | **C101028** | Designer | R$47k | R$71k | 18× | PEP + confirmed sanctions match (R08), KYC=64, R10 KYC-inconsistency, multi-rail | 74.36 |
+| #4 | **C100837** | Accountant | R$8k | R$139k | 220× | PEP + 4,367% passthrough (extreme), Tor anonymization, R09 EDD, 30 counterparties, Myanmar geo | 67.40 |
+| #5 | **C101582** | Nurse | R$11k | R$89k | 98× | 1,467% passthrough, R08 sanctions screening (Iraq cross-border), Tor ×2, KYC=73 | 66.96 |
+| #6 | **C102290** | Driver | R$11k | R$134k | 144× | **PRIMARY SAR CASE** — PEP, KYC=98, Tor + VPN×2, 2,013% passthrough, velocity burst (4 txs, R$42.6k), 7 typologies | 66.00 |
+| #7 | **C102093** | Chef | R$8k | R$192k | 297× | PEP, 1,130% passthrough, Tor, 30 counterparties (highest fan-out), Myanmar + Yemen geo, KYC=63 | 64.59 |
+| #8 | **C100208** | Dentist | R$9k | R$144k | 198× | 3,675% passthrough, Tor, R21 wire-link (→C102252), KYC=89, Myanmar cross-border (R$51k) | 63.20 |
+| #9 | **C101445** | Designer | R$21k | R$68k | 38× | R08 confirmed sanctions match (hard alert), 328% passthrough, VPN + Proxy, merchant convergence | 62.49 |
+| #10 | **C101542** | Freelancer | R$4k | R$103k | 336× | 303% passthrough, Tor ×2, R21 wire-link (→C100375), 28 counterparties, 7 typologies | 61.79 |
 
 ---
 
