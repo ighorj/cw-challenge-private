@@ -1,0 +1,87 @@
+{
+  "_comment": "n8n workflow template — production migration target. Mirrors the Python orchestrator DAG exactly. Each Execute Command node runs one agent script with --run-id passed through the workflow. Artifacts are persisted to outputs/phase4_demo/runs/{{$json.run_id}}/. Import this file into n8n and adjust the working directory and Python path nodes for your deployment.",
+  "name": "AML Multi-Agent Pipeline",
+  "nodes": [
+    {
+      "id": "trigger",
+      "name": "Manual Trigger",
+      "type": "n8n-nodes-base.manualTrigger",
+      "position": [0, 0],
+      "parameters": {}
+    },
+    {
+      "id": "init_run",
+      "name": "Initialize Run",
+      "type": "n8n-nodes-base.code",
+      "position": [200, 0],
+      "parameters": {
+        "language": "javaScript",
+        "jsCode": "const ts = new Date().toISOString().replace(/[-:T]/g, '').slice(0, 13);\nconst rid = ts + '-' + Math.random().toString(36).slice(2, 8);\nreturn [{ json: { run_id: rid, top_n: 5, use_llm: false } }];"
+      }
+    },
+    {
+      "id": "data_agent",
+      "name": "Data Agent",
+      "type": "n8n-nodes-base.executeCommand",
+      "position": [400, 0],
+      "parameters": {
+        "command": "python3 agents/data_agent/data_agent.py"
+      }
+    },
+    {
+      "id": "detection_agent",
+      "name": "Detection Agent",
+      "type": "n8n-nodes-base.executeCommand",
+      "position": [600, 0],
+      "parameters": {
+        "command": "python3 agents/detection_agent/detection_agent.py"
+      }
+    },
+    {
+      "id": "investigation_agent",
+      "name": "Investigation Agent",
+      "type": "n8n-nodes-base.executeCommand",
+      "position": [800, 0],
+      "parameters": {
+        "command": "python3 agents/investigation_agent/investigation_agent.py --run-id={{$json.run_id}}"
+      }
+    },
+    {
+      "id": "sar_agent",
+      "name": "SAR Agent",
+      "type": "n8n-nodes-base.executeCommand",
+      "position": [1000, 0],
+      "parameters": {
+        "command": "python3 agents/sar_agent/sar_agent.py --run-id={{$json.run_id}}"
+      }
+    },
+    {
+      "id": "compliance_agent",
+      "name": "Compliance Agent",
+      "type": "n8n-nodes-base.executeCommand",
+      "position": [1200, 0],
+      "parameters": {
+        "command": "python3 agents/compliance_agent/compliance_agent.py --run-id={{$json.run_id}}"
+      }
+    },
+    {
+      "id": "publish_results",
+      "name": "Publish Results",
+      "type": "n8n-nodes-base.code",
+      "position": [1400, 0],
+      "parameters": {
+        "language": "javaScript",
+        "jsCode": "return [{ json: { run_id: $json.run_id, status: 'complete', artifacts_dir: `outputs/phase4_demo/runs/${$json.run_id}` } }];"
+      }
+    }
+  ],
+  "connections": {
+    "Manual Trigger":        { "main": [[{ "node": "Initialize Run",       "type": "main", "index": 0 }]] },
+    "Initialize Run":        { "main": [[{ "node": "Data Agent",            "type": "main", "index": 0 }]] },
+    "Data Agent":            { "main": [[{ "node": "Detection Agent",       "type": "main", "index": 0 }]] },
+    "Detection Agent":       { "main": [[{ "node": "Investigation Agent",   "type": "main", "index": 0 }]] },
+    "Investigation Agent":   { "main": [[{ "node": "SAR Agent",             "type": "main", "index": 0 }]] },
+    "SAR Agent":             { "main": [[{ "node": "Compliance Agent",      "type": "main", "index": 0 }]] },
+    "Compliance Agent":      { "main": [[{ "node": "Publish Results",       "type": "main", "index": 0 }]] }
+  }
+}

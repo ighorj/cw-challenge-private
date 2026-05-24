@@ -389,7 +389,7 @@ def _llm_case(bundle, run_id):
             .replace("{run_id}", run_id)
             .replace("{customer_id}", bundle["customer_id"])
             .replace("{evidence_bundle_json}", json.dumps(slim_bundle, indent=2, default=str)))
-    raw = call_anthropic(system, user, max_tokens=2000)
+    raw = call_anthropic(system, user, max_tokens=3500)
 
     # Strip markdown code fences if present
     raw_clean = raw.strip()

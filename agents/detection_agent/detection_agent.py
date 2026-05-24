@@ -61,7 +61,7 @@ def _llm_triage(queue_obj, run_id):
     user = parts[1].strip() if len(parts) > 1 else ""
     user = (user.replace("{run_id}", run_id)
                 .replace("{queue_json}", json.dumps(queue_obj, indent=2, default=str)))
-    raw = call_anthropic(system, user, max_tokens=2000)
+    raw = call_anthropic(system, user, max_tokens=4000)
     return _parse_llm_json(raw)
 
 

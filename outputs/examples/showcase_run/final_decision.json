@@ -1,0 +1,117 @@
+{
+  "run_id": "20260524-000149-48074c",
+  "generated_at": "2026-05-24T03:17:25+00:00",
+  "backend": "anthropic",
+  "decisions": [
+    {
+      "customer_id": "C100091",
+      "sar_reference": "SAR-20260524-000149-48074c-C100091-01",
+      "severity": "unknown",
+      "decision": "escalate_manual_review",
+      "decision_rationale": "The Iran-related transactional sanctions screening event constitutes a critical-severity indicator requiring manual compliance officer sign-off prior to SAR transmission, as entity-level verification of counterparty M200363 against OFAC/UN consolidated lists remains pending. Additionally, the two failed deterministic checks\u2014investigation-SAR alignment and high-risk geography basis citation\u2014warrant human review to confirm the geographic risk basis explicitly references Iran's FATF blacklist status before filing.",
+      "evidence_strength": 0.88,
+      "confidence_level": "high",
+      "filed_at": null,
+      "next_review": "senior-officer-immediate"
+    },
+    {
+      "customer_id": "C101208",
+      "sar_reference": "SAR-20260524-000149-48074c-C101208-01",
+      "severity": "unknown",
+      "decision": "escalate_manual_review",
+      "decision_rationale": "The transactional sanctions screening event involving a Syria-bound wire transfer (R08) combined with critical-severity income mismatch (1,150% annual) and activity spanning multiple FATF high-risk jurisdictions (Syria, Yemen, Russia) warrants manual senior compliance review prior to final SAR submission to ensure entity-level sanctions determination on counterparty M200815 is completed and appropriately characterized in the filing.",
+      "evidence_strength": 0.69,
+      "confidence_level": "moderate",
+      "filed_at": null,
+      "next_review": "senior-officer-immediate"
+    },
+    {
+      "customer_id": "C101028",
+      "sar_reference": "SAR-20260524-000149-48074c-C101028-01",
+      "severity": "unknown",
+      "decision": "escalate_manual_review",
+      "decision_rationale": "The combination of confirmed sanctions match and PEP status constitutes a critical-severity dual flag requiring senior compliance officer review before filing. Additionally, two deterministic checks failed: (1) investigation/SAR action alignment requires verification that the SAR action text fully matches the investigation recommendation, and (2) high-risk geography basis citation for North Korea (KP) exposure is absent from the regulatory_basis section despite a R$4,390.02 transaction to that FATF-designated high-risk jurisdiction.",
+      "evidence_strength": 0.69,
+      "confidence_level": "moderate",
+      "filed_at": null,
+      "next_review": "senior-officer-immediate"
+    },
+    {
+      "customer_id": "C100837",
+      "sar_reference": "SAR-20260524-000149-48074c-C100837-01",
+      "severity": "unknown",
+      "decision": "approve",
+      "decision_rationale": "The SAR demonstrates defensible alignment with applicable regulatory frameworks, presents quantitatively supported findings with appropriate evidentiary tracing, and recommends proportionate actions including immediate COAF filing and enhanced due diligence. The convergence of PEP status, extreme income disparity (18\u00d7 annual income), Tor anonymization usage, and FATF high-risk jurisdiction activity supports the Tier 1 escalation classification.",
+      "evidence_strength": 0.9,
+      "confidence_level": "high",
+      "filed_at": "2026-05-24T03:16:07+00:00",
+      "next_review": "post-filing-30d"
+    },
+    {
+      "customer_id": "C101582",
+      "sar_reference": "SAR-20260524-000149-48074c-C101582-01",
+      "severity": "unknown",
+      "decision": "escalate_manual_review",
+      "decision_rationale": "Confirmed sanctions list match constitutes critical-severity exposure requiring senior compliance and sanctions team sign-off prior to submission; the SAR narrative and recommended actions are operationally adequate, but confirmed sanctions cases per policy require manual review gate before COAF filing and account restriction execution.",
+      "evidence_strength": 0.51,
+      "confidence_level": "moderate",
+      "filed_at": null,
+      "next_review": "senior-officer-immediate"
+    },
+    {
+      "customer_id": "C102290",
+      "sar_reference": "SAR-20260524-000149-48074c-C102290-01",
+      "severity": "unknown",
+      "decision": "revise",
+      "decision_rationale": "The SAR is substantively well-constructed and the investigation supports immediate filing; however, the deterministic check identified that the regulatory basis section omits explicit citation to high-risk geography frameworks despite a documented cross-border transaction to UAE (AE), which appears on FATF monitoring lists. A minor revision to add this citation will strengthen regulatory defensibility before submission.",
+      "evidence_strength": 0.97,
+      "confidence_level": "high",
+      "filed_at": null,
+      "next_review": "immediate"
+    },
+    {
+      "customer_id": "C102093",
+      "sar_reference": "SAR-20260524-000149-48074c-C102093-01",
+      "severity": "unknown",
+      "decision": "revise",
+      "decision_rationale": "The SAR narrative and evidence mapping are substantively strong; however, the failed deterministic check for high-risk geographic basis citation requires remediation before filing, as Myanmar is identified in FATF statements on jurisdictions with strategic AML/CFT deficiencies. Adding explicit FATF Recommendation 19 citation to the regulatory basis section would cure this deficiency.",
+      "evidence_strength": 0.87,
+      "confidence_level": "high",
+      "filed_at": null,
+      "next_review": "immediate"
+    },
+    {
+      "customer_id": "C100208",
+      "sar_reference": "SAR-20260524-000149-48074c-C100208-01",
+      "severity": "unknown",
+      "decision": "revise",
+      "decision_rationale": "The SAR is substantially complete with well-documented triggered alerts and appropriate hedged language, but the failed deterministic check on high-risk geo basis requires remediation\u2014the regulatory basis section should explicitly cite Myanmar's FATF grey list status or relevant COAF guidance on monitored jurisdictions to ensure defensibility of the R06 trigger.",
+      "evidence_strength": 0.85,
+      "confidence_level": "high",
+      "filed_at": null,
+      "next_review": "immediate"
+    },
+    {
+      "customer_id": "C101445",
+      "sar_reference": "SAR-20260524-000149-48074c-C101445-01",
+      "severity": "unknown",
+      "decision": "escalate_manual_review",
+      "decision_rationale": "Confirmed sanctions match at KYC level constitutes critical-severity trigger requiring senior compliance officer sign-off prior to COAF submission. The deterministic check failure on investigation-SAR alignment appears to be a formatting discrepancy rather than substantive misalignment (both recommend immediate SAR filing), but manual verification of sanctions list cross-reference against current UN/OFAC consolidated lists should precede regulatory notification.",
+      "evidence_strength": 0.56,
+      "confidence_level": "moderate",
+      "filed_at": null,
+      "next_review": "senior-officer-immediate"
+    },
+    {
+      "customer_id": "C101542",
+      "sar_reference": "SAR-20260524-000149-48074c-C101542-01",
+      "severity": "unknown",
+      "decision": "approve",
+      "decision_rationale": "The SAR draft demonstrates complete regulatory alignment, passes all deterministic policy checks, presents a coherent and well-documented narrative with appropriately cautious language, and correctly recommends immediate filing given the convergence of nine concurrent rule triggers, high ML confidence band, and the presence of network linkage to another active investigation subject; no substantive deficiencies identified that would warrant revision or escalation.",
+      "evidence_strength": 0.79,
+      "confidence_level": "high",
+      "filed_at": "2026-05-24T03:17:25+00:00",
+      "next_review": "post-filing-30d"
+    }
+  ]
+}

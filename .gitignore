@@ -223,6 +223,16 @@ __marimo__/
 src/notebooks/RelevantQueries.ipynb
 docs/phase1/SAR-2025-C101848-01.md
 
+# Phase 4 transient run artifacts — each orchestrator run creates a timestamped dir.
+# Reproducible from source. The canonical reference run lives at outputs/examples/showcase_run/.
+outputs/phase4_demo/runs/
+outputs/logs/
+*.parquet
+
+# Secrets
+.env
+.env.local
+
 # OS
 .DS_Store
 Thumbs.db
