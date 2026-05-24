@@ -84,3 +84,51 @@ def call_anthropic(system, user, model="claude-opus-4-5", max_tokens=1200):
         messages=[{"role": "user", "content": user}],
     )
     return resp.content[0].text
+
+
+# ─────────────────────────────────────────────────────────────────────────────
+# AML language utilities
+# ─────────────────────────────────────────────────────────────────────────────
+
+import re as _re
+
+_LANGUAGE_SOFTENER = [
+    # Assertive causation → hedged
+    (r'\bconsistent with layering\b',          'potentially consistent with layering'),
+    (r'\bdirect nexus to\b',                   'transaction exposure involving'),
+    (r'\bdirect nexus\b',                      'potential nexus'),
+    (r'\bconstitutes\b',                       'may constitute'),
+    (r'\bdemonstrates\b',                      'suggests'),
+    (r'\bconfirms\b',                          'indicates'),
+    (r'\bis evidence of\b',                    'may be consistent with'),
+    (r'\bused as a conduit\b',                 'potentially functioning as a conduit'),
+    (r'\bthe account is a conduit\b',          'the account may be functioning as a conduit'),
+    # Sanctions language — only soften non-confirmed references
+    (r'\bconfirmed sanctions exposure\b',      'sanctions screening event requiring review'),
+    (r'\bOFAC-sanctioned jurisdiction\b',      'jurisdiction subject to OFAC sanctions screening'),
+    (r'\bsanctioned jurisdiction\b',           'jurisdiction subject to sanctions screening'),
+    # Outcome language
+    (r'\bindicates? (?:money laundering|ML)\b','may be consistent with money laundering'),
+    (r'\bmoney laundering activity\b',         'activity potentially consistent with money laundering'),
+    (r'\bterrorist financing activity\b',      'activity warranting terrorist financing review'),
+]
+
+
+def soften_language(text: str) -> str:
+    """Replace overly assertive AML language with cautious investigative phrasing."""
+    for pattern, replacement in _LANGUAGE_SOFTENER:
+        text = _re.sub(pattern, replacement, text, flags=_re.IGNORECASE)
+    return text
+
+
+def ml_confidence_band(probability: float) -> str:
+    """Map raw ML probability to an operational confidence band for display."""
+    if probability >= 0.95:
+        return "Very High"
+    if probability >= 0.80:
+        return "High"
+    if probability >= 0.60:
+        return "Moderate-High"
+    if probability >= 0.40:
+        return "Moderate"
+    return "Low"

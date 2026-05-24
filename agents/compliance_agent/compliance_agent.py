@@ -11,7 +11,7 @@ import re
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
-from shared import RunContext, load_json, save_json, llm_available, call_anthropic, now_iso
+from shared import RunContext, load_json, save_json, llm_available, call_anthropic, now_iso, soften_language
 from priority import evidence_strength, confidence_level
 
 PROMPT_FILE = Path(__file__).parent / "prompt.md"
@@ -114,11 +114,15 @@ def _template_review(checks, sar, case, bundle):
     decision, rationale = _decision(severity, fails, has_mandatory_failure, rules)
 
     if decision == "approve":
-        assessment = ("Executive summary cites specific quantitative indicators tied to named typologies; "
-                      "triggered alerts and regulatory basis mapped; recommended actions match institutional policy.")
+        assessment = soften_language(
+            "Executive summary cites specific quantitative indicators tied to named typologies; "
+            "triggered alerts and regulatory basis are mapped; recommended actions appear consistent with institutional policy."
+        )
     elif decision == "escalate_manual_review":
-        assessment = ("SAR shows concentrated high-severity indicators that exceed automated-approval thresholds; "
-                      "narrative is evidence-grounded but the case warrants senior compliance review before filing.")
+        assessment = soften_language(
+            "SAR presents concentrated high-severity indicators that may warrant senior compliance review; "
+            "narrative is evidence-grounded but the case warrants officer review before filing."
+        )
     else:
         assessment = "SAR is structurally sound but specific compliance gaps require revision before submission."
 

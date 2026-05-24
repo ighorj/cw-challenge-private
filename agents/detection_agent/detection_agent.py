@@ -17,7 +17,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 sys.path.insert(0, str(ROOT / "src" / "rules"))
 sys.path.insert(0, str(ROOT / "src" / "ml"))
 
-from shared import RunContext, save_json, load_json, now_iso, llm_available, call_anthropic  # noqa: E402
+from shared import RunContext, save_json, load_json, now_iso, llm_available, call_anthropic, ml_confidence_band  # noqa: E402
 from priority import priority_score, severity_band, typology_families_hit  # noqa: E402
 import alerts_engine as ae  # noqa: E402
 import ml_pipeline as mp    # noqa: E402
@@ -148,7 +148,8 @@ def run(ctx: RunContext, top_n=10, use_llm=False):
              "escalation_band": r.escalation_band,
              "ml_band": r.predicted_band,
              "hard_alert": bool(r.hard_alert_flag),
-             "triggered_rules": r.triggered_rules_list}
+             "triggered_rules": r.triggered_rules_list,
+             "ml_confidence_band": ml_confidence_band(float(r.predicted_probability))}
             for i, r in queue.iterrows()
         ],
     }

@@ -11,7 +11,8 @@ from pathlib import Path
 import pandas as pd
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
-from shared import RunContext, save_json, load_json, llm_available, call_anthropic, now_iso
+from shared import RunContext, save_json, load_json, llm_available, call_anthropic, now_iso, soften_language, ml_confidence_band
+from aml_constants import RULE_DESCRIPTIONS, sanctions_status
 
 ROOT = Path(__file__).resolve().parents[2]
 PROMPT_FILE = Path(__file__).parent / "prompt.md"
@@ -82,6 +83,11 @@ def build_evidence_bundle(customer, txs, kyc, ml_df, alerts):
             "kyc_risk_score": int(kyc_row.get("kyc_risk_score", 0)),
             "risk_rating": kyc_row.get("risk_rating"),
             "sanctions_list_hit": kyc_row.get("sanctions_list_hit"),
+            "sanctions_status": sanctions_status(
+                kyc_row.get("sanctions_list_hit"),
+                int((cust_txs.sanctions_screening_hit == "Yes").sum()) if "sanctions_screening_hit" in cust_txs.columns else 0,
+            ),
+            "ml_confidence_band": ml_confidence_band(float(ml_row.get("predicted_probability", 0.0))),
         },
         "detection_signals": {
             "rules_score": customer["rules_score"],
@@ -134,7 +140,7 @@ def _template_case(bundle):
     if agg["anonymization_events"]:
         anon_str = ", ".join(f"{v} {k}" for k, v in agg["anonymization_events"].items())
         summary_parts.append(f"anonymization events ({anon_str})")
-    summary = ". ".join(summary_parts) + ". Activity is materially inconsistent with the customer profile."
+    summary = soften_language(". ".join(summary_parts) + ". Activity appears materially inconsistent with the declared customer profile.")
 
     key_facts = []
     if income_mult:

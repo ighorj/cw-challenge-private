@@ -11,7 +11,8 @@ import json
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
-from shared import RunContext, load_json, save_json, llm_available, call_anthropic, now_iso
+from shared import RunContext, load_json, save_json, llm_available, call_anthropic, now_iso, soften_language, ml_confidence_band
+from aml_constants import RULE_DESCRIPTIONS, sanctions_status
 
 PROMPT_FILE = Path(__file__).parent / "prompt.md"
 
@@ -27,42 +28,16 @@ def _template_sar(case, bundle, run_id):
 
     sar_ref = f"SAR-{run_id}-{cid}-01"
 
-    # Compact triggered_alerts payload (rule → metadata)
-    alert_map = {
-        "R01":      ("R01-VEL-BURST",         "≥4 transactions in single calendar day"),
-        "R02_HIGH": ("R02-STRUCT-BAND",       "≥3 transactions in R$9k–R$10k band"),
-        "R02_LOW":  ("R02-STRUCT-BAND",       "1–2 transactions in R$9k–R$10k band"),
-        "R03_HIGH": ("R03-INCOME-MISMATCH",   "Outflow > 100× declared monthly income"),
-        "R03_LOW":  ("R03-INCOME-MISMATCH",   "Outflow > 50× declared monthly income"),
-        "R04":      ("R04-PASSTHRU",          "PIX outflow ÷ inflow > 200%"),
-        "R05_TOR":  ("R05-ANON-IP-TOR",       "Tor use on financial transaction"),
-        "R05_VPN":  ("R05-ANON-IP-VPN",       "≥2 VPN/Proxy events"),
-        "R06":      ("R06-GEO-HIGH-RISK",     "Cross-border to high-risk jurisdiction"),
-        "R07":      ("R07-GEO-IP-MISMATCH",   "IP country ≠ sender country (≥2)"),
-        "R08":      ("R08-SANCTIONS-HIT",     "Sanctions screening / KYC list hit"),
-        "R09":      ("R09-PEP-EDD",           "PEP=Yes triggers mandatory EDD"),
-        "R10":      ("R10-KYC-INCONSISTENCY", "Contradictory KYC field combination"),
-        "R11":      ("R11-MCC-HIGH-RISK",     "≥3 transactions to high-MCC-risk merchants"),
-        "R14":      ("R14-ROOTED-DEVICE",     "≥3 transactions from rooted device"),
-        "R15":      ("R15-FAN-OUT",           "≥25 distinct receiving counterparties"),
-        "R16":      ("R16-SELF-MERCHANT",     "Sender owns receiving merchant"),
-        "R17":      ("R17-MULTI-RAIL",        "PIX + Card + Wire use within window"),
-        "R18":      ("R18-CARD-NO-3DS",       "≥3 CNP card transactions without 3DS"),
-        "R19":      ("R19-CHARGEBACK",        "Chargeback or repeat use of high-CB merchants"),
-        "R20":      ("R20-MERCHANT-CONVERGE", "Shared merchant with other flagged subjects"),
-        "R21":      ("R21-NETWORK-LINK",      "Direct Wire to another flagged subject"),
-    }
-
     triggered_alerts = []
     for r in rules:
-        if r not in alert_map:
+        if r not in RULE_DESCRIPTIONS:
             continue
-        code, logic = alert_map[r]
+        code, _, logic = RULE_DESCRIPTIONS[r]
         triggered_alerts.append({
             "alert_code": code,
             "detection_logic": logic,
             "date_or_aggregate": "review-period aggregate",
-            "relevance": "Contributes to composite risk profile",
+            "relevance": "Contributes to composite risk indicator",
         })
 
     structured = {
@@ -95,13 +70,20 @@ def _template_sar(case, bundle, run_id):
             "anonymization_events_total": sum(agg["anonymization_events"].values()) if agg["anonymization_events"] else 0,
             "kyc_risk_score": kyc["kyc_risk_score"],
             "pep": kyc.get("pep"),
+            "ml_confidence_band": ml_confidence_band(bundle.get("detection_signals", {}).get("ml_probability", 0.0)),
         },
+        "sanctions_status": sanctions_status(
+            kyc.get("sanctions_list_hit"),
+            sum(1 for tx in bundle.get("key_transactions", [])
+                if tx.get("sanctions_screening_hit") == "Yes"),
+        ),
         "linked_entities": [
             {"entity_id": e["entity_id"], "relationship": e["relationship"], "status": "Identified during this investigation"}
             for e in case["entity_links"]
         ],
         "_backend": "template",
     }
+    structured["executive_summary"] = soften_language(structured["executive_summary"])
 
     # Render markdown SAR using the structured payload
     md = _render_markdown(structured, case, bundle)
@@ -132,6 +114,8 @@ def _render_markdown(s, case, bundle):
         f"| Risk Rating | {kyc.get('risk_rating')} |",
         f"| KYC Tier | {kyc.get('kyc_tier')} |",
         f"| Total Outflow (review period) | R${s['key_metrics']['total_outflow_brl']:,.0f} |",
+        f"| Sanctions Status | {s.get('sanctions_status', {}).get('label', '—')} |",
+        f"| ML Confidence | {s['key_metrics'].get('ml_confidence_band', '—')} |",
         "",
         "---",
         "",
