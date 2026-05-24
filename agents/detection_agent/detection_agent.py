@@ -3,9 +3,11 @@ Detection agent — wraps the Phase 2 rules engine and Phase 3 ML pipeline.
 
 Does NOT reimplement either. Calls into src/rules and src/ml directly,
 then merges their outputs into a single prioritized alert queue.
+When use_llm=True, an LLM adds qualitative triage rationale to the queue.
 """
 
 import sys
+import json
 from pathlib import Path
 import pandas as pd
 import numpy as np
@@ -15,15 +17,56 @@ sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 sys.path.insert(0, str(ROOT / "src" / "rules"))
 sys.path.insert(0, str(ROOT / "src" / "ml"))
 
-from shared import RunContext, save_json, load_json, now_iso  # noqa: E402
+from shared import RunContext, save_json, load_json, now_iso, llm_available, call_anthropic  # noqa: E402
 from priority import priority_score, severity_band, typology_families_hit  # noqa: E402
 import alerts_engine as ae  # noqa: E402
 import ml_pipeline as mp    # noqa: E402
 from sklearn.model_selection import train_test_split  # noqa: E402
 
+PROMPT_FILE = Path(__file__).parent / "prompt.md"
 
-def run(ctx: RunContext, top_n=10):
-    ctx.log("detection_agent", "start")
+
+def _parse_llm_json(raw):
+    """Strip code fences and extract first balanced JSON object from LLM response."""
+    clean = raw.strip()
+    if clean.startswith("```json"):
+        clean = clean[7:]
+    elif clean.startswith("```"):
+        clean = clean[3:]
+    if clean.endswith("```"):
+        clean = clean[:-3]
+    clean = clean.strip()
+    try:
+        return json.loads(clean)
+    except json.JSONDecodeError:
+        s = clean.find("{")
+        if s == -1:
+            raise ValueError(f"No JSON object in LLM response. Raw (first 300 chars): {raw[:300]!r}")
+        depth, e = 0, -1
+        for i in range(s, len(clean)):
+            if clean[i] == "{": depth += 1
+            elif clean[i] == "}":
+                depth -= 1
+                if depth == 0: e = i; break
+        if e == -1:
+            raise ValueError(f"Unmatched braces in LLM response. Raw (first 300 chars): {raw[:300]!r}")
+        return json.loads(clean[s:e + 1])
+
+
+def _llm_triage(queue_obj, run_id):
+    """LLM adds qualitative triage rationale to the prioritized queue."""
+    prompt = PROMPT_FILE.read_text()
+    parts = prompt.split("## User", 1)
+    system = parts[0].replace("## System", "").strip()
+    user = parts[1].strip() if len(parts) > 1 else ""
+    user = (user.replace("{run_id}", run_id)
+                .replace("{queue_json}", json.dumps(queue_obj, indent=2, default=str)))
+    raw = call_anthropic(system, user, max_tokens=2000)
+    return _parse_llm_json(raw)
+
+
+def run(ctx: RunContext, top_n=10, use_llm=False):
+    ctx.log("detection_agent", "start", use_llm=use_llm)
 
     # Load processed datasets from data agent's output
     txs = pd.read_parquet(ctx.artifact("processed_transactions.parquet"))
@@ -109,17 +152,56 @@ def run(ctx: RunContext, top_n=10):
             for i, r in queue.iterrows()
         ],
     }
+    # LLM triage — adds qualitative rationale per alert and cross-customer patterns
+    backend = "anthropic" if (use_llm and llm_available()) else "template"
+    ctx.log("detection_agent", "backend_selected", backend=backend)
+
+    if backend == "anthropic":
+        triage = _llm_triage(queue_obj, ctx.run_id)
+        triage["_backend"] = "anthropic"
+    else:
+        triage = {
+            "triage_summary": (
+                f"Queue of {len(queue_obj['customers'])} customers. "
+                f"Top customer {queue_obj['customers'][0]['customer_id']} scored "
+                f"{queue_obj['customers'][0]['priority_score']} with severity "
+                f"{queue_obj['customers'][0]['severity']}."
+            ),
+            "alert_rationale": [
+                {
+                    "customer_id": c["customer_id"],
+                    "rank": c["rank"],
+                    "severity": c["severity"],
+                    "primary_typology": c["typology_families"][0] if c["typology_families"] else "unknown",
+                    "rationale": f"{len(c['triggered_rules'])} rules fired across {len(c['typology_families'])} typology families; priority={c['priority_score']}.",
+                    "investigation_priority": "immediate" if c["severity"] in ("critical",) else ("urgent" if c["severity"] == "high" else "standard"),
+                }
+                for c in queue_obj["customers"]
+            ],
+            "cross_customer_patterns": [],
+            "recommended_investigation_order": [c["customer_id"] for c in queue_obj["customers"]],
+            "_backend": "template",
+        }
+
+    queue_obj["triage"] = triage
     save_json(ctx.artifact("prioritized_alert_queue.json"), queue_obj)
 
     ctx.log("detection_agent", "complete",
             queue_size=len(queue_obj["customers"]),
-            top_customer=queue_obj["customers"][0]["customer_id"])
+            top_customer=queue_obj["customers"][0]["customer_id"],
+            backend=backend)
     return queue_obj
 
 
 if __name__ == "__main__":
-    ctx = RunContext()
-    out = run(ctx)
+    import argparse
+    ap = argparse.ArgumentParser()
+    ap.add_argument("--run-id", required=True)
+    ap.add_argument("--top-n", type=int, default=10)
+    ap.add_argument("--use-llm", action="store_true")
+    args = ap.parse_args()
+    ctx = RunContext(run_id=args.run_id)
+    out = run(ctx, top_n=args.top_n, use_llm=args.use_llm)
     print(f"Top: {out['customers'][0]['customer_id']}  "
           f"score={out['customers'][0]['rules_score']}  "
           f"ml={out['customers'][0]['ml_probability']}")

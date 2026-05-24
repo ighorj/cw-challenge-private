@@ -28,8 +28,8 @@ import compliance_agent      # noqa: E402
 
 # Each stage is (name, function). Functions accept (ctx, **kwargs).
 PIPELINE = [
-    ("data_agent",          lambda ctx, **kw: data_agent.run(ctx)),
-    ("detection_agent",     lambda ctx, **kw: detection_agent.run(ctx, top_n=kw.get("top_n", 5))),
+    ("data_agent",          lambda ctx, **kw: data_agent.run(ctx, use_llm=kw.get("use_llm", False))),
+    ("detection_agent",     lambda ctx, **kw: detection_agent.run(ctx, top_n=kw.get("top_n", 5), use_llm=kw.get("use_llm", False))),
     ("investigation_agent", lambda ctx, **kw: investigation_agent.run(ctx, use_llm=kw.get("use_llm", False))),
     ("sar_agent",           lambda ctx, **kw: sar_agent.run(ctx, use_llm=kw.get("use_llm", False))),
     ("compliance_agent",    lambda ctx, **kw: compliance_agent.run(ctx, use_llm=kw.get("use_llm", False))),

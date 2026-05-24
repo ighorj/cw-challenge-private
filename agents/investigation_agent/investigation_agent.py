@@ -207,11 +207,23 @@ def _llm_case(bundle, run_id):
     parts = prompt.split("## User", 1)
     system = parts[0].replace("## System", "").strip()
     user_template = parts[1].strip() if len(parts) > 1 else ""
+    # Trim bundle to essential fields to stay within token budget
+    slim_bundle = {
+        "customer_id": bundle["customer_id"],
+        "severity": bundle["severity"],
+        "priority_score": bundle["priority_score"],
+        "typology_families": bundle["typology_families"],
+        "kyc": bundle["kyc"],
+        "detection_signals": bundle["detection_signals"],
+        "aggregate_behavior": bundle["aggregate_behavior"],
+        "single_day_bursts": bundle["single_day_bursts"][:5],
+        "key_transactions": bundle["key_transactions"][:8],
+    }
     user = (user_template
             .replace("{run_id}", run_id)
             .replace("{customer_id}", bundle["customer_id"])
-            .replace("{evidence_bundle_json}", json.dumps(bundle, indent=2, default=str)))
-    raw = call_anthropic(system, user)
+            .replace("{evidence_bundle_json}", json.dumps(slim_bundle, indent=2, default=str)))
+    raw = call_anthropic(system, user, max_tokens=2000)
 
     # Strip markdown code fences if present
     raw_clean = raw.strip()
