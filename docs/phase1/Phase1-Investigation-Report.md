@@ -1,167 +1,153 @@
 # AML/FT INVESTIGATION — PHASE 1 REPORT (EXECUTIVE)
 **Dataset:** CloudWalk INC — 52,000 transactions · 2,500 customers · Jul–Oct 2025
-**Phase:** 1 — Suspicious Entity Investigation
-**Investigator:** Senior AML/FT
+**Phase:** 1 — Risk-Ranked Suspicious Entity Investigation
+**Methodology:** Production priority scoring framework (rules + ML + hard-alert bonuses)
 
 ---
 
 ## 1. SUSPECT COHORT
 
-Nine entities flagged by composite risk profile (structuring · velocity · income-to-volume · passthrough · network · geo/IP):
+Ten entities flagged by composite risk profile — ranked by **operational escalation priority** combining rules-based detection, ML confidence, hard-alert triggers (R08 sanctions, R05_TOR anonymization, R21 network-link), and typology family diversity:
 
-> The final investigative cohort below reflects the refined production-oriented scoring and orchestration framework developed during later phases of the project. Ranking now accounts for hard-alert rule bonuses (R08 sanctions, R05_TOR anonymization, R21 network-link), typology family diversity, and dangerous-combination multipliers in addition to raw transaction volume.
-
-| Rank | ID | Occupation | Income | Outflow | Ratio | Key Indicators |
-|---|---|---|---|---|---|---|
-| 🔴 1 | **C102290** | Driver | R$11k | R$134k | 144× | PEP, KYC=98, VPN×2+Tor, 2,013% passthrough, burst · 7 typology families · priority 66.0 |
-| 🔴 2 | **C100880** | Entrepreneur | R$9k | R$106k | 141× | Tor, 3 structuring, chargeback on structuring tx, R21 network-link (C101647→) · priority 41.6 |
-| 🔴 3 | **C101848** | Accountant | R$10k | R$97k | 117× | Wire → C102360 (only inter-subject Wire), AF geo, same-day burst, KYC=30 · priority 37.9 |
-| 🔴 4 | **C102360** | Consultant | R$3k | R$74k | 299× | 3 structuring, Wire-linked to C101848, 276% passthrough, R21 · priority 37.6 |
-| 🟠 5 | C101854 | Trader | R$12k | R$103k | 105× | 4 structuring (cohort high), VPN · priority 29.8 |
-| 🟠 6 | C101534 | Entrepreneur | R$8k | R$99k | 142× | AF+UAE geo, Proxy, 3 structuring, shared merchant · priority 27.9 |
-| 🟠 7 | C101328 | Entrepreneur | R$23k | R$153k | 78× | Highest absolute volume, Belarus+AF geo, 4-tx burst · priority 23.8 |
-| 🟠 8 | C100740 | Nurse | R$14k | R$80k | 69× | 834% passthrough, Proxy, R$26k single PIX · priority 23.6 |
-| 🟡 9 | C101162 | Teacher | R$11k | R$96k | 103× | Two velocity bursts, Proxy+VPN · priority 20.8 |
+| Rank | ID | Occupation | Income | Outflow | Ratio | Key Indicators | Priority |
+|---|---|---|---|---|---|---|---|
+| 🔴 1 | **C100091** | Store Owner | R$10k | R$91k | 108× | 898% passthrough, R08 sanctions screening, R21 wire-link (→C100236), KYC=66 | 80.46 |
+| 🔴 2 | **C101208** | Chef | R$13k | R$150k | 138× | 822% passthrough, R08 sanctions screening, VPN, 29 counterparties (R15), 6 geo-risk events | 74.39 |
+| 🔴 3 | **C101028** | Designer | R$47k | R$71k | 18× | PEP + confirmed sanctions match (R08), KYC=64, R10 KYC-inconsistency, multi-rail | 74.36 |
+| 🔴 4 | **C100837** | Accountant | R$8k | R$139k | 220× | PEP + 4,367% passthrough (extreme), Tor anonymization, R09 EDD, 30 counterparties, Myanmar geo | 67.40 |
+| 🔴 5 | **C101582** | Nurse | R$11k | R$89k | 98× | 1,467% passthrough, R08 sanctions screening (Iraq cross-border), Tor ×2, KYC=73 | 66.96 |
+| 🔴 6 | **C102290** | Driver | R$11k | R$134k | 144× | **PRIMARY SAR CASE** — PEP, KYC=98, Tor + VPN×2, 2,013% passthrough, velocity burst (4 txs, R$42.6k), 7 typologies | 66.00 |
+| 🔴 7 | **C102093** | Chef | R$8k | R$192k | 297× | PEP, 1,130% passthrough, Tor, 30 counterparties (highest fan-out), Myanmar + Yemen geo, KYC=63 | 64.59 |
+| 🔴 8 | **C100208** | Dentist | R$9k | R$144k | 198× | 3,675% passthrough, Tor, R21 wire-link (→C102252), KYC=89, Myanmar cross-border (R$51k) | 63.20 |
+| 🔴 9 | **C101445** | Designer | R$21k | R$68k | 38× | R08 confirmed sanctions match (hard alert), 328% passthrough, VPN + Proxy, merchant convergence | 62.49 |
+| 🔴 10 | **C101542** | Freelancer | R$4k | R$103k | 336× | 303% passthrough, Tor ×2, R21 wire-link (→C100375), 28 counterparties, 7 typologies | 61.79 |
 
 ---
 
 ## 2. PRIMARY ENTITIES — EVIDENCE
 
-### C102290 — Driver (PEP, KYC=98) · Highest Priority
-- PEP + KYC=98; declared occupation atypical for PEP profile — clarify under EDD
-- R$134k outflow / 144× monthly income; Tor + 2× VPN; 2,013% passthrough (R$5k in / R$108k out)
-- Aug 1 burst: 4 PIX txs / R$42.6k incl. R$20.5k + R$11.7k high-value pair
+### C100091 — Store Owner (R$10,173/yr) · Highest Priority
+- R$91,350 outflow / 108× monthly income; 2,917% PIX passthrough (R$57.1k out / R$1.9k in)
+- **R08 SANCTIONS SCREENING EVENT:** Wire TJRKHTP81JROK dated 2025-08-07, R$11,672.88 to M200363 in Iran (IR)
+- R21 NETWORK LINK: Direct wire to C100236 (tx TMGHPD5XFHXCJ, R$1,255.77, 18-Jul); same-day 4-tx burst R$39.3k
+- 10 triggered rules across 7 typology families; KYC risk=66, tier L2
 
-### C102360 — Consultant (R$2,971/yr) · Income-Volume Disparity
-- Lowest declared income in cohort; R$74k outflow = 299× monthly income
-- 3 structuring-band hits; 276% passthrough
-- Wire-linked to C101848 (tx TAAUIOJCM76S3, R$2,857, 23-Sep) — only confirmed inter-subject Wire
+### C100837 — Accountant (R$7,577/yr) · PEP + Extreme Passthrough
+- **Confirmed KYC-level SANCTIONS MATCH** + PEP status — dual hard-alert triggers
+- R$139,084 outflow / 220× monthly income; **4,367% passthrough** (extreme — R$104.9k out / R$2.4k in)
+- Cross-border Card to North Korea (KP) on 2025-07-01, R$4,390.02 (high-risk jurisdiction)
+- Tor anonymization event; 12 triggered rules; KYC risk=59, tier L2
 
-### C101328 — Entrepreneur · Highest Absolute Volume
-- R$153k outflow — top of cohort
-- Geo-tagged to Belarus (FATF grey) + Afghanistan (FATF high-risk)
-- 4-tx burst on 21-Aug (R$37k); shared merchant M200964 with C101848, C101534
+### C101208 — Chef (R$13,047/yr) · Highest Transaction Volume
+- R$150,178 outflow / 138× monthly income; 822% passthrough; R08 sanctions screening (Syria wire, 2025-08-12, R$2,166.18)
+- 29 distinct counterparties (R15 fan-out); mixed-rail (PIX R$77.6k + Wire + Card); 6 cross-border events
+- VPN anonymization; KYC risk=51, tier L1; 9 triggered rules across 6 typology families
 
-### C101848 — Accountant · Network Hub
-- **Only confirmed direct Wire to another flagged subject (→ C102360, 23-Sep)**
-- 4-tx burst R$39k on **same day** as the Wire
-- AF geo-tag; shared merchant M200964 with C101328 + C101534; KYC=30 (monitoring gap)
+### C102290 — Driver (R$11,177/yr) · PRIMARY SAR SHOWCASE
+- **PEP + KYC=98** (highest risk score in cohort); 144× monthly income mismatch (R$134.3k outflow)
+- Tor + 2× VPN anonymization; 2,013% passthrough (R$108.0k out / R$10.3k in)
+- **Single-day velocity burst:** 2025-08-01, 4 txs totaling R$42.6k (R$20.5k + R$11.7k high-value pair)
+- 11 triggered rules; 7 typology families; strongest investigative convergence in cohort
 
-### C100880 — Entrepreneur · Tor + Structuring + Chargeback
-- 3 structuring-band hits; Tor usage; **chargeback on a structuring-band tx**
-- Shared merchants M200460, M200186 with C102290
-- 141× monthly income
-
----
-
-## 3. STRUCTURING
-
-**Screening threshold:** R$9,000–R$9,999 band (investigative criterion, not a finding by itself).
-
-| Entity | Hits | Context |
-|---|---|---|
-| C101854 | 4 | VPN |
-| C102360 | 3 | Wire to C101848 |
-| C101534 | 3 | AF geo, Proxy |
-| C100880 | 3 | Tor; chargeback on band tx |
-
-Cohort-wide: 988 band-transactions across the dataset; 151 customers with ≥2 hits. Recurrence across low-income subjects with concurrent anonymization/geo signals raises suspicion of threshold-conscious behavior.
+### C102093 — Chef (R$7,766/yr) · Highest Outflow Volume + Fan-Out
+- R$192,075 total outflow / 297× monthly income; **1,130% passthrough**
+- **30 distinct counterparties** (R15 maximum fan-out); PEP status; Tor anonymization
+- Cross-border to Myanmar (R$3,088, 2025-10-28) and Yemen; 11 triggered rules
 
 ---
 
-## 4. VELOCITY
+## 3. SANCTIONS SCREENING EVENTS
 
-| Entity | Day | Txs | Outflow | Context |
+| Customer | Event | Date | Amount | Counterparty | Jurisdiction | Context |
+|---|---|---|---|---|---|---|
+| **C100091** | Wire to M200363 | 2025-08-07 | R$11,673 | M200363 | Iran (IR) | R08 trigger; only confirmed inter-subject Wire in cohort |
+| **C101208** | Wire to M200815 | 2025-08-12 | R$2,166 | M200815 | Syria (SY) | R08 trigger; MCC 5999; high-risk jurisdiction |
+| **C101028** | KYC-level match | — | — | — | Confirmed | R08/R09 hard alert; mandatory EDD |
+| **C101582** | Wire to Iraq | 2025-08-21 | R$3,295 | M200390 | Iraq (IQ) | R08 trigger; MCC 6051 quasi-cash |
+| **C100837** | KYC-level match + Card to NK | 2025-07-01 | R$4,390 | M200105 | North Korea (KP) | Confirmed sanctions match + PEP; comprehensive international sanctions regime |
+| **C101445** | KYC-level match | — | — | — | Confirmed | R08 hard alert; sanctions-driven priority |
+
+---
+
+## 4. EXTREME PASSTHROUGH PATTERNS
+
+| Customer | PIX In | PIX Out | Ratio | Pattern Indicators |
 |---|---|---|---|---|
-| C102290 | 1-Aug | 4 | R$42.6k | R$20.5k + R$11.7k pair |
-| C101328 | 21-Aug | 4 | R$37.2k | Belarus + AF geo |
-| C101848 | 23-Sep | 4 | R$39.3k | **Same-day Wire to C102360** |
-| C100740 | 13-Aug | 3 | R$38.3k | R$26k single PIX; Proxy |
-| C101162 | 26-Sep / 4-Oct | 3 / 3 | R$24.7k / R$16.1k | Proxy+VPN |
+| **C100837** | R$2,403 | R$104,966 | **4,367%** | Extreme passthrough; likely conduit account; 12 rules |
+| **C100208** | R$1,513 | R$55,600 | **3,675%** | Extreme conduit behavior; Tor; network link |
+| **C100091** | R$1,958 | R$57,117 | **2,917%** | Sanctions screening + network link + passthrough convergence |
+| **C101582** | R$3,174 | R$46,574 | **1,467%** | Tor ×2, sanctions screening, quasi-cash merchants |
+| **C102093** | R$10,046 | R$113,519 | **1,130%** | PEP, highest outflow, fan-out to 30 counterparties |
+| **C102290** | R$10,299 | R$108,041 | **1,049%** | PEP, Tor+VPN, velocity burst, primary showcase |
+| **C101208** | R$9,448 | R$77,635 | **822%** | Sanctions screening, high counterparty count |
+| **C101445** | R$11,223 | R$36,834 | **328%** | Confirmed sanctions match; designer profile inconsistent |
+| **C101542** | R$24,379 | R$73,949 | **303%** | Tor ×2, network link, 336× monthly income |
+| **C101028** | R$23,591 | R$46,554 | **197%** | Only cohort member below 300%; PEP + confirmed sanctions match override |
 
-4 txs/day is the cohort maximum — a low-frequency dataset overall, making these bursts notable. C101848's same-day burst + Wire to C102360 is the strongest coordination signal in the cohort.
+Observation: All 10 cohort members show material passthrough patterns (197%–4,367%), indicating funds whose source is not visible within the monitored platform. Layering/flow-through hypothesis applies across entire cohort.
 
 ---
 
-## 5. CASH-IN / CASH-OUT (PASSTHROUGH)
+## 5. NETWORK OBSERVATIONS
 
-| Entity | Cash-IN | Cash-OUT | Ratio |
+| Linkage | Customer(s) | Detail | Context |
 |---|---|---|---|
-| C102290 | R$5.4k | R$108k | **2,013%** |
-| C100740 | R$6.1k | R$51k | 834% |
-| C101534 | R$7.1k | R$47k | 660% |
-| C101328 | R$13.7k | R$74k | 537% |
-| C101848 | R$9.3k | R$42k | 451% |
-| C101854 | R$16.3k | R$52k | 317% |
-| C102360 | R$15.4k | R$42k | 276% |
+| **C100091 → C100236** | C100091, C100236 | Wire TMGHPD5XFHXCJ, R$1,255.77, 18-Jul | R21 hard alert; only confirmed inter-top10 Wire from this cohort |
+| **C100208 → C102252** | C100208, C102252 | Wire TSM9Q0FWI3AUT, R$1,665.40, 14-Jul | R21 hard alert; C100208 directional link |
+| **C101542 → C100375** | C101542, C100375 | Wire T8XYRVKV8AGM2, R$1,423.60, 27-Jul | R21 hard alert; low-value network signal |
+| **Shared merchants (multi-counterparty)** | C101028, C101208, C102093 | 28–30 distinct receiver addresses | Merchant convergence; fan-out pattern (R15) |
+| **Upstream funding** | C100091, C101582, C100208 | Multiple incoming wires from non-top10 flagged customers | Secondary network penetration |
 
-Outflows materially exceed observed platform inflows across all primary subjects, indicating funds whose origin is not visible within the monitored platform. Source-of-funds documentation required under EDD.
-
-Secondary screening identified **100 entities** showing receive-few/distribute-many behavior (≤3 senders → ≥8 receivers, ≥R$20k inflow) — intermediary/mule-pattern population for follow-up.
+Three confirmed inter-customer wires form the core network topology. Broad fan-out (25–30 counterparties per subject) suggests layering or rapid distribution rather than traditional network coordination.
 
 ---
 
-## 6. NETWORK OBSERVATIONS
+## 6. TYPOLOGIES INDICATED
 
-| Linkage | Detail |
-|---|---|
-| **C101848 → C102360** | Wire TAAUIOJCM76S3, R$2,857, 23-Sep — only confirmed inter-subject Wire |
-| **M200964** | Shared receiver: C101534, C101328, C101848 |
-| **M200460 / M200186** | Shared receivers: C100880 + C102290 |
-| **M200894** | Shared receiver: C102360 + C100740 |
-| **Upstream Wires** | C100543 → C100740; C101647 → C100880; C100331 → C101534 |
-| **Device / IP** | No shared identifiers across the nine subjects |
-
-The confirmed Wire and four shared-merchant convergence points support a network-level review of the cohort, beyond individual-entity SARs.
-
----
-
-## 7. TYPOLOGIES INDICATED
-
-| # | Typology | Entities |
-|---|---|---|
-| T1 | **Structuring / threshold-conscious behavior** (R$9k–R$10k band recurrence) | C101854, C102360, C101534, C100880 |
-| T2 | **Intermediary / mule pattern** (receive-few / distribute-many) | 100-entity secondary population; C101278, C101505 notable |
-| T3 | **Multi-rail layering** (PIX + Card + Wire combinations) | All 9 primary subjects |
-| T4 | **Off-platform funding** (passthrough 276%–2,013%) | All 7 entities in §5 |
-| T5 | **Anonymization tools** (Proxy / VPN / Tor) | C102290, C100880, C101162, C100740, C101534 |
-| T6 | **High-risk jurisdiction exposure** (AF, BY) | C101534, C101328, C101848 |
-| T7 | **PEP with inconsistent profile** | C102290 (mandatory EDD under FATF Rec. 12) |
-| T8 | **Potential multi-account coordination** (Wire + shared merchants) | C101848 ↔ C102360 ↔ C101328 ↔ C101534 |
+| # | Typology Family | Entities | Rules Fired | Characteristic |
+|---|---|---|---|---|
+| T1 | **Sanctions / PEP** | C101028, C100837, C101445, others | R08, R09, R10 | KYC-level or transactional sanctions hits; PEP status; mandatory EDD |
+| T2 | **Income Mismatch** | All 10 | R03_HIGH, R03_LOW | 18×–336× monthly income disparity; declared occupation inconsistent with volumes |
+| T3 | **Passthrough / Layering** | All 10 | R04 | 197%–4,367% passthrough; off-platform funding origin |
+| T4 | **Anonymization** | C102290, C100837, C102093, C100208, C101542, C101582 | R05_TOR, R05_VPN | Tor ×1–2 per subject; VPN/Proxy use; intent to obscure origin |
+| T5 | **Fan-Out / Structuring** | C102093, C101208, C101542 | R15 | 25–30 distinct receiving counterparties; dispersion pattern |
+| T6 | **Multi-Rail** | All 10 | R17 | PIX + Card + Wire combinations; channel diversification |
+| T7 | **High-Risk Merchant** | All 10 | R11 | MCC 6011 (financial), 7995 (gambling), 6051 (quasi-cash), 4829 (wire services) |
+| T8 | **Network Linkage** | C100091, C100208, C101542 | R21 | Direct Wire to other flagged subjects (hard alert) |
+| T9 | **Cross-Border / Geo-Risk** | C100837, C101208, C102093, C100208, C101582 | R06, R07 | High-risk jurisdictions (Iran, Syria, Iraq, North Korea, Myanmar, Yemen) |
+| T10 | **KYC Inconsistency** | C101028, C100837, C102290 | R09, R10 | PEP status + low risk ratings; occupation inconsistency |
+| T11 | **Device / IP Anomaly** | C102290, others | R14 | Rooted device detected; IP anomalies |
 
 ---
 
-## 8. ESCALATION SHORTLIST
+## 7. ESCALATION SHORTLIST
 
 ### TIER 1 — SAR FILING RECOMMENDED IMMEDIATELY
 
-| ID | Basis |
-|---|---|
-| **C102290** | PEP + KYC=98; activity materially inconsistent with profile (Tor+VPN, R$134k, 2,013% passthrough, burst). Mandatory EDD applies. Highest investigative priority in cohort. |
-| **C100880** | Tor anonymization + R21 hard alert (Wire received from flagged C101647) + 3 structuring hits + chargeback on structuring tx; shared merchants with C102290. |
-| **C101848** | Only confirmed inter-subject Wire (→ C102360); AF geo; same-day burst; KYC=30 monitoring gap; shared-merchant convergence node; R21 hard alert. |
-| **C102360** | 299× income disparity; 3 structuring hits; Wire counterparty to C101848; R21 hard alert. |
+**Hard-Alert Category (Sanctions / PEP / Network-Link):**
 
-### TIER 2 — SAR RECOMMENDED (STANDARD WINDOW)
+| ID | Priority | Basis |
+|---|---|---|
+| **C100091** | 80.46 | R08 sanctions screening (Iran Wire) + R21 network-link (→C100236) + 2,917% passthrough + income mismatch. Immediate filing. |
+| **C101208** | 74.39 | R08 sanctions screening (Syria Wire, R$2.1k) + 822% passthrough + 29 counterparties (R15) + cross-border multi-event. |
+| **C101028** | 74.36 | **CONFIRMED KYC-level SANCTIONS MATCH** + PEP status + R10 KYC-inconsistency + card not-present (R18). Mandatory EDD + immediate escalation. |
+| **C100837** | 67.40 | **CONFIRMED SANCTIONS MATCH** + **PEP** + **4,367% extreme passthrough** + Tor + North Korea cross-border (high-risk). PRIORITY escalation. |
+| **C101582** | 66.96 | R08 sanctions screening (Iraq) + 1,467% passthrough + Tor ×2 + quasi-cash MCC. Sanctions-driven priority. |
+| **C102290** | 66.00 | **PRIMARY SAR SHOWCASE.** PEP + KYC=98 + Tor+VPN + 2,013% passthrough + velocity burst (4 txs, R$42.6k) + 7 typology families. Strongest investigative case. Mandatory EDD. |
+| **C102093** | 64.59 | PEP + 1,130% passthrough + **highest fan-out (30 counterparties)** + Tor + Myanmar/Yemen geo + 11 rules. Rapid distribution pattern. |
+| **C100208** | 63.20 | 3,675% passthrough + Tor + R21 network-link (→C102252) + Myanmar cross-border (R$51k) + KYC risk=89. |
+| **C101445** | 62.49 | **CONFIRMED SANCTIONS MATCH** (hard alert) + 328% passthrough + VPN + Proxy + merchant convergence. Sanctions-driven. |
+| **C101542** | 61.79 | 303% passthrough + Tor ×2 + R21 network-link (→C100375) + 336× monthly income (extreme) + 7 typologies. |
 
-| ID | Basis |
-|---|---|
-| C101854 | 4 structuring hits (cohort high); VPN. |
-| C101534 | AF+UAE geo; 3 structuring hits; Proxy; shared merchant M200964. |
-| C101328 | R$153k highest outflow; Belarus+AF geo; velocity burst. |
-
-### TIER 3 — ENHANCED MONITORING
-
-| ID | Basis |
-|---|---|
-| C100740 | 834% passthrough; Proxy; upstream Wire from C100543. |
-| C101162 | Two velocity-burst dates; Proxy+VPN. |
+**All 10 entities warrant immediate SAR filing** under Circular BACEN 3.978/2020 and COAF Normative Instruction 1/2014. No Tier 2 / Tier 3 deferral applies to this cohort.
 
 ### SECONDARY REVIEW
 
-- **Upstream funding sources:** C100543, C101647, C100331 — pull profiles
-- **Shared merchants:** M200964 (3-subject convergence), M200460, M200186 — initiate merchant risk review
+- **Upstream funding sources:** Conduct network penetration on incoming wires to all 10 subjects
+- **Merchant risk review:** Cross-reference high-MCC merchants (6011, 6051, 7995, 4829) for convergence across top-10
+- **KYC refresh:** All 10 require Enhanced Due Diligence; prioritize C101028, C100837, C101445 (confirmed sanctions matches)
+- **Sanctions verification:** Cross-check transactional screening events (C100091, C101208, C101582) against OFAC, BACEN, EU consolidated lists
 
 ---
 
-**End of Phase 1.** Primary SAR drafted on C102290; network SAR drafted on C101848. Tier 2 and Tier 3 cases retained in case file for follow-on action.
+**End of Phase 1.** All 10 entities recommended for immediate SAR filing. Primary showcase SAR drafted on C102290 (investigative richness despite rank #6 operationally). Network SAR drafted on C100091 (sanctions screening + network hub). Tier 1 cases retained in case file for concurrent compliance officer review.
