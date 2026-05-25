@@ -80,7 +80,7 @@ Three-tier alerting design — each tier serves a distinct purpose and cannot be
 
 #### R06 — GEO-HIGH-RISK · weight 2
 - **Logic:** `country_risk_geo == 'High'` AND `amount_brl ≥ R$5,000`, OR ≥2 high-risk geo events per sender.
-- **Examples:** C100837 (North Korea), C102093 (Myanmar, Yemen), C100208 (Myanmar), C101208, C101582 (Iraq) — production top-10 cross-border concentration.
+- **Examples:** C100837 (Syria, Myanmar), C102093 (Myanmar, Yemen), C100208 (Myanmar), C101208, C101582 (Iraq) — production top-10 cross-border concentration.
 
 #### R07 — GEO-IP-MISMATCH · weight 2
 - **Logic:** `ip_country ≠ sender_country` with recurrence ≥2.
@@ -154,13 +154,13 @@ Production top-10 priority cohort scored using the framework:
 | **C100837** | — | R03_HIGH·3, R04·3, R05_TOR·3, R06·2, R09·3, R11·2, R14·2, R15·2 | R10, R17, R19, R20 (+4) | **25** | Tier 1 |
 | **C102290** | — | R01·3, R03_HIGH·3, R04·3, R05_TOR·3, R09·3, R11·2, R15·2 | R10, R17, R19, R20 (+4) | **24** | Tier 1 |
 | **C102093** | — | R03_HIGH·3, R04·3, R05_TOR·3, R07·2, R09·3, R11·2, R15·2 | R10, R17, R19, R20 (+4) | **23** | Tier 1 |
-| **C101542** | **R21** | R03_HIGH·3, R04·3, R11·2, R15·2 | R17, R19, R20 (+3) | **13** + hard | Tier 1 |
-| **C100208** | **R21** | R03_HIGH·3, R04·3, R05_TOR·3, R06·2, R11·2 | R10, R17, R20 (+3) | **13** + hard | Tier 1 |
-| **C101028** | **R08** | R04·3, R05_VPN·2, R09·3, R10·—, R11·2, R18·1 | R19, R20 (+2) | **11** + hard | Tier 1 |
-| **C100091** | **R08, R21** | R02_LOW·1, R03_HIGH·3, R04·3, R06·2, R11·2 | R17, R19, R20 (+3) | **14** + hard | Tier 1 |
-| **C101208** | **R08** | R03_HIGH·3, R05_VPN·2, R11·2, R15·2, R18·1 | R17, R19, R20 (+3) | **13** + hard | Tier 1 |
-| **C101445** | **R08** | R04·3, R05_VPN·2, R11·2 | R17, R19, R20 (+3) | **10** + hard | Tier 1 |
-| **C101582** | **R08** | R03_LOW·1, R05_TOR·3, R11·2 | R17, R19, R20 (+3) | **9** + hard | Tier 1 |
+| **C101542** | **R21** | R03_HIGH·3, R04·3, R05_TOR·3, R11·2, R15·2 | R17, R19, R20 (+3) | **17** | Tier 1 (hard) |
+| **C100208** | **R21** | R03_HIGH·3, R04·3, R05_TOR·3, R06·2, R11·2 | R10, R17, R20 (+3) | **16** | Tier 1 (hard) |
+| **C101028** | **R08** | R04·3, R05_VPN·2, R09·3, R11·2, R18·1 | R10, R19, R20 (+3) | **15** | Tier 1 (hard) |
+| **C100091** | **R08, R21** | R02_LOW·1, R03_HIGH·3, R04·3, R06·2, R11·2 | R17, R19, R20 (+3) | **15** | Tier 1 (hard) |
+| **C101208** | **R08** | R03_HIGH·3, R05_VPN·2, R11·2, R15·2, R18·1 | R17, R19, R20 (+3) | **14** | Tier 1 (hard) |
+| **C101445** | **R08** | R04·3, R05_VPN·2, R11·2 | R17, R19, R20 (+3) | **11** | Tier 1 (hard) |
+| **C101582** | **R08** | R03_LOW·1, R05_TOR·3, R11·2 | R17, R19, R20 (+3) | **10** | Tier 1 (hard) |
 
 Framework reproduces production risk-ranked cohort algorithmically — all 10 land in Tier 1 via composite scoring or hard-alert triggers.
 
