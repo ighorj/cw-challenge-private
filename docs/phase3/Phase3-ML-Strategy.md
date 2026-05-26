@@ -108,31 +108,38 @@ The concordance check is the qualitative acceptance test: if SHAP explanations d
 
 ## 7. Operational integration
 
-The two layers operate sequentially, not in competition:
+Three independent signals feed the analyst queue sequentially, not in competition:
 
 ```
                   ┌──────────────────────────┐
   Dataset ───────►│   Phase 2 rules engine   │── deterministic alerts
-                  └──────────────┬───────────┘    + composite score
+                  └──────┬───────────────────┘    + composite_score + hard_alert flag
+                         │
+                         ├──────────────────────────────────────────────────────────────►
+                         │         ┌──────────────────────────────┐
+                         │         │  Phase 3 Isolation Forest    │── anomaly_score
+                         │         │  (unsupervised, no labels)   │   (independent signal)
+                         │         └──────────────────────────────┘
+                         │
+                         ▼
+                  ┌──────────────────────────┐
+                  │  Phase 3 XGBoost (v2)    │── predicted_probability ∈ [0,1]
+                  │  regression + isotonic   │   (behavioral signal only)
+                  └──────────────┬───────────┘
                                  │
                                  ▼
                   ┌──────────────────────────┐
-                  │  Phase 3 ML prioritizer  │── continuous probability
-                  └──────────────┬───────────┘    per customer
-                                 │
-                                 ▼
-                  ┌──────────────────────────┐
-                  │   Analyst triage queue   │
-                  └──────────────────────────┘
+                  │   Analyst triage queue   │── priority_score (rules + ML + hard-alert bonuses)
+                  └──────────────────────────┘    + SHAP top-3 drivers per customer
 ```
 
-**Triage logic (proposed):**
-- **Tier A hard alerts** → file SAR; ML score informational only.
-- **Tier 1 SAR (score ≥10)** → analyst queue, ranked by ML probability descending.
-- **Tier 2 SAR (6–9)** → standard window, but escalated to Tier 1 queue if ML probability > 0.75.
-- **Tier 3 / Routine** → ML probability > 0.90 surfaces customer for review as near-miss; otherwise routine.
+**Triage logic (v2 implementation):**
+- **Hard alerts** (R08 sanctions, R16 self-merchant, R21 network-link) → mandatory escalation regardless of ML score; `predicted_probability` informational only.
+- **Tier 1 — SAR immediate** (escalation band from rules engine) → analyst queue, re-ranked by `priority_score` descending.
+- **Tier 2 / Tier 3** → escalated to Tier 1 queue if `predicted_probability` ≥ 0.75 (behavioral near-miss).
+- **Routine** → surfaced for analyst review if `predicted_probability` ≥ 0.90 or `iforest_anomaly_score` is in top 5%; otherwise suppressed.
 
-The ML layer **never overrides** a rule-driven decision downward (it cannot suppress a SAR). It only escalates upward and re-orders within bands.
+The ML layer **never overrides** a rule-driven decision downward (it cannot suppress a SAR). It only re-orders within bands and escalates upward. Divergence between the three signals (rules / XGBoost / Isolation Forest) is explicitly informative: a hard-alert customer with low ML probability is regulatory-fact-driven, not behavioral-pattern-driven.
 
 ---
 
