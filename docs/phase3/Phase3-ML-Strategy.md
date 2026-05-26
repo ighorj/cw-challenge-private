@@ -1,6 +1,6 @@
 # PHASE 3 — ML PRIORITIZATION LAYER · STRATEGY DOCUMENT
 **Project:** CloudWalk AML/FT Investigation Pipeline
-**Status:** Design only — no training, no code, no notebook yet.
+**Status:** v1 strategy preserved below for traceability. v2 strategy is documented in the addendum at the bottom of this file and implemented in `src/ml/ml_pipeline.py`. See [`Phase3_ML_Summary.md`](Phase3_ML_Summary.md) and [`ml_results.md`](ml_results.md) for the v2 executive summary and results.
 
 ---
 
@@ -152,3 +152,84 @@ The pipeline is feasible and defensible at this scale. Approval requested before
 ---
 
 **Stops here.** No training, no code, no notebook started.
+
+---
+
+# ADDENDUM — v2 STRATEGY (regression-based behavioral risk)
+
+After v1 was implemented and evaluated, three issues motivated a redesign:
+
+1. **Headline metrics were inflated by label–feature proximity.** PR-AUC 0.998 was driven by the rules-derived label being a function of the very features the model received.
+2. **1,726 customers (69 % of the population) were excluded from training** because the bimodal labeling scheme could not assign them a clean positive or negative label.
+3. **`pep_flag` short-circuited R09 learning** — a single binary feature reproduced ~half the positive-label population.
+
+The v2 redesign keeps the operational positioning ("prioritization layer on top of rules") but redefines the modeling task to address all three issues at once.
+
+## v2.1 New target — `behavioral_risk_score`
+
+The regression target is the sum of weights for the **soft behavioral core rules only**:
+- R02 STRUCT-BAND (HIGH=3, LOW=1)
+- R03 INCOME-MISMATCH (HIGH=3, LOW=1)
+- R09 PEP-EDD (=3)
+
+Range: 0–9 (integer-valued discrete; max if all three families fire HIGH).
+
+**Hard regulatory alerts (R08 sanctions, R16 self-merchant, R21 network linkage) are explicitly excluded from the target.** They are binary regulatory facts owned by the rules engine; the ML model is not asked to predict them from transactional behavior.
+
+The remaining 15 rules (R01, R04–R07, R10–R15, R17–R20) are held out — they do not appear in the target and their boolean output is never a feature; their underlying signals survive only as raw aggregates the model must rediscover.
+
+## v2.2 Training set
+
+**All 2,500 customers.** Every customer has a defined `behavioral_risk_score` (most are 0; the distribution is documented in `ml_results.md`). No grey-zone exclusion.
+
+## v2.3 Feature additions
+
+| New feature | Purpose | Source |
+|---|---|---|
+| `iforest_anomaly_score` | Unsupervised anomaly signal that does not see any labels or rules | `src/ml/isolation_forest.py` |
+| `count_high_score_counterparties` | Risk-weighted counterparty exposure | rules engine `composite_score` of receivers |
+| `max_counterparty_score` | Worst c2c receiver | same |
+| `fraction_outflow_to_high_score` | Share of outflow to high-score receivers | same |
+| `count_high_chargeback_merchants` | Merchant exposure | merchant table |
+
+The counterparty exposure features deliberately use **rules-engine output** as the counterparty signal — not the model's own predictions, which would create a feedback loop. This is documented as a known trade-off: replacing it with confirmed-launderer status would require ground truth that does not exist in the synthetic dataset.
+
+## v2.4 Feature removals
+
+- `pep_flag` — 1:1 mechanical mapping to R09 (the only soft rule with a direct binary KYC feature). Removed to prevent short-circuit learning.
+
+## v2.5 Model and calibration
+
+- **Algorithm:** XGBoost regressor (`reg:squarederror`), max_depth=4, lr=0.08, n_estimators=800 with early stopping at 40 rounds.
+- **Calibration:** Isotonic regression on the training set, mapping raw regression score to `P(composite_score ≥ 90th percentile OR hard_alert)`. Monotone, clipped to [0,1].
+- **Output `predicted_probability`** consumed by downstream agents is the calibrated probability; downstream contracts (detection_agent → investigation_agent → SAR agent) are unchanged.
+
+## v2.6 Validation
+
+Customer-level random 70/30 split on all 2,500 customers; XGBoost internal 75/25 train-val for early stopping. Temporal split remains unavailable (see § 5 above — unchanged justification under v2).
+
+### Metrics
+
+| Tier | Metric | Why |
+|---|---|---|
+| Primary | **R²** | Genuine regression quality on the new continuous target |
+| Primary | **Spearman ρ (test and full)** | Rank quality on the actual ranking task |
+| Secondary | PR-AUC / ROC-AUC on v1-labeled subset | Apples-to-apples comparison with v1 |
+| Secondary | Top-50 / Top-100 overlap with composite_score top customers | Operational sanity check |
+
+The new metrics are documented in `ml_results.md`; v2 achieves R² = 0.70 on the test set, Spearman = 0.87 on the full population.
+
+## v2.7 Honest framing — what v2 gives up and what it gains
+
+| Gives up | Gains |
+|---|---|
+| 4 pp of PR-AUC on the v1-labeled task (0.998 → 0.957) | 3.2× more training data (774 → 2,500) |
+| 10 pp of ROC-AUC (inflated by leakage in v1) | R² = 0.70 on a continuous, non-trivial regression target |
+| The illusion that ML "predicts" sanctions and network linkage | Calibrated probabilities |
+| | Clean separation: rules own regulatory facts, ML owns behavioral patterns |
+| | Network-exposure features and IF anomaly score in top SHAP drivers |
+| | Phase 1 sanctions-driven cohort correctly drops to low ML probability while remaining hard_alert=True from the rules layer (the layered behavior the design targets) |
+
+This is a deliberate trade. v1 looked stronger on the headline number, but the strength was leakage-driven. v2 is more honest, more useful, and more defensible in front of a compliance officer who asks "what is the model actually learning?".
+
+**Implemented in v2; this addendum is the design record for the change.**

@@ -12,7 +12,7 @@ Given 52,000 transactions and 2,500 KYC profiles across four months, the system 
 
 ## Key results
 
-- **C102290** — designated **investigative showcase case**. PEP customer (KYC=98), 144× income mismatch, 2,013% passthrough, Tor + 2 VPN events, single-day burst (R$42k), shared receiving merchants with C100880. Strongest multi-typology convergence in the dataset. Full SAR: [`docs/phase1/SAR-2025-C102290-01.md`](docs/phase1/SAR-2025-C102290-01.md). ML cohort rank #1 (0.9998 probability).
+- **C102290** — designated **investigative showcase case**. PEP customer (KYC=98), 144× income mismatch, 2,013% passthrough, Tor + 2 VPN events, single-day burst (R$42k), shared receiving merchants with C100880. Strongest multi-typology convergence in the dataset. Full SAR: [`docs/phase1/SAR-2025-C102290-01.md`](docs/phase1/SAR-2025-C102290-01.md). ML Tier 1 (calibrated probability 1.00) driven by behavioral signals — see [`docs/phase3/Phase3_ML_Summary.md`](docs/phase3/Phase3_ML_Summary.md).
 - **C100091** — highest **operational escalation priority** (rank #1 by composite priority score). Driven by a single transactional sanctions screening event. The customer's KYC profile shows no confirmed sanctions match, so this is preserved as a "screening event requiring review" rather than a confirmed exposure.
 - **Operational vs investigative distinction is explicit.** Priority score answers "what must escalate today?" — investigative richness answers "what best demonstrates the system's depth?" Both signals are surfaced; neither overwrites the other.
 
@@ -49,7 +49,7 @@ CW/
 ├── src/
 │   ├── rules/                 21-rule alerts engine (Phase 2)
 │   └── ml/                    XGBoost prioritization + SHAP (Phase 3)
-│       ├── ml_pipeline.py     XGBoost supervised ranking
+│       ├── ml_pipeline.py     XGBoost regression on behavioral_risk_score
 │       └── isolation_forest.py Unsupervised anomaly detection (raw features only)
 ├── docs/
 │   ├── architecture/          Pipeline diagram (mmd + png)
@@ -75,7 +75,7 @@ CW/
 |---|---|---|
 | **1 — Investigation** | 9-subject manual cohort + 1 showcase SAR (C102290) | [`docs/phase1/`](docs/phase1/) |
 | **2 — Rules engine** | 21 deterministic rules, composite scoring, escalation bands | [`src/rules/alerts_engine.py`](src/rules/alerts_engine.py) |
-| **3 — ML prioritization** | XGBoost + Isolation Forest: supervised ranking with SHAP + unsupervised anomaly detection on raw features | [`src/ml/ml_pipeline.py`](src/ml/ml_pipeline.py) · [`src/ml/isolation_forest.py`](src/ml/isolation_forest.py) |
+| **3 — ML prioritization** | XGBoost regression on a behavioral risk target (R02/R03/R09 rule subset), trained on all 2,500 customers; hard alerts (R08/R16/R21) stay with the rules engine. Isolation Forest score and counterparty-network features feed in; isotonic calibration produces meaningful probabilities. SHAP per customer. | [`src/ml/ml_pipeline.py`](src/ml/ml_pipeline.py) · [`src/ml/isolation_forest.py`](src/ml/isolation_forest.py) |
 | **4 — Multi-agent orchestration** | 5 LLM agents + orchestrator with deterministic fallback | [`agents/`](agents/) |
 
 ---
@@ -140,7 +140,7 @@ A committed canonical run lives under [`outputs/examples/showcase_run/`](outputs
 ## Limitations
 
 - **Synthetic dataset.** Behavior was not validated against real customer ground truth.
-- **Weak-label ML training (mitigated).** Labels were derived from the rules engine, not from analyst judgment, so XGBoost probabilities correlate with rule fires by construction. This circularity was identified and partially mitigated by adding an Isolation Forest model (`src/ml/isolation_forest.py`) trained exclusively on raw transaction features — no labels, no rule scores. The two models provide independent signals: agreement strengthens confidence; divergence flags customers whose behavior is anomalous in ways the current rules do not fully capture.
+- **Weak-label ML training (mitigated).** Labels are still derived from the rules engine, but the v2 pipeline narrows the target to the **behavioral-soft** subset (R02 structuring, R03 income mismatch, R09 PEP) and explicitly excludes hard alerts (R08 sanctions, R16 self-merchant, R21 network linkage) from the target — those are binary regulatory facts owned by the rules engine, not patterns ML should be asked to predict from transactional behavior. The remaining 15 rules are held out and survive only as raw aggregates the model must rediscover. Three independent signals therefore feed the analyst queue: the rules engine (regulatory facts), the XGBoost regressor (behavioral risk), and Isolation Forest (unsupervised anomaly, no labels). Agreement across layers strengthens confidence; divergence is informative.
 - **No real sanctions verification.** OFAC, BACEN, EU sanctions lists are not integrated. Sanctions screening events are treated as preliminary indicators only.
 - **No human-in-the-loop feedback.** There is no analyst-decision capture or model retraining loop.
 - **No production monitoring or drift handling.** This is a delivery prototype, not a deployed system.

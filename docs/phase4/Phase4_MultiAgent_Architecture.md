@@ -101,6 +101,6 @@ JSON contract is unchanged. Each artifact carries `_backend: anthropic | templat
 |---|---|
 | Phase 1 (manual SAR) | Markdown SAR template mirrors `docs/phase1/SAR-2025-C102290-01.md` |
 | Phase 2 (rules engine) | Imported by `detection_agent.py` |
-| Phase 3 (XGBoost + SHAP) | Imported by `detection_agent.py` |
+| Phase 3 (XGBoost regression on `behavioral_risk_score` + Isolation Forest + SHAP, all 2,500 customers, isotonic calibration) | Imported by `detection_agent.py`; ML outputs `predicted_probability`, `predicted_band`, `predicted_score`, `behavioral_risk_score`, `composite_score`, `hard_alert`, `iforest_anomaly_score` — consumed by `detection_agent` and `investigation_agent` |
 
 Phase 4 adds orchestration, evidence-grounded narrative generation, SAR templating, deterministic compliance review, and an immutable audit trail.

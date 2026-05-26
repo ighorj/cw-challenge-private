@@ -32,11 +32,18 @@ Rules are deterministic, auditable, and explain every fire by transaction. The c
 
 ## ML approach
 
-XGBoost classifier trained on weak labels derived from the rules engine outputs (intentional weak supervision — labels reflect institutional risk policy, not ground truth). Features: aggregate transaction statistics, KYC fields, rail/anonymization/geo counts. SHAP explanations are produced per-customer for the top-3 drivers.
+**XGBoost regressor on `behavioral_risk_score`** (Phase 3 v2). The target is the sum of weights for the soft behavioral core rules only — R02 structuring, R03 income mismatch, R09 PEP — a continuous integer in 0–9. Hard regulatory alerts (R08 sanctions, R16 self-merchant, R21 network linkage) are deliberately **excluded** from the target: those are binary regulatory facts owned by the rules engine, not patterns ML should be asked to predict from transactional behavior. The remaining 15 rules are held out and survive only as raw aggregates the model must rediscover. Training uses **all 2,500 customers** (v1 excluded the 1,726 grey-zone customers). 43 features across 10 groups, including counterparty-exposure features (the rules engine's `composite_score` of each receiver as a counterparty risk signal) and the Isolation Forest anomaly score as a single feature column. Isotonic calibration maps the raw regression output to a [0,1] probability anchored on `P(composite_score ≥ 90th percentile OR hard_alert)`. SHAP top-3 drivers per customer are emitted in the ranked output.
 
-**Important methodological note:** ML probabilities in the top cohort are compressed in the 0.98–0.9999 range due to weak-label correlation with the rules. The presentation layer therefore uses **cohort-relative confidence bands** (Extreme / Very High / High / Moderate-High / Moderate) calibrated to the queue distribution, not the full population.
+**Test metrics (n = 750):** RMSE 0.77, MAE 0.55, R² 0.70, Spearman 0.85. **Full-population Spearman (n = 2,500):** 0.87 vs the target.
 
-**Dual-model approach — XGBoost + Isolation Forest:** Because XGBoost is trained on rules-derived labels, its confidence scores reflect agreement with existing typologies rather than an independent view of the data. To address this, a complementary **Isolation Forest** model (`src/ml/isolation_forest.py`) was added, trained exclusively on nine raw transaction features — amount, hour, MCC risk, geo risk, anonymization type, device root status, rail, card-present flag, and 3DS status — with no access to rule scores or labels. When both models flag the same customer, the signals reinforce each other from structurally independent evidence bases, which materially strengthens the case for escalation. When they diverge — a customer ranks high in XGBoost but mid-population in Isolation Forest, as with C102290 — it indicates that the risk comes from composite rule convergence rather than raw transaction-level outlier behavior. That distinction is operationally useful: a purely transaction-anomaly customer (high IF, low XGBoost) may represent an emerging typology the rules have not yet codified.
+**Three independent signals feed the analyst queue:**
+1. **Rules engine** — 21 deterministic rules → `composite_score`, `hard_alert` flag.
+2. **XGBoost regressor (v2)** — behavioral resemblance → `predicted_probability`.
+3. **Isolation Forest** — unsupervised anomaly (no labels, raw features only) → `iforest_anomaly_score`.
+
+Convergence across layers strengthens confidence; divergence is informative. The model deliberately underrates sanctions-driven Phase 1 cohort subjects (C100091, C101028, C101582) — the rules engine still flags them via `hard_alert = True`, so coverage is preserved; the divergence between layers tells the analyst the case is *regulatory-fact-driven*, not *behavioral-pattern-driven*. C102290 (the SAR showcase) retains `predicted_probability = 1.00` driven entirely by behavioral SHAP drivers, with no leakage from sanctions/PEP shortcuts.
+
+A v1 binary classifier was implemented earlier (training on 774 labeled customers; PR-AUC 0.998 on the labeled subset). The v1 metrics were inflated by label–feature leakage; v2 trades 4 percentage points of PR-AUC for a more honest target, 3.2× more training data, calibrated probabilities, and a clean separation between behavioral and regulatory signals. Full v1-vs-v2 comparison: [`docs/phase3/Phase3_ML_Summary.md`](phase3/Phase3_ML_Summary.md), [`docs/phase3/ml_results.md`](phase3/ml_results.md).
 
 ## Operational vs investigative distinction
 
@@ -70,7 +77,7 @@ A separate **Orchestrator** routes stages, propagates the `--use-llm` flag, and 
 
 ## Lessons learned
 
-- **Weak-label ML inflates confidence inside the top cohort.** Solved at the presentation layer with cohort-relative bands rather than retraining.
+- **Weak-label ML inflates confidence inside the top cohort.** v2 redesigned the target around behavioral-soft rules only and excluded hard alerts from the target, which spreads probabilities meaningfully across the cohort and produces a usable layered signal (rules + ML + IF). Cohort-relative bands remain in the presentation layer as a secondary safeguard.
 - **Priority scoring must distinguish hard alerts from investigative depth.** A single sanctions screening event should not silently dominate ranking — surface both dimensions.
 - **Sanctions concepts must be separated** at the data model level: transactional screening events ≠ confirmed KYC-level entity matches. Conflating them produces misleading SARs.
 - **Cautious AML language is non-negotiable** in regulatory outputs. The `soften_language()` utility post-processes any assertive phrasing to hedged investigative wording.
@@ -79,7 +86,7 @@ A separate **Orchestrator** routes stages, propagates the `--use-llm` flag, and 
 ## Limitations
 
 - Synthetic dataset; no real customer behavior validated against ground truth
-- Weak-label ML training (labels derived from rules, not analyst feedback)
+- Weak-label ML training (labels derived from rules, not analyst feedback). v2 narrows but does not eliminate this — only 5 of 21 rules contribute to the target; hard alerts are out of target entirely.
 - No live sanctions list verification (OFAC/BACEN/EU lists not integrated)
 - No human-in-the-loop feedback collection
 - No production drift monitoring or model recalibration cadence
