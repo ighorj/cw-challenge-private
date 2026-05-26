@@ -6,7 +6,7 @@ _CloudWalk AML/FT Investigation Pipeline · Architecture_
 
 ## 1. What this is
 
-A six-agent pipeline wrapping the Phase 2 rules engine and Phase 3 ML prioritizer in an evidence-grounded investigation → SAR drafting → compliance-review workflow. Sequential, contract-driven, fully auditable.
+A five-agent pipeline (plus a deterministic orchestrator) wrapping the Phase 2 rules engine and Phase 3 ML prioritizer in an evidence-grounded investigation → SAR drafting → compliance-review workflow. Sequential, contract-driven, fully auditable.
 
 ```
 data_agent → detection_agent → investigation_agent → sar_agent → compliance_agent
@@ -45,7 +45,7 @@ Agents exchange **JSON only**. Three high-value contracts (full schemas inlined 
 
 | Contract | Key fields |
 |---|---|
-| `prioritized_alert_queue.json` | `customers[].{rank, customer_id, rules_score, ml_probability, escalation_band, hard_alert, triggered_rules[]}` |
+| `prioritized_alert_queue.json` | `customers[].{rank, customer_id, rules_score, ml_probability, ml_band, ml_confidence_band, ml_confidence_band_cohort, ml_cohort_rank, priority_score, severity, escalation_band, hard_alert, triggered_rules[], typology_families[]}` |
 | `investigation_case.json`      | `cases[].{customer_id, summary, triggered_typologies[], key_facts[], entity_links[], timeline[], confidence, recommended_next_step}` |
 | `sar_structured.json`          | `sars[].{customer_id, sar_reference, executive_summary, triggered_alerts[], detailed_findings[], regulatory_basis[], recommended_actions[], key_metrics, linked_entities[]}` |
 
