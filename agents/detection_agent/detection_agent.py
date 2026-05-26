@@ -21,7 +21,6 @@ from shared import RunContext, save_json, load_json, now_iso, llm_available, cal
 from priority import priority_score, severity_band, typology_families_hit  # noqa: E402
 import alerts_engine as ae  # noqa: E402
 import ml_pipeline as mp    # noqa: E402
-from sklearn.model_selection import train_test_split  # noqa: E402
 
 PROMPT_FILE = Path(__file__).parent / "prompt.md"
 
@@ -93,26 +92,13 @@ def run(ctx: RunContext, top_n=10, use_llm=False):
             alerted_customers=len(alerts),
             hard_alerts=int(alerts.hard_alert_flag.sum()))
 
-    # ── Phase 3 ML ────────────────────────────────────────────────────────
-    X_all = mp.build_features(txs, kyc, mer)
-    lbl   = mp.build_labels(txs, kyc, mer)
-    labeled = lbl.dropna(subset=["y"]).index
-    X = X_all.loc[labeled].astype(float)
-    y = lbl.loc[labeled, "y"].astype(int)
-    X_dev, X_test, y_dev, y_test = train_test_split(
-        X, y, test_size=0.30, stratify=y, random_state=42)
-    model = mp.train_xgb(X_dev, y_dev)
-    X_full = X_all.astype(float)
-    probs = model.predict_proba(X_full)[:, 1]
-    cuts = mp.percentile_bands(probs)
-    ml_df = pd.DataFrame({
-        "customer_id": X_full.index,
-        "predicted_probability": probs.round(4),
-        "predicted_band": [mp.assign_band(p, cuts) for p in probs],
-    }).sort_values("predicted_probability", ascending=False).reset_index(drop=True)
+    # ── Phase 3 ML (v2: regression on behavioral_risk_score, all 2,500) ───
+    ml_result = mp.score_population(txs, kyc, mer, with_shap=True)
+    ml_df = ml_result["ranked"]
     ml_df.to_csv(ctx.artifact("ml_ranked_output.csv"), index=False)
     ctx.log("detection_agent", "ml_complete",
-            ml_tier1_count=int((ml_df.predicted_band == "ML Tier 1").sum()))
+            ml_tier1_count=int((ml_df.predicted_band == "ML Tier 1").sum()),
+            ml_total_customers=len(ml_df))
 
     # ── Merge into prioritized queue ──────────────────────────────────────
     merged = (alerts.merge(ml_df, on="customer_id", how="left")
