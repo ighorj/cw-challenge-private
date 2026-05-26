@@ -1,26 +1,26 @@
 # AML/FT INVESTIGATION — PHASE 1 REPORT (EXECUTIVE)
 **Dataset:** CloudWalk INC — 52,000 transactions · 2,500 customers · Jul–Oct 2025
 **Phase:** 1 — Risk-Ranked Suspicious Entity Investigation
-**Methodology:** Production priority scoring framework (rules + ML + hard-alert bonuses)
+**Methodology:** Production priority scoring framework (rules + ML v2 + hard-alert bonuses)
 
 ---
 
 ## 1. SUSPECT COHORT
 
-Ten entities flagged by composite risk profile — ranked by **operational escalation priority** combining rules-based detection, ML confidence, hard-alert triggers (R08 sanctions, R05_TOR anonymization, R21 network-link), and typology family diversity:
+Ten entities flagged by composite risk profile — ranked by **operational escalation priority** combining rules-based detection, ML confidence (v2: XGBoost regression on behavioral risk score, isotonic calibration), hard-alert triggers (R08 sanctions, R05_TOR anonymization, R21 network-link), and typology family diversity:
 
 | Rank | ID | Occupation | Income | Outflow | Ratio | Key Indicators | Priority |
 |---|---|---|---|---|---|---|---|
-| #1 | **C100091** | Store Owner | R$10k | R$91k | 108× | 898% passthrough, R08 sanctions screening, R21 wire-link (→C100236), KYC=66 | 80.46 |
-| #2 | **C101208** | Chef | R$13k | R$150k | 138× | 822% passthrough, R08 sanctions screening, VPN, 29 counterparties (R15), 6 geo-risk events | 74.39 |
-| #3 | **C101028** | Designer | R$47k | R$71k | 18× | PEP + confirmed sanctions match (R08), KYC=64, R10 KYC-inconsistency, multi-rail | 74.36 |
-| #4 | **C100837** | Accountant | R$8k | R$139k | 220× | PEP + 4,367% passthrough (extreme), Tor anonymization, R09 EDD, 30 counterparties, Myanmar geo | 67.40 |
-| #5 | **C101582** | Nurse | R$11k | R$89k | 98× | 1,467% passthrough, R08 sanctions screening (Iraq cross-border), Tor ×2, KYC=73 | 66.96 |
-| #6 | **C102290** | Driver | R$11k | R$134k | 144× | **PRIMARY SAR CASE** — PEP, KYC=98, Tor + VPN×2, 2,013% passthrough, velocity burst (4 txs, R$42.6k), 7 typologies | 66.00 |
-| #7 | **C102093** | Chef | R$8k | R$192k | 297× | PEP, 1,130% passthrough, Tor, 30 counterparties (highest fan-out), Myanmar + Yemen geo, KYC=63 | 64.59 |
-| #8 | **C100208** | Dentist | R$9k | R$144k | 198× | 3,675% passthrough, Tor, R21 wire-link (→C102252), KYC=89, Myanmar cross-border (R$51k) | 63.20 |
-| #9 | **C101445** | Designer | R$21k | R$68k | 38× | R08 confirmed sanctions match (hard alert), 328% passthrough, VPN + Proxy, merchant convergence | 62.49 |
-| #10 | **C101542** | Freelancer | R$4k | R$103k | 336× | 303% passthrough, Tor ×2, R21 wire-link (→C100375), 28 counterparties, 7 typologies | 61.79 |
+| #1 | **C100091** | Store Owner | R$10k | R$91k | 108× | 898% passthrough, R08 sanctions screening, R21 wire-link (→C100236), KYC=66 | 73.19 |
+| #2 | **C101208** | Chef | R$13k | R$150k | 138× | 822% passthrough, R08 sanctions screening, VPN, 29 counterparties (R15), 6 geo-risk events | 70.12 |
+| #3 | **C100837** | Accountant | R$8k | R$139k | 220× | PEP + 4,367% passthrough (extreme), Tor anonymization, R09 EDD, 30 counterparties, Myanmar geo | 67.40 |
+| #4 | **C102290** | Driver | R$11k | R$134k | 144× | **PRIMARY SAR CASE** — PEP, KYC=98, Tor + VPN×2, 2,013% passthrough, velocity burst (4 txs, R$42.6k), 7 typologies | 66.00 |
+| #5 | **C101028** | Designer | R$47k | R$71k | 18× | PEP + confirmed sanctions match (R08), KYC=64, R10 KYC-inconsistency, multi-rail | 65.72 |
+| #6 | **C102093** | Chef | R$8k | R$192k | 297× | PEP, 1,130% passthrough, Tor, 30 counterparties (highest fan-out), Myanmar + Yemen geo, KYC=63 | 62.60 |
+| #7 | **C101582** | Nurse | R$11k | R$89k | 98× | 1,467% passthrough, R08 sanctions screening (Iraq cross-border), Tor ×2, KYC=73 | 59.69 |
+| #8 | **C101542** | Freelancer | R$4k | R$103k | 336× | 303% passthrough, Tor ×2, R21 wire-link (→C100375), 28 counterparties, 7 typologies | 57.42 |
+| #9 | **C100208** | Dentist | R$9k | R$144k | 198× | 3,675% passthrough, Tor, R21 wire-link (→C102252), KYC=89, Myanmar cross-border (R$51k) | 56.95 |
+| #10 | **C101445** | Designer | R$21k | R$68k | 38× | R08 confirmed sanctions match (hard alert), 328% passthrough, VPN + Proxy, merchant convergence | 52.94 |
 
 ---
 
@@ -130,16 +130,16 @@ Three confirmed inter-customer wires form the core network topology. Broad fan-o
 
 | ID | Priority | Basis |
 |---|---|---|
-| **C100091** | 80.46 | R08 sanctions screening (Iran Wire) + R21 network-link (→C100236) + 2,917% passthrough + income mismatch. Immediate filing. |
-| **C101208** | 74.39 | R08 sanctions screening (Syria Wire, R$2.1k) + 822% passthrough + 29 counterparties (R15) + cross-border multi-event. |
-| **C101028** | 74.36 | **CONFIRMED KYC-level SANCTIONS MATCH** + PEP status + R10 KYC-inconsistency + card not-present (R18). Mandatory EDD + immediate escalation. |
+| **C100091** | 73.19 | R08 sanctions screening (Iran Wire) + R21 network-link (→C100236) + 2,917% passthrough + income mismatch. Immediate filing. |
+| **C101208** | 70.12 | R08 sanctions screening (Syria Wire, R$2.1k) + 822% passthrough + 29 counterparties (R15) + cross-border multi-event. |
 | **C100837** | 67.40 | **PEP** (R09 EDD hard alert) + **4,367% extreme passthrough** + Tor + Syria/Myanmar geo-risk (R06). PRIORITY escalation. |
-| **C101582** | 66.96 | R08 sanctions screening (Iraq) + 1,467% passthrough + Tor ×2 + quasi-cash MCC. Sanctions-driven priority. |
 | **C102290** | 66.00 | **PRIMARY SAR SHOWCASE.** PEP + KYC=98 + Tor+VPN + 2,013% passthrough + velocity burst (4 txs, R$42.6k) + 7 typology families. Strongest investigative case. Mandatory EDD. |
-| **C102093** | 64.59 | PEP + 1,130% passthrough + **highest fan-out (30 counterparties)** + Tor + Myanmar/Yemen geo + 11 rules. Rapid distribution pattern. |
-| **C100208** | 63.20 | 3,675% passthrough + Tor + R21 network-link (→C102252) + Myanmar cross-border (R$51k) + KYC risk=89. |
-| **C101445** | 62.49 | **CONFIRMED SANCTIONS MATCH** (hard alert) + 328% passthrough + VPN + Proxy + merchant convergence. Sanctions-driven. |
-| **C101542** | 61.79 | 303% passthrough + Tor ×2 + R21 network-link (→C100375) + 336× monthly income (extreme) + 7 typologies. |
+| **C101028** | 65.72 | **CONFIRMED KYC-level SANCTIONS MATCH** + PEP status + R10 KYC-inconsistency + card not-present (R18). Mandatory EDD + immediate escalation. |
+| **C102093** | 62.60 | PEP + 1,130% passthrough + **highest fan-out (30 counterparties)** + Tor + Myanmar/Yemen geo + 11 rules. Rapid distribution pattern. |
+| **C101582** | 59.69 | R08 sanctions screening (Iraq) + 1,467% passthrough + Tor ×2 + quasi-cash MCC. Sanctions-driven priority. |
+| **C101542** | 57.42 | 303% passthrough + Tor ×2 + R21 network-link (→C100375) + 336× monthly income (extreme) + 7 typologies. |
+| **C100208** | 56.95 | 3,675% passthrough + Tor + R21 network-link (→C102252) + Myanmar cross-border (R$51k) + KYC risk=89. |
+| **C101445** | 52.94 | **CONFIRMED SANCTIONS MATCH** (hard alert) + 328% passthrough + VPN + Proxy + merchant convergence. Behavioral ML score=0 (no soft rule fires); hard alert preserves mandatory escalation. |
 
 **All 10 entities warrant immediate SAR filing** under Circular BACEN 3.978/2020 and COAF Normative Instruction 1/2014. No Tier 2 / Tier 3 deferral applies to this cohort.
 
