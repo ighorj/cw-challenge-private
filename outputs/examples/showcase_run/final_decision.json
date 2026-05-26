@@ -1,11 +1,11 @@
 {
-  "run_id": "20260526-041414-4aa919",
-  "generated_at": "2026-05-26T04:14:37+00:00",
+  "run_id": "20260526-120114-87e097",
+  "generated_at": "2026-05-26T15:01:32+00:00",
   "backend": "template",
   "decisions": [
     {
       "customer_id": "C100091",
-      "sar_reference": "SAR-20260526-041414-4aa919-C100091-01",
+      "sar_reference": "SAR-20260526-120114-87e097-C100091-01",
       "severity": "critical",
       "decision": "escalate_manual_review",
       "decision_rationale": "Sanctions or self-merchant indicator present \u2014 senior compliance officer review required prior to filing.",
@@ -16,7 +16,7 @@
     },
     {
       "customer_id": "C101208",
-      "sar_reference": "SAR-20260526-041414-4aa919-C101208-01",
+      "sar_reference": "SAR-20260526-120114-87e097-C101208-01",
       "severity": "critical",
       "decision": "escalate_manual_review",
       "decision_rationale": "Sanctions or self-merchant indicator present \u2014 senior compliance officer review required prior to filing.",
@@ -27,90 +27,13 @@
     },
     {
       "customer_id": "C100837",
-      "sar_reference": "SAR-20260526-041414-4aa919-C100837-01",
+      "sar_reference": "SAR-20260526-120114-87e097-C100837-01",
       "severity": "high",
       "decision": "approve",
       "decision_rationale": "SAR is evidence-grounded; deterministic checks passed and regulatory basis aligned.",
       "evidence_strength": 1.0,
       "confidence_level": "high",
-      "filed_at": "2026-05-26T04:14:37+00:00",
-      "next_review": "post-filing-30d"
-    },
-    {
-      "customer_id": "C102290",
-      "sar_reference": "SAR-20260526-041414-4aa919-C102290-01",
-      "severity": "high",
-      "decision": "approve",
-      "decision_rationale": "SAR is evidence-grounded; deterministic checks passed and regulatory basis aligned.",
-      "evidence_strength": 0.97,
-      "confidence_level": "high",
-      "filed_at": "2026-05-26T04:14:37+00:00",
-      "next_review": "post-filing-30d"
-    },
-    {
-      "customer_id": "C101028",
-      "sar_reference": "SAR-20260526-041414-4aa919-C101028-01",
-      "severity": "critical",
-      "decision": "escalate_manual_review",
-      "decision_rationale": "Sanctions or self-merchant indicator present \u2014 senior compliance officer review required prior to filing.",
-      "evidence_strength": 0.79,
-      "confidence_level": "high",
-      "filed_at": null,
-      "next_review": "senior-officer-immediate"
-    },
-    {
-      "customer_id": "C102093",
-      "sar_reference": "SAR-20260526-041414-4aa919-C102093-01",
-      "severity": "high",
-      "decision": "approve",
-      "decision_rationale": "SAR is evidence-grounded; deterministic checks passed and regulatory basis aligned.",
-      "evidence_strength": 0.97,
-      "confidence_level": "high",
-      "filed_at": "2026-05-26T04:14:37+00:00",
-      "next_review": "post-filing-30d"
-    },
-    {
-      "customer_id": "C102040",
-      "sar_reference": "SAR-20260526-041414-4aa919-C102040-01",
-      "severity": "high",
-      "decision": "revise",
-      "decision_rationale": "1 policy gap(s) require remediation: structuring_narrative_grounded",
-      "evidence_strength": 0.91,
-      "confidence_level": "high",
-      "filed_at": null,
-      "next_review": "immediate"
-    },
-    {
-      "customer_id": "C101582",
-      "sar_reference": "SAR-20260526-041414-4aa919-C101582-01",
-      "severity": "critical",
-      "decision": "escalate_manual_review",
-      "decision_rationale": "Sanctions or self-merchant indicator present \u2014 senior compliance officer review required prior to filing.",
-      "evidence_strength": 0.61,
-      "confidence_level": "moderate",
-      "filed_at": null,
-      "next_review": "senior-officer-immediate"
-    },
-    {
-      "customer_id": "C101542",
-      "sar_reference": "SAR-20260526-041414-4aa919-C101542-01",
-      "severity": "high",
-      "decision": "approve",
-      "decision_rationale": "SAR is evidence-grounded; deterministic checks passed and regulatory basis aligned.",
-      "evidence_strength": 0.84,
-      "confidence_level": "high",
-      "filed_at": "2026-05-26T04:14:37+00:00",
-      "next_review": "post-filing-30d"
-    },
-    {
-      "customer_id": "C100208",
-      "sar_reference": "SAR-20260526-041414-4aa919-C100208-01",
-      "severity": "high",
-      "decision": "approve",
-      "decision_rationale": "SAR is evidence-grounded; deterministic checks passed and regulatory basis aligned.",
-      "evidence_strength": 0.9,
-      "confidence_level": "high",
-      "filed_at": "2026-05-26T04:14:37+00:00",
+      "filed_at": "2026-05-26T15:01:32+00:00",
       "next_review": "post-filing-30d"
     }
   ]
