@@ -151,7 +151,7 @@ The most diagnostic finding from v2 is **how the cohort splits when the model is
 
 ![PCA — customer behavioral space](../../outputs/figures/ml_pca_clusters.png)
 
-High-risk customers concentrate in the upper-right region of the projection. The committed PCA figure was produced under v1 features; the structural conclusion (a single behavioral cluster rather than scattered outliers) is unchanged under v2.
+High-risk customers concentrate in the upper-right region of the projection. Top-10 subjects are annotated with v2 priority scores. The structural conclusion — a single behavioral cluster rather than scattered outliers — holds under v2 features.
 
 ---
 
