@@ -4,19 +4,20 @@ flowchart TD
     classDef accent fill:#0d1117,stroke:#58a6ff,color:#58a6ff,stroke-width:2px;
     classDef side fill:#161b22,stroke:#58a6ff,color:#c9d1d9,stroke-dasharray: 4 2;
 
-    A[Transações PIX · Card · Wire\nKYC · Merchants · Device/IP · Geo-Risk]
-    B[Data Agent\nValidação por Rail · Enrichment · Feature Engineering — 43 features]
-    C[Detection Agent\n21 Regras AML · XGBoost Regressor · Isolation Forest]
-    D[Fila de Alertas Priorizada\nRules Score · ML Probability · Anomaly Signal · SHAP]
-    E[Investigation Agent\nPerfil 360° · Timeline · Counterparty Graph · Evidence Bundle]
-    F[SAR Agent\nSAR Markdown + JSON — grounded in evidence bundle]
-    G[Compliance Agent\nBACEN · COAF · FATF · Sanctions Screening]
-    H[Decisão Final + Audit Trail\napprove · revise · reject]
+    A[Transações PIX · Card · Wire<br/>KYC · Merchants · Device/IP · Geo-Risk]
+    B[Data Agent<br/>Validação por Rail · Enrichment · Feature Engineering — 43 features]
+    C[Detection Agent<br/>21 Regras AML · XGBoost Regressor · Isolation Forest]
+    D[Fila de Alertas Priorizada<br/>Rules Score · ML Probability · Anomaly Signal · SHAP]
+    E[Investigation Agent<br/>Perfil 360° · Timeline · Counterparty Graph · Evidence Bundle]
+    F[SAR Agent<br/>SAR Markdown + JSON — grounded in evidence bundle]
+    G[Compliance Agent<br/>BACEN · COAF · FATF · Sanctions Screening]
+    H[Final Decision<br/>approve · revise · escalate_manual_review]
 
-    LLM[(Anthropic LLM\nreasoning · drafting · review)]
-    ART[(Artifact Store\noutputs versionados)]
-    AUD[(audit_log.json\nimutável · ISO timestamps)]
-    ORC[(Orchestrator\nJSON Contracts · Versioning · Routing)]
+    LLM[(Anthropic LLM<br/>reasoning · drafting · review)]
+    ART[(Artifact Store<br/>outputs versionados)]
+    AUD[(audit_log.json<br/>imutável)]
+    ORC[(Orchestrator<br/>JSON Contracts · Versioning · Routing)]
+    FIN[(final_decision.json)]
 
     A --> B
     B --> C
@@ -25,6 +26,7 @@ flowchart TD
     E --> F
     F --> G
     G --> H
+    H --> FIN
 
     E -. reasoning .-> LLM
     F -. drafting .-> LLM
@@ -38,5 +40,5 @@ flowchart TD
 
     ORC -. orquestra .-> B & C & E & F & G
 
-    class A,B,C,D,E,F,G,H node;
+    class A,B,C,D,E,F,G,H,FIN node;
     class LLM,ART,AUD,ORC side;
