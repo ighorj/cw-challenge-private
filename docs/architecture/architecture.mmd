@@ -4,17 +4,19 @@ flowchart TD
     classDef accent fill:#0d1117,stroke:#58a6ff,color:#58a6ff,stroke-width:2px;
     classDef side fill:#161b22,stroke:#58a6ff,color:#c9d1d9,stroke-dasharray: 4 2;
 
-    A[AML Dataset Transactions + KYC + Merchants]
-    B[Rules Engine + ML Scoring]
-    C[Prioritized Alert Queue]
-    D[Investigation Agent]
-    E[SAR Agent]
-    F[Compliance Agent]
-    G[Final Decision + Audit Trail]
+    A[Transações PIX · Card · Wire\nKYC · Merchants · Device/IP · Geo-Risk]
+    B[Data Agent\nValidação por Rail · Enrichment · Feature Engineering — 43 features]
+    C[Detection Agent\n21 Regras AML · XGBoost Regressor · Isolation Forest]
+    D[Fila de Alertas Priorizada\nRules Score · ML Probability · Anomaly Signal · SHAP]
+    E[Investigation Agent\nPerfil 360° · Timeline · Counterparty Graph · Evidence Bundle]
+    F[SAR Agent\nSAR Markdown + JSON — grounded in evidence bundle]
+    G[Compliance Agent\nBACEN · COAF · FATF · Sanctions Screening]
+    H[Decisão Final + Audit Trail\napprove · revise · reject]
 
-    LLM[(Anthropic LLM)]
-    ART[(Artifact Store)]
-    AUD[(Audit Log)]
+    LLM[(Anthropic LLM\nreasoning · drafting · review)]
+    ART[(Artifact Store\noutputs versionados)]
+    AUD[(audit_log.json\nimutável · ISO timestamps)]
+    ORC[(Orchestrator\nJSON Contracts · Versioning · Routing)]
 
     A --> B
     B --> C
@@ -22,16 +24,19 @@ flowchart TD
     D --> E
     E --> F
     F --> G
+    G --> H
 
-    D -. reasoning .-> LLM
-    E -. drafting .-> LLM
-    F -. review .-> LLM
+    E -. reasoning .-> LLM
+    F -. drafting .-> LLM
+    G -. review .-> LLM
 
-    D -. outputs .-> ART
     E -. outputs .-> ART
     F -. outputs .-> ART
+    G -. outputs .-> ART
 
-    G -. events .-> AUD
+    H -. events .-> AUD
 
-    class A,B,C,D,E,F,G node;
-    class LLM,ART,AUD side;
+    ORC -. orquestra .-> B & C & E & F & G
+
+    class A,B,C,D,E,F,G,H node;
+    class LLM,ART,AUD,ORC side;
